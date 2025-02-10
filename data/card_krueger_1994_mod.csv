@@ -1,0 +1,821 @@
+"","bonus","chain","co_owned","date","empft","emppt","firstinc","hrsopen","inctime","meals","ncalls","nmgrs","nregs","nregs11","observation","open","pctaff","pentree","pfry","psoda","region","sheet","special","state","status","type","wage_st","emptot","pct_fte"
+"1","yes","bk","no",NA,30,15,NA,16.5,19,"reduced price meals",0,3,3,3,"February 1992",6.5,NA,0.52,1.03,1.03,"phillypa",46,NA,"Pennsylvania",NA,NA,NA,40.5,74.0740740740741
+"2","no","kfc","no",NA,6.5,6.5,NA,13,26,"reduced price meals",0,4,4,3,"February 1992",10,NA,2.35,0.9,1.01,"phillypa",49,NA,"Pennsylvania",NA,NA,NA,13.75,47.2727272727273
+"3","no","kfc","yes",NA,3,7,0.37,10,13,"reduced price meals",0,2,3,3,"February 1992",11,30,2.33,0.74,0.95,"phillypa",506,NA,"Pennsylvania",NA,NA,NA,8.5,35.2941176470588
+"4","yes","wendys","yes",NA,20,20,0.1,12,26,"reduced price meals",0,4,2,2,"February 1992",10,0,1.79,0.82,0.87,"phillypa",56,NA,"Pennsylvania",NA,NA,5,34,58.8235294117647
+"5","yes","wendys","yes",NA,6,26,0.15,12,52,"both free and reduced price meals",0,5,2,2,"February 1992",10,0,1.65,0.77,0.87,"phillypa",61,NA,"Pennsylvania",NA,NA,5.5,24,25
+"6","no","wendys","yes",NA,0,31,0.07,12,26,"reduced price meals",2,5,2,2,"February 1992",10,45,0.95,0.77,0.87,"phillypa",62,NA,"Pennsylvania",NA,NA,5,20.5,0
+"7","no","bk","no",NA,50,35,0.1,18,26,"reduced price meals",0,3,3,3,"February 1992",6,0,0.94,0.88,1.04,"eastonpa",445,NA,"Pennsylvania",NA,NA,5,70.5,70.9219858156028
+"8","no","bk","no",NA,10,17,0.25,24,52,"reduced price meals",0,5,6,4,"February 1992",0,0,0.96,0.84,1.05,"eastonpa",451,NA,"Pennsylvania",NA,NA,5,23.5,42.5531914893617
+"9","no","kfc","yes",NA,2,8,0.25,10,13,"free meals",0,5,2,2,"February 1992",11,0,2.32,0.73,0.73,"eastonpa",455,NA,"Pennsylvania",NA,NA,5.25,11,18.1818181818182
+"10","no","kfc","yes",NA,2,10,0.15,10,19,"free meals",2,2,4,4,"February 1992",11,0,2.32,0.73,0.94,"phillypa",458,NA,"Pennsylvania",NA,NA,5,9,22.2222222222222
+"11","yes","roys","yes",NA,2.5,20,0.37,12.5,13,"reduced price meals",0,3,4,4,"February 1992",9,5,1.11,1.01,1.05,"eastonpa",462,NA,"Pennsylvania",NA,NA,5,15.5,16.1290322580645
+"12","no","bk","no",NA,40,30,0.17,18,13,"reduced price meals",0,3,4,3,"February 1992",6,0,0.95,0.94,0.95,"eastonpa",468,NA,"Pennsylvania",NA,NA,5,58,68.9655172413793
+"13","no","bk","no",NA,8,27,0.25,18,39,"reduced price meals",0,5,3,2,"February 1992",6,80,0.96,0.72,0.92,"eastonpa",469,NA,"Pennsylvania",NA,NA,5,26.5,30.188679245283
+"14","no","bk","no",NA,10.5,30,0.3,18,NA,"reduced price meals",0,3,3,3,"February 1992",6,0,0.94,0.84,0.97,"eastonpa",470,NA,"Pennsylvania",NA,NA,5.5,28.5,36.8421052631579
+"15","no","bk","no",NA,6,9,0.37,12.5,26,"reduced price meals",2,3,3,1,"February 1992",9,0,1.01,0.98,1.13,"eastonpa",474,NA,"Pennsylvania",NA,NA,5,13.5,44.4444444444444
+"16","yes","kfc","yes",NA,5,17.5,0.25,10,26,"both free and reduced price meals",2,3,5,4,"February 1992",11,0,2.53,0.74,0.95,"eastonpa",481,NA,"Pennsylvania",NA,NA,5.25,16.75,29.8507462686567
+"17","yes","kfc","yes",NA,1,15,0.07,10,13,"reduced price meals",0,1,4,3,"February 1992",11,0,2.32,0.73,0.94,"eastonpa",483,NA,"Pennsylvania",NA,NA,5,9.5,10.5263157894737
+"18","yes","roys","yes",NA,10,6,0.17,11.5,13,"reduced price meals",0,2,6,3,"February 1992",10,0,0.95,0.91,1.11,"eastonpa",487,NA,"Pennsylvania",NA,NA,5,15,66.6666666666667
+"19","yes","roys","no",NA,20,13,0.25,16,13,"reduced price meals",1,3,5,5,"February 1992",6,0,1.01,0.79,1.05,"eastonpa",488,NA,"Pennsylvania",NA,NA,5,29.5,67.7966101694915
+"20","yes","roys","no",NA,5,23,0.37,14,13,"reduced price meals",2,2,4,4,"February 1992",7,6,0.94,1.01,1.05,"eastonpa",489,NA,"Pennsylvania",NA,NA,5,18.5,27.027027027027
+"21","no","roys","yes",NA,10,12.5,0.12,16,13,"reduced price meals",0,4,4,4,"February 1992",6,0,1.05,1.01,1.05,"eastonpa",490,NA,"Pennsylvania",NA,NA,5,20.25,49.3827160493827
+"22","no","roys","yes",NA,27,12,0.25,16,26,"reduced price meals",0,3,6,3,"February 1992",6,0,2.01,0.9,1.05,"phillypa",493,NA,"Pennsylvania",NA,NA,5,36,75
+"23","no","roys","no",NA,4,28,0.25,15,26,"reduced price meals",2,3,3,3,"February 1992",7,2,0.94,1.01,1.05,"eastonpa",495,NA,"Pennsylvania",NA,NA,5,21,19.047619047619
+"24","yes","roys","yes",NA,10,15,0.17,16,13,"reduced price meals",0,3,5,3,"February 1992",6,0,0.73,0.9,1.05,"eastonpa",496,NA,"Pennsylvania",NA,NA,5,20.5,48.780487804878
+"25","yes","wendys","yes",NA,0,28,0.07,12,26,"reduced price meals",0,5,2,2,"February 1992",10,11,1.75,0.69,0.9,"eastonpa",499,NA,"Pennsylvania",NA,NA,5,19,0
+"26","no","roys","yes",NA,3,16,0.25,16,13,"reduced price meals",2,3,6,3,"February 1992",6,30,1.16,0.95,1.05,"eastonpa",509,NA,"Pennsylvania",NA,NA,5,14,21.4285714285714
+"27","no","roys","yes",NA,7,16,0.2,16,13,"reduced price meals",0,4,5,3,"February 1992",6,33,1.16,0.94,1.05,"eastonpa",515,NA,"Pennsylvania",NA,NA,5,19,36.8421052631579
+"28","no","bk","no",NA,21,9,0.25,16.5,4,"reduced price meals",2,7,5,3,"February 1992",6.5,33,0.84,0.84,0.98,"phillypa",37,NA,"Pennsylvania",NA,NA,4.25,32.5,64.6153846153846
+"29","no","bk","no",NA,1,32,NA,17.5,8,"reduced price meals",0,2,4,2,"February 1992",6.5,100,0.52,0.73,1.03,"phillypa",39,NA,"Pennsylvania",NA,NA,4.25,19,5.26315789473684
+"30","no","bk","no",NA,10,20,0.15,16.5,4,"reduced price meals",0,7,3,3,"February 1992",6.5,100,0.8,0.82,0.98,"phillypa",40,NA,"Pennsylvania",NA,NA,4.25,27,37.037037037037
+"31","no","bk","no",NA,0,27,0.2,16.5,18,"reduced price meals",0,6,3,3,"February 1992",6.5,100,0.85,0.82,0.98,"phillypa",41,NA,"Pennsylvania",NA,NA,4.25,19.5,0
+"32","no","bk","no",NA,17,4,NA,16.5,NA,"reduced price meals",2,5,3,3,"February 1992",6.5,100,0.86,0.83,0.98,"phillypa",42,NA,"Pennsylvania",NA,NA,4.5,24,70.8333333333333
+"33","no","bk","no",NA,0,24,0.25,16,2,"reduced price meals",0,6,3,3,"February 1992",7,25,0.86,0.83,0.98,"phillypa",45,NA,"Pennsylvania",NA,NA,4.25,18,0
+"34","no","bk","no",NA,25,15,0.17,17,4,"reduced price meals",2,NA,3,3,"February 1992",6,75,0.86,0.86,1.05,"phillypa",47,NA,"Pennsylvania",NA,NA,4.5,NA,NA
+"35","yes","bk","no",NA,6,20,0.2,14,13,"both free and reduced price meals",0,3,4,3,"February 1992",7,31,0.63,0.84,1.01,"phillypa",48,NA,"Pennsylvania",NA,NA,4.25,19,31.5789473684211
+"36","no","kfc","no",NA,6,10,NA,12,13,"reduced price meals",0,3,4,3,"February 1992",10,20,3.5,0.89,1.01,"phillypa",50,NA,"Pennsylvania",NA,NA,4.5,14,42.8571428571429
+"37","no","kfc","no",NA,0,15,0.15,13,NA,"reduced price meals",1,3,4,3,"February 1992",10,100,2.35,0.89,1.01,"phillypa",51,NA,"Pennsylvania",NA,NA,4.25,10.5,0
+"38","yes","wendys","yes",NA,30,10,0.07,12,26,"reduced price meals",0,3,2,2,"February 1992",10,70,0.9,0.79,0.87,"phillypa",57,NA,"Pennsylvania",NA,NA,4.67,38,78.9473684210526
+"39","no","wendys","yes",NA,8,25,0.15,12,26,"reduced price meals",2,3,2,2,"February 1992",10,80,1.01,0.77,0.87,"phillypa",58,NA,"Pennsylvania",NA,NA,4.75,23.5,34.0425531914894
+"40","no","wendys","no",NA,0,15,0.1,10.5,26,"free meals",3,3,2,2,"February 1992",7.5,90,0.81,0.89,0.91,"phillypa",59,NA,"Pennsylvania",NA,NA,4.25,10.5,0
+"41","no","wendys","no",NA,10,20,0.1,11.5,4,"free meals",0,5,2,2,"February 1992",10.5,75,0.86,0.74,0.94,"phillypa",60,NA,"Pennsylvania",NA,NA,4.25,25,40
+"42","no","kfc","yes",NA,2,12,0.12,10,52,"both free and reduced price meals",0,3,4,3,"February 1992",11,90,2.33,0.74,0.95,"eastonpa",407,NA,"Pennsylvania",NA,NA,4.75,11,18.1818181818182
+"43","no","bk","no",NA,20,25,0.15,15,13,"reduced price meals",0,4,3,3,"February 1992",7,44,0.8,0.75,0.95,"phillypa",430,NA,"Pennsylvania",NA,NA,4.25,36.5,54.7945205479452
+"44","no","bk","no",NA,20,55,0.15,16,17,"reduced price meals",0,5,4,3,"February 1992",7,75,0.79,0.74,0.94,"phillypa",432,NA,"Pennsylvania",NA,NA,4.5,52.5,38.0952380952381
+"45","no","bk","no",NA,10,30,0.15,16,13,"reduced price meals",0,4,3,3,"February 1992",7,75,0.8,0.73,0.95,"phillypa",433,NA,"Pennsylvania",NA,NA,4.25,29,34.4827586206897
+"46","no","bk","no",NA,15,50,0.25,16,6,"reduced price meals",2,5,3,3,"February 1992",7,77,NA,0.75,0.95,"phillypa",434,NA,"Pennsylvania",NA,NA,4.25,45,33.3333333333333
+"47","yes","bk","no",NA,1,37.5,0.17,15.5,4,"reduced price meals",1,3,3,3,"February 1992",6.5,25,0.79,0.75,0.95,"phillypa",435,NA,"Pennsylvania",NA,NA,4.25,22.75,4.3956043956044
+"48","no","kfc","no",NA,0,9,0.07,8,52,"reduced price meals",2,3,2,1,"February 1992",11,11,2.43,0.84,1.01,"phillypa",438,NA,"Pennsylvania",NA,NA,4.25,7.5,0
+"49","no","wendys","no",NA,0,25,0.15,11.5,19,"reduced price meals",2,3,2,2,"February 1992",10.5,100,2.01,0.79,0.89,"phillypa",440,NA,"Pennsylvania",NA,NA,4.25,15.5,0
+"50","yes","wendys","no",NA,30,10,0.25,11.5,4,"reduced price meals",2,3,2,2,"February 1992",10.5,100,0.84,0.77,0.89,"phillypa",441,NA,"Pennsylvania",NA,NA,4.25,38,78.9473684210526
+"51","no","wendys","no",NA,4,19,0.25,11.5,4,"reduced price meals",0,4,2,2,"February 1992",10.5,95,1.8,0.79,0.89,"phillypa",443,NA,"Pennsylvania",NA,NA,4.25,17.5,22.8571428571429
+"52","no","wendys","no",NA,12,20,0.37,12.5,19,"reduced price meals",2,3,2,2,"February 1992",10.5,NA,0.84,0.8,0.89,"phillypa",444,NA,"Pennsylvania",NA,NA,4.25,25,48
+"53","no","bk","no",NA,NA,NA,0.25,18,4,"reduced price meals",2,3,NA,NA,"February 1992",6,50,0.94,0.84,1.03,"eastonpa",446,NA,"Pennsylvania",NA,NA,4.5,NA,NA
+"54","yes","bk","no",NA,8,18,0.25,18,4,"reduced price meals",0,4,3,3,"February 1992",6,78,0.91,0.84,0.97,"eastonpa",448,NA,"Pennsylvania",NA,NA,4.75,21,38.0952380952381
+"55","no","bk","no",NA,0,25,NA,18,3.5,"reduced price meals",2,3,4,4,"February 1992",6,3,NA,NA,NA,"eastonpa",449,NA,"Pennsylvania",NA,NA,4.87,15.5,0
+"56","no","bk","no",NA,2,21,0.15,16.5,13,"reduced price meals",0,3,3,3,"February 1992",6.5,50,0.84,0.82,0.97,"eastonpa",450,NA,"Pennsylvania",NA,NA,4.75,15.5,12.9032258064516
+"57","no","kfc","yes",NA,1,9,0.15,10,4,"reduced price meals",0,3,4,3,"February 1992",11,NA,2.53,0.73,0.94,"eastonpa",454,NA,"Pennsylvania",NA,NA,4.5,8.5,11.7647058823529
+"58","no","roys","yes",NA,5,20,0.37,16,13,"reduced price meals",0,3,5,NA,"February 1992",6,NA,0.94,0.9,1.05,"eastonpa",459,NA,"Pennsylvania",NA,NA,4.25,18,27.7777777777778
+"59","yes","wendys","no",NA,8,17.5,0.3,11.5,17,"both free and reduced price meals",2,4,2,2,"February 1992",10.5,65,0.94,0.8,0.94,"eastonpa",466,NA,"Pennsylvania",NA,NA,4.75,20.75,38.5542168674699
+"60","no","bk","no",NA,25,20,NA,18,26,"reduced price meals",2,4,2,2,"February 1992",6,50,0.91,0.84,0.97,"eastonpa",471,NA,"Pennsylvania",NA,NA,4.25,39,64.1025641025641
+"61","no","bk","no",NA,37.5,2,NA,16.5,52,"reduced price meals",2,3,3,3,"February 1992",6.5,80,0.91,1.05,0.97,"eastonpa",472,NA,"Pennsylvania",NA,NA,4.25,41.5,90.3614457831325
+"62","yes","bk","no",NA,5,27,0.5,17,26,"reduced price meals",0,4,3,2,"February 1992",6,50,0.89,0.86,0.97,"eastonpa",473,NA,"Pennsylvania",NA,NA,4.75,22.5,22.2222222222222
+"63","no","bk","no",NA,25,8,NA,15,NA,"free meals",1,3,3,3,"February 1992",7,60,0.9,0.89,1.02,"eastonpa",475,NA,"Pennsylvania",NA,NA,4.5,32,78.125
+"64","no","bk","no",NA,6,30,0.12,18,52,"reduced price meals",2,3,3,3,"February 1992",6,60,0.91,0.79,0.95,"phillypa",476,NA,"Pennsylvania",NA,NA,4.25,24,25
+"65","yes","bk","no",NA,8,28,0.12,16.5,39,"reduced price meals",1,4,3,3,"February 1992",6.5,50,0.99,0.78,0.97,"eastonpa",477,NA,"Pennsylvania",NA,NA,4.25,26,30.7692307692308
+"66","no","bk","no",NA,32,25,0.22,19,13,"reduced price meals",0,4,3,3,"February 1992",6,30,0.91,0.86,0.97,"phillypa",478,NA,"Pennsylvania",NA,NA,4.5,48.5,65.979381443299
+"67","no","kfc","yes",NA,1,9,0.37,10,26,"reduced price meals",2,3,4,3,"February 1992",11,80,2.33,0.74,0.95,"eastonpa",485,NA,"Pennsylvania",NA,NA,4.5,8.5,11.7647058823529
+"68","no","roys","no",NA,4,25,0.37,13,13,"reduced price meals",0,2,3,2,"February 1992",8.5,100,0.95,0.91,1.05,"eastonpa",491,NA,"Pennsylvania",NA,NA,4.5,18.5,21.6216216216216
+"69","no","roys","yes",NA,2,16,0.25,12.5,13,"reduced price meals",0,3,2,1,"February 1992",9,75,0.94,1.05,1.11,"eastonpa",492,NA,"Pennsylvania",NA,NA,4.5,13,15.3846153846154
+"70","yes","wendys","yes",NA,12,15,0.15,12,13,"reduced price meals",0,3,2,2,"February 1992",10,37,0.84,0.84,0.91,"eastonpa",497,NA,"Pennsylvania",NA,NA,4.5,22.5,53.3333333333333
+"71","yes","wendys","yes",NA,20,10,0.1,12,26,"reduced price meals",2,3,2,2,"February 1992",10,75,0.85,0.84,0.91,"eastonpa",498,NA,"Pennsylvania",NA,NA,4.75,28,71.4285714285714
+"72","yes","bk","no",NA,14,15,0.37,16.5,4,"reduced price meals",0,3,3,3,"February 1992",6.5,63,0.94,0.84,0.84,"eastonpa",501,NA,"Pennsylvania",NA,NA,4.25,24.5,57.1428571428571
+"73","no","bk","no",NA,7.5,14,0.12,16.5,NA,"reduced price meals",2,4,3,3,"February 1992",6.5,100,0.91,0.84,0.97,"eastonpa",503,NA,"Pennsylvania",NA,NA,4.75,18.5,40.5405405405405
+"74","no","roys","yes",NA,7,25,0.25,16,26,"reduced price meals",0,4,3,3,"February 1992",6,60,1.05,0.91,1.05,"eastonpa",510,NA,"Pennsylvania",NA,NA,4.25,23.5,29.7872340425532
+"75","no","roys","yes",NA,4,16,0.15,16.5,9,"reduced price meals",0,3,4,4,"February 1992",6,75,1.05,0.91,1.01,"eastonpa",511,NA,"Pennsylvania",NA,NA,4.75,15,26.6666666666667
+"76","no","roys","no",NA,5,20,0.25,16,26,"reduced price meals",0,3,5,3,"February 1992",6,25,0.94,0.9,0.94,"eastonpa",514,NA,"Pennsylvania",NA,NA,4.5,18,27.7777777777778
+"77","no","roys","yes",NA,6,22.5,0.12,16,13,"both free and reduced price meals",2,3,4,3,"February 1992",6,23,1.05,0.91,1.05,"eastonpa",516,NA,"Pennsylvania",NA,NA,4.75,20.25,29.6296296296296
+"78","yes","bk","no",NA,2.5,20,NA,16.5,13,"reduced price meals",0,3,4,4,"February 1992",6.5,50,0.52,NA,NA,"phillypa",521,NA,"Pennsylvania",NA,NA,4.25,15.5,16.1290322580645
+"79","no","bk","no",NA,2,30,0.2,16,26,"both free and reduced price meals",2,4,3,3,"February 1992",7,75,0.94,0.87,1,"phillypa",522,NA,"Pennsylvania",NA,NA,4.35,21,9.52380952380952
+"80","yes","bk","no",NA,0,22,NA,16,NA,"reduced price meals",0,4,4,NA,"February 1992",7,NA,1,0.95,1.06,"centralj",113,NA,"New Jersey",NA,NA,NA,15,0
+"81","no","bk","no",NA,0,20,NA,14.5,13,"reduced price meals",0,5,2,1,"February 1992",7,28,1.01,0.95,1.06,"centralj",123,NA,"New Jersey",NA,NA,NA,15,0
+"82","no","roys","no",NA,10,20,NA,12.5,26,"none",0,4,5,3,"February 1992",9,NA,NA,NA,NA,"centralj",135,NA,"New Jersey",NA,NA,NA,24,41.6666666666667
+"83","yes","roys","yes",NA,4.5,25.5,NA,11.5,NA,"reduced price meals",0,2,6,NA,"February 1992",10,NA,1.06,1.07,1.12,"northj",138,NA,"New Jersey",NA,NA,NA,19.25,23.3766233766234
+"84","no","bk","no",NA,0,25,0.15,17,52,"free meals",0,9,4,3,"February 1992",7,33,0.89,0.95,1,"northj",153,NA,"New Jersey",NA,NA,NA,21.5,0
+"85","no","kfc","no",NA,0,13,NA,11,NA,"free meals",0,3,3,2,"February 1992",10.5,100,2.34,0.79,0.91,"northj",181,NA,"New Jersey",NA,NA,NA,9.5,0
+"86","no","wendys","no",NA,30,20,NA,12,NA,"reduced price meals",0,4,NA,1,"February 1992",10.5,NA,1.06,0.95,1.06,"northj",191,NA,"New Jersey",NA,NA,NA,44,68.1818181818182
+"87","no","bk","no",NA,NA,10,NA,16,26,"reduced price meals",1,3,2,2,"February 1992",7,NA,0.95,1.02,1.02,"northj",231,NA,"New Jersey",NA,NA,NA,NA,NA
+"88","no","bk","no",NA,0,34,NA,17,17,"free meals",3,4,4,3,"February 1992",7,95,1.06,1.02,1.18,"northj",236,NA,"New Jersey",NA,NA,NA,21,0
+"89","no","wendys","no",NA,20,10,NA,16,16,"free meals",0,3,2,2,"February 1992",7,NA,1.06,0.86,1.06,"southj",254,NA,"New Jersey",NA,NA,NA,28,71.4285714285714
+"90","yes","wendys","no",NA,0,14,0.27,14,52,"free meals",2,3,2,2,"February 1992",7,10,0.85,0.79,1.01,"southj",255,NA,"New Jersey",NA,NA,NA,10,0
+"91","no","bk","no",NA,0,35,0.2,16,26,"reduced price meals",3,3,3,3,"February 1992",7,70,0.95,0.95,1.06,"northj",294,NA,"New Jersey",NA,NA,NA,20.5,0
+"92","no","roys","yes",NA,15,15,NA,17,17,"reduced price meals",0,3,4,4,"February 1992",6,NA,1.06,NA,1.02,"northj",306,NA,"New Jersey",NA,NA,NA,25.5,58.8235294117647
+"93","yes","wendys","no",NA,0,30,0.32,11.5,26,"reduced price meals",2,4,2,2,"February 1992",10.5,78,1.06,0.91,0.91,"northj",311,NA,"New Jersey",NA,NA,NA,19,0
+"94","yes","bk","no",NA,5,19,0.25,16,4,"both free and reduced price meals",0,2,3,2,"February 1992",7,65,0.88,0.85,1,"southj",315,NA,"New Jersey",NA,NA,NA,16.5,30.3030303030303
+"95","no","bk","yes",NA,9,10,0.17,17,13,"free meals",0,3,5,2,"February 1992",6,100,0.92,0.92,1.06,"southj",335,NA,"New Jersey",NA,NA,NA,17,52.9411764705882
+"96","yes","bk","yes",NA,0,45,0.15,19,26,"both free and reduced price meals",2,5,4,NA,"February 1992",6.5,30,1.1,0.95,1.1,"northj",372,NA,"New Jersey",NA,NA,NA,27.5,0
+"97","no","roys","yes",NA,2,2,0.25,7,13,"free meals",2,2,4,2,"February 1992",11,100,2.35,1.17,1.2,"centralj",6,NA,"New Jersey",NA,NA,5,5,40
+"98","no","kfc","no",NA,10,8,0.25,11,6,"both free and reduced price meals",0,2,6,5,"February 1992",11,0,2.49,0.85,1.06,"centralj",14,NA,"New Jersey",NA,NA,5.12,16,62.5
+"99","yes","bk","no",NA,30,15,NA,16,6,"reduced price meals",3,4,4,2,"February 1992",7,NA,0.98,0.91,1.06,"northj",26,NA,"New Jersey",NA,NA,5.56,41.5,72.289156626506
+"100","no","kfc","yes",NA,4,10,0.37,10,NA,"free meals",2,4,4,3,"February 1992",11,0,2.34,0.85,1.06,"centralj",27,NA,"New Jersey",NA,NA,5,13,30.7692307692308
+"101","no","kfc","no",NA,6,4,0.37,10,13,"free meals",4,2,2,2,"February 1992",11,0,2.53,1.06,1.06,"northj",30,NA,"New Jersey",NA,NA,5,10,60
+"102","no","kfc","no",NA,4,16,0.15,11,13,"reduced price meals",2,3,4,3,"February 1992",11,0,2.56,1.06,1.03,"centralj",31,NA,"New Jersey",NA,NA,5.25,15,26.6666666666667
+"103","no","roys","no",NA,12,20,0.25,17,26,"reduced price meals",0,4,5,4,"February 1992",6,7,0.95,1.07,1.02,"northj",33,NA,"New Jersey",NA,NA,5,26,46.1538461538462
+"104","yes","wendys","no",NA,8,12,0.17,13,30,"reduced price meals",0,4,2,2,"February 1992",10.5,0,2.57,0.91,1.02,"centralj",36,NA,"New Jersey",NA,NA,5.5,18,44.4444444444444
+"105","no","roys","no",NA,6,50,0.15,19,4,"reduced price meals",0,4,6,5,"February 1992",6,100,1.17,1.07,1.18,"northj",77,NA,"New Jersey",NA,NA,5,35,17.1428571428571
+"106","no","roys","yes",NA,13,10,0.15,17,26,"reduced price meals",0,3,4,2,"February 1992",6,0,1.02,1.02,1.12,"northj",78,NA,"New Jersey",NA,NA,5,21,61.9047619047619
+"107","no","wendys","no",NA,25,13,0.1,12,26,"reduced price meals",4,3,2,2,"February 1992",10,95,1.06,0.98,1.06,"northj",81,NA,"New Jersey",NA,NA,5,34.5,72.463768115942
+"108","yes","wendys","no",NA,8,14.5,0.37,13.5,13,"reduced price meals",6,3,2,2,"February 1992",10.5,0,1.06,1.03,1.06,"northj",82,NA,"New Jersey",NA,NA,5,18.25,43.8356164383562
+"109","no","wendys","no",NA,12.5,20,0.25,13.5,13,"reduced price meals",2,2,2,2,"February 1992",10.5,11,2.13,0.98,1.06,"northj",83,NA,"New Jersey",NA,NA,5,24.5,51.0204081632653
+"110","no","bk","no",NA,7,20,0.52,12.5,26,"free meals",3,3,5,4,"February 1992",9,1,1.02,1.02,1.12,"centralj",85,NA,"New Jersey",NA,NA,5.5,20,35
+"111","no","bk","yes",NA,10,6,0.17,16,13,"reduced price meals",2,3,3,2,"February 1992",7,0,1.04,0.95,1.09,"centralj",89,NA,"New Jersey",NA,NA,5,16,62.5
+"112","no","kfc","no",NA,0,25,0.25,10,26,"both free and reduced price meals",2,5,NA,NA,"February 1992",11,0,2.56,0.8,1.06,"centralj",94,NA,"New Jersey",NA,NA,5,17.5,0
+"113","no","wendys","no",NA,12.5,10,0.27,11.5,26,"reduced price meals",2,3,2,2,"February 1992",10.5,50,0.95,0.85,0.91,"northj",103,NA,"New Jersey",NA,NA,5,20.5,60.9756097560976
+"114","no","wendys","no",NA,4,26,0.2,14,13,"reduced price meals",0,3,2,2,"February 1992",10,80,1.06,0.98,1.06,"northj",112,NA,"New Jersey",NA,NA,5,20,20
+"115","no","kfc","yes",NA,6.5,7.5,0.15,11,NA,"reduced price meals",3,2,4,2,"February 1992",11,NA,2.34,0.85,1.06,"centralj",128,NA,"New Jersey",NA,NA,5,12.25,53.0612244897959
+"116","no","roys","no",NA,20,20,0.05,16,26,"reduced price meals",3,3,6,4,"February 1992",6,0,0.74,1,1.1,"centralj",129,NA,"New Jersey",NA,NA,5.25,33,60.6060606060606
+"117","yes","roys","no",NA,15,25,0.37,17,4,"reduced price meals",2,4,5,2,"February 1992",6,10,1.06,1.06,1.06,"centralj",131,NA,"New Jersey",NA,NA,5.5,31.5,47.6190476190476
+"118","no","wendys","no",NA,NA,NA,NA,12.5,NA,"reduced price meals",0,2,2,1,"February 1992",10.5,NA,1.06,0.95,0.95,"centralj",139,NA,"New Jersey",NA,NA,5.5,NA,NA
+"119","yes","wendys","no",NA,0,30,0.25,11.5,26,"reduced price meals",3,3,2,2,"February 1992",10.5,15,1.06,0.95,0.95,"centralj",143,NA,"New Jersey",NA,NA,5.37,18,0
+"120","yes","wendys","no",NA,10,30,0.15,12.5,26,"reduced price meals",2,3,2,2,"February 1992",10.5,0,1.06,0.85,0.91,"centralj",144,NA,"New Jersey",NA,NA,5.05,28,35.7142857142857
+"121","yes","bk","no",NA,5,17,0.15,16,13,"reduced price meals",0,3,3,2,"February 1992",7,0,0.95,0.95,1.06,"northj",145,NA,"New Jersey",NA,NA,5,16.5,30.3030303030303
+"122","no","bk","no",NA,8.5,6.5,0.25,14,8,"reduced price meals",0,3,2,2,"February 1992",7,100,0.95,0.89,1.12,"northj",147,NA,"New Jersey",NA,NA,5.12,14.75,57.6271186440678
+"123","yes","bk","no",NA,4.5,30,0.17,17,26,"reduced price meals",4,4,3,2,"February 1992",7,0,0.95,0.95,1.06,"northj",148,NA,"New Jersey",NA,NA,5.25,23.5,19.1489361702128
+"124","no","bk","no",NA,1,12,0.1,15,12,"reduced price meals",0,3,3,3,"February 1992",7,92,1.04,0.81,1.09,"northj",151,NA,"New Jersey",NA,NA,5,10,10
+"125","yes","bk","no",NA,35,15,0.67,15,9,"free meals",0,4,3,2,"February 1992",7,10,1.02,0.95,1.17,"northj",152,NA,"New Jersey",NA,NA,5.12,46.5,75.2688172043011
+"126","no","kfc","no",NA,10,5,0.25,12,26,"free meals",0,3,3,3,"February 1992",10.5,0,2.34,0.85,0.91,"northj",157,NA,"New Jersey",NA,NA,5,15.5,64.5161290322581
+"127","no","roys","yes",NA,8,25,0.15,17,19,"reduced price meals",0,4,7,3,"February 1992",6,2,1.06,1.02,1.12,"northj",161,NA,"New Jersey",NA,NA,5,24.5,32.6530612244898
+"128","no","roys","yes",NA,12,18,0.15,16.5,13,"reduced price meals",0,3,3,3,"February 1992",6,11,1.06,1.07,1.2,"northj",163,NA,"New Jersey",NA,NA,5,24,50
+"129","no","roys","yes",NA,4,30,0.1,19,26,"reduced price meals",0,4,5,3,"February 1992",5,3,1.06,1.02,1.12,"northj",164,NA,"New Jersey",NA,NA,5,23,17.3913043478261
+"130","yes","wendys","no",NA,20,10,0.27,12.5,15,"reduced price meals",1,3,3,2,"February 1992",10.5,60,1.06,0.89,1.06,"northj",165,NA,"New Jersey",NA,NA,5,28,71.4285714285714
+"131","no","bk","yes",NA,12,33,0.25,16,13,"reduced price meals",0,4,3,3,"February 1992",7,50,1.04,0.94,1.1,"northj",169,NA,"New Jersey",NA,NA,5,32.5,36.9230769230769
+"132","no","bk","yes",NA,10,20,0.52,16,52,"reduced price meals",1,3,3,2,"February 1992",7,0,1.08,1.02,1.1,"northj",170,NA,"New Jersey",NA,NA,5,23,43.4782608695652
+"133","no","roys","no",NA,4,20,0.52,15,26,"reduced price meals",0,3,4,3,"February 1992",7,2,1.06,1.09,1.12,"northj",187,NA,"New Jersey",NA,NA,5.62,17,23.5294117647059
+"134","yes","roys","yes",NA,5,42,0.12,16,26,"reduced price meals",0,4,5,NA,"February 1992",6,NA,1.06,1.07,1.02,"northj",190,NA,"New Jersey",NA,NA,5,30,16.6666666666667
+"135","no","wendys","yes",NA,8,19,0.2,11.5,26,"reduced price meals",0,4,2,2,"February 1992",10.5,NA,1.06,0.85,0.95,"northj",196,NA,"New Jersey",NA,NA,5,21.5,37.2093023255814
+"136","no","bk","no",NA,23,10,0.25,17,26,"reduced price meals",0,4,3,2,"February 1992",7,50,0.89,0.89,0.99,"northj",197,NA,"New Jersey",NA,NA,5,32,71.875
+"137","no","bk","no",NA,0,10,NA,16,26,"reduced price meals",2,3,2,2,"February 1992",7,0,0.49,NA,1.12,"northj",234,NA,"New Jersey",NA,NA,5,8,0
+"138","no","roys","yes",NA,15,35,0.25,17,26,"reduced price meals",0,3,6,4,"February 1992",6,20,1.06,1.02,1.18,"northj",240,NA,"New Jersey",NA,NA,5.1,35.5,42.2535211267606
+"139","yes","roys","no",NA,15,25,0.37,16,13,"reduced price meals",2,4,5,5,"February 1992",7,30,1.06,1.02,1.12,"northj",241,NA,"New Jersey",NA,NA,5,31.5,47.6190476190476
+"140","yes","roys","yes",NA,25,10,0.25,17,13,"reduced price meals",0,3,5,4,"February 1992",6,0,1.06,1.02,1.1,"northj",242,NA,"New Jersey",NA,NA,5.25,33,75.7575757575758
+"141","no","roys","no",NA,15,8,NA,13.5,NA,"free meals",3,3,4,2,"February 1992",8.5,0,1.02,1.02,1.2,"northj",245,NA,"New Jersey",NA,NA,5.5,22,68.1818181818182
+"142","no","bk","no",NA,13,12,0.25,14.5,4,"reduced price meals",0,4,3,3,"February 1992",7.5,50,0.85,0.85,1.02,"southj",259,NA,"New Jersey",NA,NA,5,23,56.5217391304348
+"143","yes","bk","yes",NA,10,18,0.17,15,26,"reduced price meals",1,4,5,4,"February 1992",7,0,0.85,0.85,1.02,"southj",268,NA,"New Jersey",NA,NA,5,23,43.4782608695652
+"144","no","kfc","yes",NA,0,13,0.1,11,13,"reduced price meals",3,2,4,2,"February 1992",11,38,2.34,0.79,1.02,"southj",271,NA,"New Jersey",NA,NA,5,8.5,0
+"145","no","kfc","yes",NA,4,11,0.2,11,4,"free meals",4,3,4,2,"February 1992",11,0,2.34,0.74,0.95,"southj",272,NA,"New Jersey",NA,NA,5.05,12.5,32
+"146","no","kfc","yes",NA,0,15,0.12,10,26,"reduced price meals",0,2,4,3,"February 1992",11,27,2.34,0.74,0.91,"southj",274,NA,"New Jersey",NA,NA,5.5,9.5,0
+"147","no","kfc","yes",NA,5,10,0.25,10.5,26,"reduced price meals",3,3,4,3,"February 1992",11,0,2.19,0.74,0.95,"southj",276,NA,"New Jersey",NA,NA,5,13,38.4615384615385
+"148","no","bk","yes",NA,5,16,0.25,16,26,"reduced price meals",0,4,3,3,"February 1992",7,50,1.01,0.95,1.06,"northj",296,NA,"New Jersey",NA,NA,5.3,17,29.4117647058824
+"149","no","kfc","yes",NA,3,8,NA,11.5,26,"free meals",0,2,3,2,"February 1992",10.5,0,2.34,0.85,1.06,"northj",299,NA,"New Jersey",NA,NA,5,9,33.3333333333333
+"150","yes","kfc","yes",NA,8,12,0.36,10.5,11,"both free and reduced price meals",4,5,3,1,"February 1992",11,0,2.34,0.85,1.06,"northj",301,NA,"New Jersey",NA,NA,5,19,42.1052631578947
+"151","yes","kfc","no",NA,5,9,0.12,12,13,"reduced price meals",0,2,4,4,"February 1992",11,0,2.45,0.8,1.12,"southj",320,NA,"New Jersey",NA,NA,5,11.5,43.4782608695652
+"152","no","kfc","no",NA,3,14,0.25,12.5,NA,"reduced price meals",0,3,4,2,"February 1992",10.5,10,2.45,0.85,1.12,"southj",321,NA,"New Jersey",NA,NA,5,13,23.0769230769231
+"153","no","roys","no",NA,20,46,0.2,24,26,"reduced price meals",2,5,5,2,"February 1992",0,0,NA,1.06,1.18,"southj",324,NA,"New Jersey",NA,NA,5.25,48,41.6666666666667
+"154","no","roys","yes",NA,18,45,0.15,24,11,"reduced price meals",3,5,4,3,"February 1992",0,7,NA,0.99,1.26,"southj",326,NA,"New Jersey",NA,NA,5.15,45.5,39.5604395604396
+"155","yes","wendys","no",NA,4,16,0.12,15.5,13,"free meals",0,3,2,2,"February 1992",10.5,0,0.95,0.86,1.01,"southj",330,NA,"New Jersey",NA,NA,5.42,15,26.6666666666667
+"156","no","bk","no",NA,10,10,0.17,12.5,4,"both free and reduced price meals",0,3,3,3,"February 1992",9,0,0.91,0.91,0.91,"southj",334,NA,"New Jersey",NA,NA,5,18,55.5555555555556
+"157","no","roys","yes",NA,2.5,27,0.15,16,6,"reduced price meals",1,5,3,3,"February 1992",6,10,0.95,0.91,1.12,"southj",349,NA,"New Jersey",NA,NA,5,21,11.9047619047619
+"158","yes","wendys","no",NA,14,7,0.25,10.5,4,"free meals",3,3,2,2,"February 1992",10.5,10,0.95,0.86,0.95,"southj",354,NA,"New Jersey",NA,NA,5.06,20.5,68.2926829268293
+"159","yes","wendys","no",NA,11.5,10,NA,11.5,13,"free meals",3,4,2,2,"February 1992",10.5,0,1.06,0.8,0.95,"southj",356,NA,"New Jersey",NA,NA,5.05,20.5,56.0975609756098
+"160","no","wendys","no",NA,4.5,20,0.2,11.5,16,"free meals",1,3,2,2,"February 1992",10.5,100,0.95,0.86,0.95,"northj",357,NA,"New Jersey",NA,NA,5,17.5,25.7142857142857
+"161","no","bk","no",NA,12,23,0.15,16,13,"reduced price meals",0,4,3,3,"February 1992",7,100,0.95,1.02,1.06,"northj",371,NA,"New Jersey",NA,NA,5,27.5,43.6363636363636
+"162","no","bk","yes",NA,14,12,0.25,15.5,4,"reduced price meals",0,4,6,3,"February 1992",6.5,100,1.03,0.95,1.01,"northj",373,NA,"New Jersey",NA,NA,5,24,58.3333333333333
+"163","yes","bk","no",NA,25,10,0.25,15,26,"free meals",3,4,4,2,"February 1992",7,0,NA,0.8,1.02,"northj",375,NA,"New Jersey",NA,NA,5.25,34,73.5294117647059
+"164","no","bk","yes",NA,10,8,0.1,18.5,52,"reduced price meals",4,4,5,5,"February 1992",6.5,NA,1.1,0.96,1.1,"northj",378,NA,"New Jersey",NA,NA,5,18,55.5555555555556
+"165","yes","bk","no",NA,10,20,0.5,16.5,13,"reduced price meals",0,4,4,2,"February 1992",6.5,0,1.1,1.17,1.27,"northj",381,NA,"New Jersey",NA,NA,5,24,41.6666666666667
+"166","no","roys","yes",NA,13,31,0.15,18,26,"reduced price meals",2,NA,5,4,"February 1992",6,10,1.06,1.12,1.09,"northj",403,NA,"New Jersey",NA,NA,5.05,NA,NA
+"167","no","wendys","yes",NA,12,35,0.32,11.5,NA,"free meals",0,4,2,2,"February 1992",10.5,0,2.14,NA,1.02,"northj",406,NA,"New Jersey",NA,NA,5,33.5,35.8208955223881
+"168","yes","wendys","yes",NA,5,10,0.15,10.5,26,"reduced price meals",2,2,1,1,"February 1992",11,0,1.38,1.17,1.17,"northj",408,NA,"New Jersey",NA,NA,5.75,12,41.6666666666667
+"169","no","bk","no",NA,3,60,NA,15,39,"free meals",0,2,3,3,"February 1992",7,0,0.95,0.87,1.19,"northj",409,NA,"New Jersey",NA,NA,5,35,8.57142857142857
+"170","no","bk","no",NA,16,30,0.25,16,NA,"both free and reduced price meals",0,4,4,3,"February 1992",7,80,0.85,0.83,0.93,"centralj",1,NA,"New Jersey",NA,NA,4.5,35,45.7142857142857
+"171","yes","bk","no",NA,10,6,0.5,14,26,"free meals",0,3,2,2,"February 1992",7,80,0.96,0.91,1.06,"centralj",2,NA,"New Jersey",NA,NA,4.75,16,62.5
+"172","yes","kfc","no",NA,6,13,0.25,10,13,"reduced price meals",3,3,5,3,"February 1992",11,50,3.09,0.95,1.06,"centralj",3,NA,"New Jersey",NA,NA,4.25,15.5,38.7096774193548
+"173","no","roys","no",NA,10,12,0.25,12.5,4,"reduced price meals",0,3,8,4,"February 1992",9,50,2.13,1,1.06,"centralj",4,NA,"New Jersey",NA,NA,4.75,19,52.6315789473684
+"174","no","roys","no",NA,5,30,0.17,17,13,"free meals",0,4,5,4,"February 1992",6,NA,2.13,NA,0.95,"centralj",5,NA,"New Jersey",NA,NA,4.5,24,20.8333333333333
+"175","no","wendys","no",NA,NA,25,0.15,12,NA,"free meals",0,4,2,1,"February 1992",10.5,NA,2.28,0.91,1.02,"centralj",8,NA,"New Jersey",NA,NA,4.8,NA,NA
+"176","no","bk","no",NA,12,40,0.15,16,26,"reduced price meals",2,4,4,4,"February 1992",7,35,0.85,0.67,1.04,"centralj",9,NA,"New Jersey",NA,NA,4.37,36,33.3333333333333
+"177","no","bk","no",NA,15,20,0.17,16,39,"reduced price meals",0,4,3,3,"February 1992",7,80,0.85,0.85,1.04,"centralj",10,NA,"New Jersey",NA,NA,4.25,29,51.7241379310345
+"178","no","bk","no",NA,10,30,0.1,16,26,"reduced price meals",2,4,3,3,"February 1992",7,80,0.91,0.89,1.09,"centralj",11,NA,"New Jersey",NA,NA,4.25,29,34.4827586206897
+"179","no","bk","no",NA,6.5,23.5,0.1,16,9,"reduced price meals",0,3,3,3,"February 1992",7,100,0.91,0.79,1.05,"centralj",12,NA,"New Jersey",NA,NA,4.37,21.25,30.5882352941176
+"180","no","kfc","no",NA,0,25,0.25,10,7,"reduced price meals",0,3,5,4,"February 1992",11,100,2.66,0.95,1.06,"centralj",13,NA,"New Jersey",NA,NA,4.5,15.5,0
+"181","yes","roys","no",NA,3,25,0.15,17,9,"reduced price meals",3,4,5,4,"February 1992",6,95,0.95,0.98,1.02,"centralj",15,NA,"New Jersey",NA,NA,4.6,19.5,15.3846153846154
+"182","no","roys","no",NA,6,22,0.25,17,13,"reduced price meals",0,4,5,5,"February 1992",6,50,NA,1,1,"centralj",16,NA,"New Jersey",NA,NA,4.5,21,28.5714285714286
+"183","no","roys","no",NA,0,20,0.25,17,13,"reduced price meals",0,4,6,5,"February 1992",6,60,2.02,1,1.06,"centralj",17,NA,"New Jersey",NA,NA,4.37,14,0
+"184","no","roys","no",NA,15,25,NA,17,13,"reduced price meals",2,3,4,4,"February 1992",6,50,NA,NA,NA,"centralj",18,NA,"New Jersey",NA,NA,4.25,30.5,49.1803278688525
+"185","no","bk","no",NA,4,31,0.25,16,4,"reduced price meals",3,4,3,3,"February 1992",6,50,0.93,0.91,1.05,"southj",19,NA,"New Jersey",NA,NA,4.25,23.5,17.0212765957447
+"186","no","kfc","no",NA,5,12,0.1,10.5,6,"reduced price meals",0,3,3,3,"February 1992",10.5,90,2.13,0.8,1.06,"southj",21,NA,"New Jersey",NA,NA,4.45,14,35.7142857142857
+"187","no","roys","no",NA,3,15,0.12,16,26,"reduced price meals",2,4,4,1,"February 1992",7,90,0.95,0.84,1.06,"southj",22,NA,"New Jersey",NA,NA,4.35,14.5,20.6896551724138
+"188","no","bk","no",NA,0,25,0.12,16,26,"reduced price meals",2,3,3,2,"February 1992",7,75,0.95,0.95,1.06,"northj",23,NA,"New Jersey",NA,NA,4.5,15.5,0
+"189","yes","bk","no",NA,15,15,0.25,16,13,"reduced price meals",2,4,4,3,"February 1992",7,40,1.01,0.95,1.06,"centralj",24,NA,"New Jersey",NA,NA,4.75,26.5,56.6037735849057
+"190","no","kfc","no",NA,0,14,0.25,10,NA,"reduced price meals",6,1,2,1,"February 1992",11,10,2.56,1.17,1.06,"northj",28,NA,"New Jersey",NA,NA,4.5,8,0
+"191","no","kfc","no",NA,0,7,0.25,11,4,"reduced price meals",3,2,3,2,"February 1992",11,NA,2.56,1.01,1.06,"northj",29,NA,"New Jersey",NA,NA,4.5,5.5,0
+"192","no","roys","no",NA,10,20.5,0.25,11.5,26,"reduced price meals",0,3,4,3,"February 1992",10.5,40,1.06,1.02,1.12,"northj",32,NA,"New Jersey",NA,NA,4.5,23.25,43.010752688172
+"193","no","roys","yes",NA,5,15,NA,11.5,26,"reduced price meals",0,3,5,3,"February 1992",10.5,75,1.06,1.02,1.12,"northj",34,NA,"New Jersey",NA,NA,4.95,15.5,32.258064516129
+"194","yes","wendys","no",NA,25,6.5,0.25,11.5,9,"reduced price meals",2,4,2,2,"February 1992",10.5,NA,2.13,0.95,0.96,"northj",35,NA,"New Jersey",NA,NA,4.5,32.25,77.5193798449613
+"195","no","bk","no",NA,15,20,0.15,17,17,"reduced price meals",0,5,3,2,"February 1992",6,100,0.98,0.95,1.05,"centralj",38,NA,"New Jersey",NA,NA,4.25,30,50
+"196","no","bk","yes",NA,26,6,NA,18,26,"reduced price meals",1,NA,4,3,"February 1992",6,75,1.17,0.97,1.1,"northj",63,NA,"New Jersey",NA,NA,4.25,NA,NA
+"197","no","bk","no",NA,20,15,0.2,16,26,"both free and reduced price meals",1,3,3,2,"February 1992",7,60,0.95,0.95,1.06,"northj",64,NA,"New Jersey",NA,NA,4.5,30.5,65.5737704918033
+"198","no","bk","no",NA,0,20,0.25,15.5,52,"reduced price meals",5,4,3,3,"February 1992",6.5,90,1.11,0.85,1.06,"northj",65,NA,"New Jersey",NA,NA,4.8,14,0
+"199","no","bk","no",NA,15,18,0.15,17,26,"reduced price meals",0,3,3,2,"February 1992",7,20,0.95,0.95,1.06,"northj",66,NA,"New Jersey",NA,NA,4.25,27,55.5555555555556
+"200","no","bk","no",NA,5,15,0.25,13.5,13,"free meals",0,6,3,2,"February 1992",8,55,1.17,1.06,1.17,"northj",67,NA,"New Jersey",NA,NA,4.5,18.5,27.027027027027
+"201","no","bk","no",NA,30,10,0.05,17,14,"both free and reduced price meals",1,3,3,3,"February 1992",7,NA,1.02,1.02,1.07,"northj",68,NA,"New Jersey",NA,NA,4.25,38,78.9473684210526
+"202","no","bk","no",NA,0,27,0.22,18,13,"reduced price meals",0,3,4,2,"February 1992",7,100,0.95,0.95,1.17,"northj",69,NA,"New Jersey",NA,NA,4.25,16.5,0
+"203","no","bk","no",NA,35,20,0.27,16,13,"free meals",0,5,3,3,"February 1992",7,50,1.02,0.95,1.06,"northj",70,NA,"New Jersey",NA,NA,4.5,50,70
+"204","no","bk","no",NA,0,35,0.25,17,13,"both free and reduced price meals",1,3,3,2,"February 1992",7,100,0.95,0.95,1.06,"northj",71,NA,"New Jersey",NA,NA,4.75,20.5,0
+"205","no","kfc","no",NA,0,7,0.75,12,NA,"both free and reduced price meals",1,3,3,2,"February 1992",11,40,2.45,1.06,1.06,"northj",73,NA,"New Jersey",NA,NA,4.25,6.5,0
+"206","no","kfc","no",NA,3,15,0.25,11,4,"reduced price meals",0,3,3,3,"February 1992",11,0,2.77,1.27,1.17,"northj",75,NA,"New Jersey",NA,NA,4.25,13.5,22.2222222222222
+"207","no","roys","yes",NA,8,32,0.2,17,26,"reduced price meals",0,4,6,3,"February 1992",6,50,1.02,1.02,1.12,"northj",76,NA,"New Jersey",NA,NA,4.25,28,28.5714285714286
+"208","no","roys","yes",NA,6,25,0.15,17,26,"reduced price meals",4,3,5,4,"February 1992",6,30,1.06,1.02,1.17,"northj",79,NA,"New Jersey",NA,NA,4.5,21.5,27.906976744186
+"209","no","wendys","no",NA,4.5,20,0.25,11.5,26,"reduced price meals",1,NA,2,2,"February 1992",10.5,90,1.06,0.98,1.06,"northj",80,NA,"New Jersey",NA,NA,4.25,NA,NA
+"210","no","bk","no",NA,4,30,0.15,16,26,"reduced price meals",3,5,4,2,"February 1992",7,50,0.91,0.85,1.04,"centralj",84,NA,"New Jersey",NA,NA,4.5,24,16.6666666666667
+"211","no","bk","no",NA,11,11,0.25,15,13,"both free and reduced price meals",1,4,3,3,"February 1992",7,NA,1.1,0.94,1.06,"centralj",86,NA,"New Jersey",NA,NA,4.25,20.5,53.6585365853659
+"212","no","bk","no",NA,0,15,NA,15,26,"reduced price meals",0,NA,3,3,"February 1992",7,NA,1.02,0.86,1.06,"centralj",87,NA,"New Jersey",NA,NA,4.5,NA,NA
+"213","yes","bk","no",NA,3,35,NA,15,NA,"both free and reduced price meals",0,3,5,5,"February 1992",7,75,0.91,0.87,1.06,"southj",88,NA,"New Jersey",NA,NA,4.25,23.5,12.7659574468085
+"214","no","bk","yes",NA,8,22,0.15,17,8,"reduced price meals",2,4,3,3,"February 1992",7,100,1.04,0.93,1.09,"centralj",91,NA,"New Jersey",NA,NA,4.25,23,34.7826086956522
+"215","no","bk","yes",NA,4,18,0.75,15,13,"reduced price meals",0,4,3,3,"February 1992",7,100,1.03,0.95,1.09,"centralj",92,NA,"New Jersey",NA,NA,4.25,17,23.5294117647059
+"216","no","bk","yes",NA,2.5,30,0.15,16,52,"reduced price meals",0,3,NA,NA,"February 1992",7,90,0.96,NA,NA,"northj",93,NA,"New Jersey",NA,NA,4.25,20.5,12.1951219512195
+"217","no","kfc","no",NA,18,3,0.27,10,26,"free meals",1,4,4,3,"February 1992",11,40,2.56,0.8,1.06,"centralj",95,NA,"New Jersey",NA,NA,4.25,23.5,76.5957446808511
+"218","no","kfc","no",NA,0,15,0.12,10,26,"reduced price meals",2,2,3,2,"February 1992",11.5,80,2.66,1.01,1.06,"northj",96,NA,"New Jersey",NA,NA,4.25,9.5,0
+"219","yes","kfc","no",NA,0,12,0.25,10,13,"reduced price meals",2,4,3,2,"February 1992",11,58,2.56,0.75,1.02,"centralj",97,NA,"New Jersey",NA,NA,4.25,10,0
+"220","no","kfc","no",NA,0,20,0.4,10,13,"both free and reduced price meals",0,4,3,3,"February 1992",11,80,2.56,0.8,1.06,"centralj",98,NA,"New Jersey",NA,NA,4.25,14,0
+"221","no","roys","yes",NA,60,40,0.15,24,26,"reduced price meals",0,5,8,6,"February 1992",0,50,2.3,NA,1.23,"centralj",99,NA,"New Jersey",NA,NA,4.75,85,70.5882352941177
+"222","no","roys","no",NA,4.5,15,0.15,15,26,"reduced price meals",3,3,6,4,"February 1992",7,80,1.06,1.18,1.2,"centralj",101,NA,"New Jersey",NA,NA,4.75,15,30
+"223","no","roys","no",NA,12,13,0.2,16,52,"reduced price meals",2,3,6,4,"February 1992",7,15,1.07,0.91,1.06,"southj",102,NA,"New Jersey",NA,NA,4.4,21.5,55.8139534883721
+"224","yes","wendys","no",NA,40,20,0.32,11.5,4,"reduced price meals",0,3,2,2,"February 1992",10.5,50,0.94,0.84,0.95,"centralj",104,NA,"New Jersey",NA,NA,4.62,53,75.4716981132076
+"225","no","bk","no",NA,0,40,NA,16.5,10,"reduced price meals",2,4,4,2,"February 1992",6.5,50,1.03,1,0.96,"northj",105,NA,"New Jersey",NA,NA,4.25,24,0
+"226","no","bk","no",NA,0,35,0.27,16,26,"both free and reduced price meals",0,3,2,1,"February 1992",7,65,0.95,0.95,1.06,"northj",106,NA,"New Jersey",NA,NA,4.25,20.5,0
+"227","no","bk","yes",NA,6,11,0.32,14.5,8,"free meals",0,3,3,3,"February 1992",8,40,0.95,0.95,1.17,"northj",107,NA,"New Jersey",NA,NA,4.25,14.5,41.3793103448276
+"228","yes","bk","no",NA,13.5,15,0.37,17,26,"free meals",2,4,3,3,"February 1992",7,6,1.06,1.01,1.27,"northj",108,NA,"New Jersey",NA,NA,4.25,25,54
+"229","no","roys","no",NA,17,14,0.42,16,2,"both free and reduced price meals",0,3,5,5,"February 1992",7,55,1.01,1.06,1.17,"northj",111,NA,"New Jersey",NA,NA,4.25,27,62.962962962963
+"230","yes","bk","no",NA,0,35,0.57,16,26,"reduced price meals",2,5,3,NA,"February 1992",7,50,0.95,0.95,1.07,"centralj",114,NA,"New Jersey",NA,NA,4.75,22.5,0
+"231","no","bk","no",NA,20,25,0.3,17,4,"free meals",0,4,4,3,"February 1992",7,25,1.06,0.95,1.06,"centralj",115,NA,"New Jersey",NA,NA,4.75,36.5,54.7945205479452
+"232","no","bk","no",NA,4,22.5,0.37,13,18,"reduced price meals",0,2,7,3,"February 1992",8.5,90,1.11,1.02,1.49,"centralj",116,NA,"New Jersey",NA,NA,4.25,17.25,23.1884057971014
+"233","no","bk","no",NA,10,15,0.15,15,26,"reduced price meals",3,4,4,2,"February 1992",7,70,1.01,0.95,1.06,"northj",118,NA,"New Jersey",NA,NA,4.25,21.5,46.5116279069767
+"234","yes","bk","no",NA,12,19,0.27,16.5,13,"both free and reduced price meals",2,3,3,3,"February 1992",6.5,50,0.95,0.91,1.06,"northj",119,NA,"New Jersey",NA,NA,4.75,24.5,48.9795918367347
+"235","no","bk","yes",NA,0,32,NA,16,NA,"reduced price meals",3,3,3,2,"February 1992",7,NA,1.04,0.98,1.13,"centralj",120,NA,"New Jersey",NA,NA,4.5,19,0
+"236","no","bk","no",NA,1,38,0.2,12.5,4,"free meals",0,5,5,3,"February 1992",9,70,1.12,1.12,NA,"northj",122,NA,"New Jersey",NA,NA,4.25,25,4
+"237","no","bk","no",NA,8,10,0.25,15,13,"reduced price meals",1,3,2,2,"February 1992",8,14,1.04,0.91,1.06,"centralj",124,NA,"New Jersey",NA,NA,4.25,16,50
+"238","no","kfc","no",NA,15,0,0.25,12.5,26,"free meals",0,4,3,2,"February 1992",10,100,2.34,0.85,0.91,"centralj",125,NA,"New Jersey",NA,NA,4.5,19,78.9473684210526
+"239","no","roys","yes",NA,7,25.5,0.3,18,19,"reduced price meals",2,3,4,3,"February 1992",5,15,1,1.07,1.12,"centralj",130,NA,"New Jersey",NA,NA,4.5,22.75,30.7692307692308
+"240","no","roys","yes",NA,20,20,0.25,24,26,"reduced price meals",0,5,5,3,"February 1992",0,80,2.3,1.06,1.28,"centralj",132,NA,"New Jersey",NA,NA,4.5,35,57.1428571428571
+"241","no","roys","yes",NA,6,16,NA,17,26,"reduced price meals",0,2,4,3,"February 1992",6,99,1.06,1.07,1.12,"centralj",133,NA,"New Jersey",NA,NA,4.75,16,37.5
+"242","no","roys","no",NA,5.5,25,NA,16,NA,"reduced price meals",2,3,4,3,"February 1992",6,42,0.95,NA,1.09,"centralj",134,NA,"New Jersey",NA,NA,4.62,21,26.1904761904762
+"243","no","roys","yes",NA,14.5,14.5,0.27,17,21,"reduced price meals",2,5,5,4,"February 1992",6,5,1.1,1.07,1.12,"centralj",136,NA,"New Jersey",NA,NA,4.25,26.75,54.2056074766355
+"244","no","roys","yes",NA,15,25,0.15,16,26,"reduced price meals",3,3,6,4,"February 1992",6,50,1.02,1.06,1.12,"northj",137,NA,"New Jersey",NA,NA,4.25,30.5,49.1803278688525
+"245","yes","wendys","no",NA,0,40,0.37,11.5,26,"reduced price meals",0,3,2,2,"February 1992",10.5,25,1.06,0.86,0.91,"centralj",140,NA,"New Jersey",NA,NA,4.5,23,0
+"246","yes","wendys","no",NA,10,15,0.27,12.5,13,"reduced price meals",0,4,2,2,"February 1992",10.5,NA,1.06,0.91,1.02,"centralj",141,NA,"New Jersey",NA,NA,4.75,21.5,46.5116279069767
+"247","yes","wendys","no",NA,15,35,0.15,11.5,26,"reduced price meals",0,4,2,2,"February 1992",10,NA,1.06,0.95,1.06,"northj",142,NA,"New Jersey",NA,NA,4.25,36.5,41.0958904109589
+"248","yes","bk","no",NA,8,20,0.25,16,26,"reduced price meals",3,5,4,3,"February 1992",7,NA,1.06,1,1.06,"northj",146,NA,"New Jersey",NA,NA,4.8,23,34.7826086956522
+"249","no","bk","no",NA,0,20,0.27,16,26,"both free and reduced price meals",1,4,2,1,"February 1992",7,50,0.95,0.95,1.06,"northj",149,NA,"New Jersey",NA,NA,4.5,14,0
+"250","yes","bk","no",NA,0,27.5,0.27,16,26,"reduced price meals",2,3.5,3,3,"February 1992",7,2,0.89,0.89,1.23,"northj",150,NA,"New Jersey",NA,NA,4.67,17.25,0
+"251","no","bk","no",NA,8,15,0.25,15,6,"free meals",0,3,8,3,"February 1992",7,0,1.02,0.95,1.06,"northj",156,NA,"New Jersey",NA,NA,4.87,18.5,43.2432432432432
+"252","no","kfc","no",NA,2,7,0.12,10,4,"free meals",1,3,3,3,"February 1992",11,55,2.34,0.7,0.92,"northj",158,NA,"New Jersey",NA,NA,4.5,8.5,23.5294117647059
+"253","no","kfc","no",NA,6,12,0.12,10.5,4,"free meals",8,2,3,3,"February 1992",10.5,22,2.34,0.85,0.98,"northj",159,NA,"New Jersey",NA,NA,4.5,14,42.8571428571429
+"254","no","roys","yes",NA,0,40,0.17,16.5,26,"reduced price meals",2,3,NA,1,"February 1992",6,45,1.06,1.02,1.12,"northj",162,NA,"New Jersey",NA,NA,4.75,23,0
+"255","yes","wendys","no",NA,8,32,0.25,11.5,26,"reduced price meals",0,5,2,2,"February 1992",10.5,40,1.06,0.85,0.95,"northj",166,NA,"New Jersey",NA,NA,4.75,29,27.5862068965517
+"256","yes","bk","no",NA,5,20,0.25,15,4,"free meals",0,4,3,3,"February 1992",7,50,0.95,0.95,1.06,"northj",168,NA,"New Jersey",NA,NA,4.25,19,26.3157894736842
+"257","no","bk","yes",NA,2,32,0.25,16,8,"reduced price meals",0,3,3,3,"February 1992",7,NA,1.04,0.95,1.09,"northj",171,NA,"New Jersey",NA,NA,4.25,21,9.52380952380952
+"258","no","bk","no",NA,0,24,0.25,12.5,13,"free meals",0,5,5,4,"February 1992",9,0.3,1.06,1.02,1.12,"northj",172,NA,"New Jersey",NA,NA,4.75,17,0
+"259","no","bk","no",NA,6,40,0.15,17.5,26,"reduced price meals",3,10,4,3,"February 1992",6.5,50,0.98,0.95,1.06,"northj",173,NA,"New Jersey",NA,NA,4.85,36,16.6666666666667
+"260","no","bk","no",NA,11,20,0.15,16,26,"reduced price meals",2,4,4,3,"February 1992",7,50,0.98,0.88,1.18,"northj",174,NA,"New Jersey",NA,NA,4.75,25,44
+"261","no","bk","no",NA,15,21,0.12,16,13,"free meals",0,4,4,4,"February 1992",7,20,1.05,NA,1.06,"northj",176,NA,"New Jersey",NA,NA,4.62,29.5,50.8474576271186
+"262","yes","kfc","yes",NA,13,12,0.2,10,52,"free meals",0,3,3,2,"February 1992",11,96,2.34,0.85,0.91,"northj",178,NA,"New Jersey",NA,NA,4.25,22,59.0909090909091
+"263","yes","kfc","no",NA,2,12,0.25,10.5,13,"free meals",2,3,3,3,"February 1992",10.5,90,2.34,0.91,0.91,"northj",179,NA,"New Jersey",NA,NA,4.25,11,18.1818181818182
+"264","no","kfc","no",NA,8,3,0.25,11,26,"reduced price meals",0,4,4,2,"February 1992",11,30,2.66,1.01,1.06,"northj",180,NA,"New Jersey",NA,NA,4.5,13.5,59.2592592592593
+"265","yes","kfc","no",NA,3,15,0.25,11,4,"reduced price meals",0,3,4,3,"February 1992",11,100,2.66,1.01,1.06,"southj",182,NA,"New Jersey",NA,NA,4.5,13.5,22.2222222222222
+"266","no","kfc","no",NA,12,4,0.33,11,20,"both free and reduced price meals",0,4,4,3,"February 1992",11,100,2.66,1.01,1.06,"northj",183,NA,"New Jersey",NA,NA,4.62,18,66.6666666666667
+"267","no","kfc","no",NA,2,9,0.2,10.5,13,"reduced price meals",0,3,4,4,"February 1992",11,100,2.66,1.01,1.06,"centralj",185,NA,"New Jersey",NA,NA,4.5,9.5,21.0526315789474
+"268","yes","roys","no",NA,10,20,0.15,16,26,"reduced price meals",3,4,5,3,"February 1992",6,50,0.95,1.02,1.12,"northj",186,NA,"New Jersey",NA,NA,4.75,24,41.6666666666667
+"269","no","roys","no",NA,4,15,0.2,15,39,"reduced price meals",0,3,4,2,"February 1992",7,95,1.12,1.07,1.12,"northj",189,NA,"New Jersey",NA,NA,4.75,14.5,27.5862068965517
+"270","yes","wendys","no",NA,20,10,0.17,12,26,"reduced price meals",2,4,2,2,"February 1992",10,10,1.06,0.85,0.91,"northj",192,NA,"New Jersey",NA,NA,4.87,29,68.9655172413793
+"271","yes","wendys","no",NA,1,13,0.12,11,13,"reduced price meals",3,3,2,1,"February 1992",10,NA,0.99,0.85,0.95,"northj",193,NA,"New Jersey",NA,NA,4.5,10.5,9.52380952380952
+"272","yes","wendys","no",NA,0,30,NA,11.5,26,"reduced price meals",3,3,2,2,"February 1992",10.5,100,1.06,0.85,1.06,"northj",195,NA,"New Jersey",NA,NA,4.25,18,0
+"273","yes","bk","no",NA,NA,NA,0.12,16,4,"both free and reduced price meals",0,4,3,3,"February 1992",7,65,0.95,0.95,1.06,"northj",198,NA,"New Jersey",NA,NA,4.25,NA,NA
+"274","no","kfc","no",NA,0,12,0.12,10,NA,"free meals",0,3,4,3,"February 1992",11,25,2.34,0.8,0.85,"northj",199,NA,"New Jersey",NA,NA,4.35,9,0
+"275","yes","bk","no",NA,0,60,0.2,18,9,"reduced price meals",0,3,4,3,"February 1992",6,15,0.98,0.91,1.06,"northj",200,NA,"New Jersey",NA,NA,4.25,33,0
+"276","no","bk","no",NA,0,33,0.35,17,26,"reduced price meals",0,3,3,3,"February 1992",7,65,0.95,1.02,1.06,"northj",201,NA,"New Jersey",NA,NA,4.5,19.5,0
+"277","yes","bk","no",NA,30,14,0.37,19,4,"reduced price meals",2,4,3,3,"February 1992",6,15,0.63,0.95,1.17,"northj",202,NA,"New Jersey",NA,NA,4.25,41,73.1707317073171
+"278","no","bk","no",NA,9,12,0.15,17,26,"reduced price meals",2,2,3,3,"February 1992",7,50,0.95,0.95,1.06,"northj",203,NA,"New Jersey",NA,NA,4.25,17,52.9411764705882
+"279","no","bk","no",NA,10,8.5,0.27,17.5,13,"reduced price meals",0,4,3,3,"February 1992",6.5,31,1.06,1,1.06,"northj",204,NA,"New Jersey",NA,NA,4.25,18.25,54.7945205479452
+"280","no","kfc","yes",NA,8,10,0.25,12,8,"free meals",0,4,4,2,"February 1992",11,25,2.34,0.85,1.06,"northj",207,NA,"New Jersey",NA,NA,4.75,17,47.0588235294118
+"281","no","roys","yes",NA,12,32,0.15,17,26,"reduced price meals",1,4,4,4,"February 1992",6,95,0.85,0.94,1.19,"northj",208,NA,"New Jersey",NA,NA,4.62,32,37.5
+"282","no","roys","yes",NA,4,36,0.12,18,26,"reduced price meals",0,4,5,5,"February 1992",6,75,0.95,0.95,1.17,"northj",209,NA,"New Jersey",NA,NA,4.25,26,15.3846153846154
+"283","yes","wendys","yes",NA,0,19,0.17,11.5,13,"reduced price meals",3,2,4,2,"February 1992",10.5,90,0.95,0.95,1.06,"northj",210,NA,"New Jersey",NA,NA,4.5,11.5,0
+"284","no","bk","no",NA,3,28,NA,15,13,"reduced price meals",2,4,3,3,"February 1992",7,80,0.95,0.95,1.02,"southj",211,NA,"New Jersey",NA,NA,4.5,21,14.2857142857143
+"285","no","bk","no",NA,11,17.5,0.17,16,13,"free meals",0,3,3,2,"February 1992",7,95,0.84,0.88,1.06,"southj",212,NA,"New Jersey",NA,NA,4.5,22.75,48.3516483516484
+"286","no","bk","yes",NA,4.5,20,0.15,17.5,4,"reduced price meals",1,4,4,3,"February 1992",6.5,50,0.93,0.93,0.96,"southj",213,NA,"New Jersey",NA,NA,4.55,18.5,24.3243243243243
+"287","no","bk","no",NA,2,30,0.25,16,6.5,"reduced price meals",0,3,2,2,"February 1992",7,75,0.91,0.89,1.02,"southj",214,NA,"New Jersey",NA,NA,4.62,20,10
+"288","no","bk","no",NA,10,10,0.2,16,13,"reduced price meals",0,3,3,3,"February 1992",7,100,0.91,0.89,1.06,"southj",215,NA,"New Jersey",NA,NA,4.5,18,55.5555555555556
+"289","no","kfc","no",NA,2,11,0.15,10.5,13,"free meals",0,3,4,3,"February 1992",11,100,2.77,0.95,1.06,"southj",216,NA,"New Jersey",NA,NA,4.25,10.5,19.047619047619
+"290","no","kfc","yes",NA,2,13,0.17,10,13,"free meals",0,2,4,3,"February 1992",11,73,2.19,0.74,0.95,"southj",217,NA,"New Jersey",NA,NA,4.25,10.5,19.047619047619
+"291","no","kfc","yes",NA,7,4,0.25,10,26,"free meals",0,2,3,2,"February 1992",11,5,2.34,0.74,0.85,"southj",218,NA,"New Jersey",NA,NA,4.35,11,63.6363636363636
+"292","no","kfc","yes",NA,3,9,0.12,10,19,"reduced price meals",0,3,4,3,"February 1992",11,50,2.34,0.74,0.91,"southj",219,NA,"New Jersey",NA,NA,4.25,10.5,28.5714285714286
+"293","no","kfc","no",NA,3,15,0.25,10,13,"reduced price meals",4,2,5,3,"February 1992",11,50,2.77,0.95,1.06,"southj",220,NA,"New Jersey",NA,NA,4.25,12.5,24
+"294","no","kfc","no",NA,1,28,0.25,11,13,"free meals",0,3,4,3,"February 1992",11,95,2.56,0.95,1.02,"southj",221,NA,"New Jersey",NA,NA,4.6,18,5.55555555555556
+"295","no","roys","yes",NA,2,24,0.25,12.5,13,"reduced price meals",3,3,3,1,"February 1992",9,75,1.06,0.85,1.12,"southj",222,NA,"New Jersey",NA,NA,4.25,17,11.7647058823529
+"296","no","roys","yes",NA,3,18,0.25,16,13,"reduced price meals",2,3,3,2,"February 1992",6,30,NA,NA,NA,"southj",223,NA,"New Jersey",NA,NA,4.75,15,20
+"297","no","roys","yes",NA,3,27,0.2,17,13,"reduced price meals",0,3,6,3,"February 1992",6,25,0.91,0.91,1.06,"southj",225,NA,"New Jersey",NA,NA,4.75,19.5,15.3846153846154
+"298","no","wendys","no",NA,0,22,0.25,11.5,13,"free meals",0,2,2,2,"February 1992",10.5,60,0.95,0.71,0.95,"southj",226,NA,"New Jersey",NA,NA,4.25,13,0
+"299","yes","wendys","no",NA,3,28.5,0.2,12.5,13,"both free and reduced price meals",0,3,2,2,"February 1992",10.5,20,0.95,0.86,0.95,"southj",228,NA,"New Jersey",NA,NA,4.5,20.25,14.8148148148148
+"300","no","bk","no",NA,3,40,0.1,13.5,26,"reduced price meals",2,3,5,4,"February 1992",8.5,30,1.06,0.95,0.95,"northj",229,NA,"New Jersey",NA,NA,4.5,26,11.5384615384615
+"301","no","bk","no",NA,0,25,0.1,17,26,"free meals",0,3,3,2,"February 1992",7,60,0.95,0.95,1.02,"northj",230,NA,"New Jersey",NA,NA,4.25,15.5,0
+"302","yes","bk","no",NA,18,6,0.12,16,26,"both free and reduced price meals",3,3,3,3,"February 1992",7,46,0.95,0.95,1.06,"northj",232,NA,"New Jersey",NA,NA,4.75,24,75
+"303","no","bk","no",NA,19,7,0.32,16,13,"reduced price meals",0,3,2,2,"February 1992",7,10,0.95,0.95,1.17,"northj",233,NA,"New Jersey",NA,NA,4.65,25.5,74.5098039215686
+"304","no","bk","no",NA,5,17,0.21,16,26,"reduced price meals",2,1,3,2,"February 1992",7,100,1.04,0.95,1.02,"northj",235,NA,"New Jersey",NA,NA,4.25,14.5,34.4827586206897
+"305","no","bk","no",NA,12,11,0.25,16,13,"reduced price meals",2,4,2,2,"February 1992",7,50,1.01,0.95,1.11,"northj",237,NA,"New Jersey",NA,NA,4.25,21.5,55.8139534883721
+"306","no","kfc","yes",NA,0,22,0.12,12,9,"free meals",2,3,5,3,"February 1992",11,100,2.34,1.02,1.06,"northj",238,NA,"New Jersey",NA,NA,4.75,14,0
+"307","no","kfc","no",NA,15,4,0.25,13.5,13,"free meals",1,3,5,3,"February 1992",10.5,35,2.74,0.95,1.05,"northj",239,NA,"New Jersey",NA,NA,4.25,20,75
+"308","no","roys","yes",NA,7,25,0.25,16.5,8,"reduced price meals",0,3,6,3,"February 1992",6,40,0.74,1.02,1.07,"northj",243,NA,"New Jersey",NA,NA,4.5,22.5,31.1111111111111
+"309","no","roys","yes",NA,12,30,0.25,18,4,"reduced price meals",3,3,4,3,"February 1992",6,40,1.02,1.12,1.17,"northj",244,NA,"New Jersey",NA,NA,4.25,30,40
+"310","no","wendys","no",NA,0,40,0.1,15.5,13,"reduced price meals",3,4,2,2,"February 1992",10.5,75,1.06,1.05,1.06,"northj",247,NA,"New Jersey",NA,NA,4.5,24,0
+"311","no","wendys","no",NA,8,16,0.37,16,13,"reduced price meals",2,6,2,2,"February 1992",10,NA,0.85,0.95,1.17,"northj",248,NA,"New Jersey",NA,NA,4.75,22,36.3636363636364
+"312","no","bk","no",NA,6,6,0.25,15,4,"free meals",1,4,3,2,"February 1992",7,63,0.95,1.06,1.13,"southj",249,NA,"New Jersey",NA,NA,4.37,13,46.1538461538462
+"313","no","kfc","yes",NA,1,4,0.3,10,13,"free meals",2,2,4,1,"February 1992",11,100,NA,NA,0.85,"southj",250,NA,"New Jersey",NA,NA,4.5,5,20
+"314","no","roys","yes",NA,7,7,NA,13,52,"reduced price meals",0,3,2,2,"February 1992",7,NA,2.3,1.06,1.23,"southj",253,NA,"New Jersey",NA,NA,4.87,13.5,51.8518518518518
+"315","no","bk","no",NA,20,10,0.2,16,39,"reduced price meals",2,3,2,2,"February 1992",7,10,0.91,0.88,1.02,"southj",257,NA,"New Jersey",NA,NA,4.25,28,71.4285714285714
+"316","no","bk","no",NA,4,22,0.15,16,8,"reduced price meals",0,3,3,3,"February 1992",7,38,0.9,0.92,1.06,"southj",258,NA,"New Jersey",NA,NA,4.25,18,22.2222222222222
+"317","yes","bk","yes",NA,10,20,0.17,16,4,"reduced price meals",2,4,4,2,"February 1992",7,100,0.88,0.93,1.06,"southj",260,NA,"New Jersey",NA,NA,4.25,24,41.6666666666667
+"318","no","bk","no",NA,7,13,0.25,16.5,13,"reduced price meals",0,3,4,4,"February 1992",6.5,78,1.06,0.95,1.06,"southj",262,NA,"New Jersey",NA,NA,4.25,16.5,42.4242424242424
+"319","yes","bk","no",NA,0,10,0.25,15,13,"both free and reduced price meals",5,2,2,2,"February 1992",7,60,0.91,0.88,1.02,"southj",264,NA,"New Jersey",NA,NA,4.25,7,0
+"320","no","bk","no",NA,0,20,0.15,16,26,"reduced price meals",3,1,3,3,"February 1992",7,100,0.94,0.88,1.02,"southj",265,NA,"New Jersey",NA,NA,4.25,11,0
+"321","no","bk","no",NA,6.5,20,0.22,16,26,"reduced price meals",0,3,3,2,"February 1992",7,80,0.8,0.8,0.9,"southj",267,NA,"New Jersey",NA,NA,4.25,19.5,33.3333333333333
+"322","no","kfc","yes",NA,2,10,0.12,10,13,"reduced price meals",0,3,4,3,"February 1992",11,33,1.5,0.69,0.95,"southj",269,NA,"New Jersey",NA,NA,4.45,10,20
+"323","no","kfc","yes",NA,2,14,0.2,10,13,"free meals",0,4,4,3,"February 1992",11,95,2.34,0.74,0.95,"southj",273,NA,"New Jersey",NA,NA,4.62,13,15.3846153846154
+"324","no","kfc","yes",NA,4,4,0.25,11,9,"reduced price meals",0,4,4,3,"February 1992",11,38,2.34,0.79,0.95,"southj",275,NA,"New Jersey",NA,NA,4.25,10,40
+"325","no","kfc","yes",NA,2,15,0.25,10,9,"both free and reduced price meals",0,3,3,3,"February 1992",11,10,2.34,0.85,0.95,"southj",277,NA,"New Jersey",NA,NA,4.25,12.5,16
+"326","no","kfc","yes",NA,3,4,0.25,10,3,"reduced price meals",0,3,4,3,"February 1992",11,43,2.19,0.74,0.95,"southj",278,NA,"New Jersey",NA,NA,4.25,8,37.5
+"327","no","roys","yes",NA,2,14,0.13,16,13,"reduced price meals",2,3,4,3,"February 1992",6,25,0.79,0.91,1.06,"southj",282,NA,"New Jersey",NA,NA,4.25,12,16.6666666666667
+"328","yes","roys","yes",NA,5,23,0.25,16,13,"reduced price meals",1,4,5,4,"February 1992",6,88,0.91,0.91,1.02,"southj",284,NA,"New Jersey",NA,NA,4.5,20.5,24.390243902439
+"329","no","roys","yes",NA,3,25,0.25,16,4,"reduced price meals",1,3,4,2,"February 1992",6,70,0.8,0.91,1.02,"southj",285,NA,"New Jersey",NA,NA,4.75,18.5,16.2162162162162
+"330","no","roys","yes",NA,1,15,0.25,11.5,13,"reduced price meals",4,3,2,1,"February 1992",10,66,0.95,NA,1.12,"southj",286,NA,"New Jersey",NA,NA,4.75,11.5,8.69565217391304
+"331","no","roys","yes",NA,3,18,0.17,16,13,"reduced price meals",2,3,5,3,"February 1992",6,70,0.95,0.91,1.06,"southj",287,NA,"New Jersey",NA,NA,4.5,15,20
+"332","no","roys","yes",NA,0,20,0.25,16,NA,"reduced price meals",3,3,6,4,"February 1992",6,15,0.95,0.95,1.02,"southj",288,NA,"New Jersey",NA,NA,4.75,13,0
+"333","no","roys","yes",NA,2,12,0.2,16,13,"reduced price meals",2,2,5,3,"February 1992",6,50,0.95,0.95,1.02,"southj",289,NA,"New Jersey",NA,NA,4.25,10,20
+"334","no","wendys","no",NA,8,12,0.1,12.5,26,"both free and reduced price meals",1,3,2,2,"February 1992",10.5,35,0.95,0.89,0.95,"southj",290,NA,"New Jersey",NA,NA,4.75,17,47.0588235294118
+"335","no","wendys","no",NA,4,20,0.12,11.5,16,"free meals",0,3,2,2,"February 1992",10.5,25,0.95,0.86,0.95,"southj",291,NA,"New Jersey",NA,NA,4.55,17,23.5294117647059
+"336","no","wendys","no",NA,10,15,0.12,16,26,"free meals",2,3,2,1,"February 1992",7,2,0.95,0.92,0.95,"southj",292,NA,"New Jersey",NA,NA,4.8,20.5,48.780487804878
+"337","no","bk","no",NA,8,9,0.12,16.5,26,"reduced price meals",3,3,3,3,"February 1992",6.5,100,0.95,0.95,1.06,"northj",295,NA,"New Jersey",NA,NA,4.75,15.5,51.6129032258064
+"338","no","bk","yes",NA,9,15,0.05,16,13,"reduced price meals",1,3,3,3,"February 1992",7,100,0.98,0.91,1.06,"northj",297,NA,"New Jersey",NA,NA,4.25,19.5,46.1538461538462
+"339","yes","roys","yes",NA,10,35,0.27,17,26,"reduced price meals",0,3,6,5,"February 1992",6,28,1.02,1,1.12,"northj",303,NA,"New Jersey",NA,NA,4.35,30.5,32.7868852459016
+"340","no","roys","no",NA,10,20,0.37,17,26,"reduced price meals",3,3,5,3,"February 1992",6,50,2.24,1.27,1.27,"northj",304,NA,"New Jersey",NA,NA,4.5,23,43.4782608695652
+"341","no","roys","yes",NA,0,20,NA,17,NA,"reduced price meals",2,3,5,4,"February 1992",6,NA,1.06,1.27,1.27,"northj",305,NA,"New Jersey",NA,NA,4.39,13,0
+"342","no","roys","yes",NA,17.5,17.5,0.5,18,15,"reduced price meals",0,4,5,5,"February 1992",6,90,1.06,1.19,1.19,"northj",307,NA,"New Jersey",NA,NA,4.25,30.25,57.8512396694215
+"343","yes","wendys","no",NA,0,28,0.25,11.5,13,"reduced price meals",2,4,2,1,"February 1992",10.5,61,1.94,0.91,0.91,"northj",310,NA,"New Jersey",NA,NA,4.25,18,0
+"344","no","bk","no",NA,4,6,0.22,11,10,"free meals",3,3,3,1,"February 1992",8,100,0.93,1.06,1.22,"southj",312,NA,"New Jersey",NA,NA,4.25,10,40
+"345","no","bk","no",NA,11,9,0.25,15,4,"free meals",0,4,3,2,"February 1992",7,80,0.94,0.93,1.06,"southj",313,NA,"New Jersey",NA,NA,4.5,19.5,56.4102564102564
+"346","no","bk","no",NA,8,12,0.25,15,4,"free meals",8,3,3,2,"February 1992",7,80,0.91,0.95,1.06,"southj",314,NA,"New Jersey",NA,NA,4.62,17,47.0588235294118
+"347","no","bk","yes",NA,15,15,0.25,16,8,"reduced price meals",0,3,3,2,"February 1992",7,10,0.87,0.92,1.06,"southj",316,NA,"New Jersey",NA,NA,4.62,25.5,58.8235294117647
+"348","no","bk","no",NA,0,8,0.17,12,13,"free meals",3,2,3,1,"February 1992",8,100,0.96,0.93,1.22,"southj",317,NA,"New Jersey",NA,NA,4.25,6,0
+"349","yes","kfc","no",NA,5,7,0.25,12,13,"reduced price meals",3,3,3,3,"February 1992",11,36,2.61,0.98,1.23,"southj",318,NA,"New Jersey",NA,NA,4.75,11.5,43.4782608695652
+"350","yes","kfc","no",NA,0,11,0.12,12.5,2.5,"reduced price meals",2,3,NA,NA,"February 1992",10.5,NA,3.95,0.85,1.06,"southj",319,NA,"New Jersey",NA,NA,4.62,8.5,0
+"351","no","roys","yes",NA,8,13,0.15,16,13,"reduced price meals",0,4,6,2,"February 1992",6,25,1.02,1.06,1.06,"southj",322,NA,"New Jersey",NA,NA,4.75,18.5,43.2432432432432
+"352","no","roys","yes",NA,4,15,0.25,15,10,"reduced price meals",0,4,6,3,"February 1992",6,50,0.79,1.06,1.09,"southj",325,NA,"New Jersey",NA,NA,4.5,15.5,25.8064516129032
+"353","no","bk","no",NA,2,16.5,0.2,15,13,"reduced price meals",0,4,4,NA,"February 1992",7,100,0.82,0.88,1.02,"centralj",333,NA,"New Jersey",NA,NA,4.25,14.25,14.0350877192982
+"354","no","bk","no",NA,28,12,0.2,15,4,"reduced price meals",2,4,3,2,"February 1992",7,80,0.93,0.91,1.02,"southj",336,NA,"New Jersey",NA,NA,4.5,38,73.6842105263158
+"355","no","bk","yes",NA,5,29.5,0.3,17,NA,"both free and reduced price meals",0,5,4,3,"February 1992",7,90,0.93,0.93,1.06,"southj",337,NA,"New Jersey",NA,NA,4.87,24.75,20.2020202020202
+"356","no","bk","yes",NA,18,6,0.37,16,26,"both free and reduced price meals",2,2,3,3,"February 1992",7,70,0.95,0.85,1.06,"southj",339,NA,"New Jersey",NA,NA,4.25,23,78.2608695652174
+"357","no","bk","no",NA,6,30,0.1,14.5,26,"reduced price meals",3,3,5,4,"February 1992",7.5,30,0.85,0.95,0.96,"southj",340,NA,"New Jersey",NA,NA,4.25,24,25
+"358","no","kfc","yes",NA,2,7,0.25,9.5,4,"free meals",0,2,3,3,"February 1992",11,33,2.34,0.74,0.95,"southj",341,NA,"New Jersey",NA,NA,4.62,7.5,26.6666666666667
+"359","no","kfc","yes",NA,10,6,0.25,10.5,26,"reduced price meals",0,2,4,3,"February 1992",11,43,2.34,0.74,0.95,"southj",343,NA,"New Jersey",NA,NA,4.75,15,66.6666666666667
+"360","no","kfc","yes",NA,2,10.5,0.2,10,19,"reduced price meals",0,2,4,3,"February 1992",11,NA,NA,NA,0.95,"southj",346,NA,"New Jersey",NA,NA,4.25,9.25,21.6216216216216
+"361","no","roys","yes",NA,3,10.5,0.2,10.5,13,"reduced price meals",0,3,3,2,"February 1992",10.5,75,0.95,1.06,1.02,"centralj",348,NA,"New Jersey",NA,NA,4.25,11.25,26.6666666666667
+"362","no","roys","yes",NA,8,9,0.37,16,13,"reduced price meals",0,4,5,NA,"February 1992",6,60,1.12,0.91,1.06,"southj",350,NA,"New Jersey",NA,NA,4.75,16.5,48.4848484848485
+"363","no","roys","yes",NA,2,27.5,NA,16,NA,"reduced price meals",1,3,4,3,"February 1992",6,NA,0.95,0.9,1.02,"southj",351,NA,"New Jersey",NA,NA,4.25,18.75,10.6666666666667
+"364","no","roys","yes",NA,0,19,0.25,11.5,8,"reduced price meals",0,4,2,2,"February 1992",10,50,0.99,0.91,1.12,"northj",352,NA,"New Jersey",NA,NA,4.75,13.5,0
+"365","no","roys","yes",NA,7.5,22.5,0.22,16,13,"reduced price meals",0,3,5,3,"February 1992",6,90,0.95,0.85,1.07,"southj",353,NA,"New Jersey",NA,NA,4.37,21.75,34.4827586206897
+"366","yes","wendys","no",NA,2,17,0.15,11.5,26,"free meals",0,3,2,2,"February 1992",10.5,100,0.95,0.92,0.95,"centralj",355,NA,"New Jersey",NA,NA,4.87,13.5,14.8148148148148
+"367","no","bk","yes",NA,0,22,0.17,15,26,"reduced price meals",1,4,3,3,"February 1992",7,100,0.82,0.85,1.02,"southj",359,NA,"New Jersey",NA,NA,4.25,15,0
+"368","yes","bk","no",NA,3,25,0.15,15,13,"reduced price meals",0,2,3,3,"February 1992",7,100,0.89,0.84,1.06,"southj",360,NA,"New Jersey",NA,NA,4.25,17.5,17.1428571428571
+"369","no","bk","no",NA,6,13,0.22,16,26,"reduced price meals",0,5,3,3,"February 1992",7,100,0.85,0.91,1.02,"southj",361,NA,"New Jersey",NA,NA,4.25,17.5,34.2857142857143
+"370","yes","kfc","no",NA,6,13,0.66,12.5,13,"reduced price meals",0,NA,5,3,"February 1992",10.5,100,2.45,0.81,1.06,"southj",362,NA,"New Jersey",NA,NA,4.25,NA,NA
+"371","no","kfc","no",NA,0,25,0.18,12.5,18,"reduced price meals",2,3,4,3,"February 1992",10.5,75,2.45,0.8,1.06,"southj",363,NA,"New Jersey",NA,NA,4.25,15.5,0
+"372","yes","kfc","no",NA,3.5,20,0.12,12,13,"reduced price meals",3,3,4,4,"February 1992",11,NA,2.45,0.85,0.95,"southj",364,NA,"New Jersey",NA,NA,4.25,16.5,21.2121212121212
+"373","no","roys","no",NA,2,17,0.25,11.5,13,"reduced price meals",3,3,5,4,"February 1992",10.5,50,0.63,0.91,1.02,"southj",366,NA,"New Jersey",NA,NA,4.5,13.5,14.8148148148148
+"374","no","wendys","no",NA,0,20,0.15,12.5,13,"both free and reduced price meals",1,3,2,1,"February 1992",10.5,20,0.95,0.86,0.89,"southj",368,NA,"New Jersey",NA,NA,4.25,13,0
+"375","no","bk","yes",NA,0,15,0.12,15,18,"reduced price meals",1,4,3,2,"February 1992",7,87,1.17,1.06,1.17,"northj",369,NA,"New Jersey",NA,NA,4.35,11.5,0
+"376","no","bk","no",NA,20,11.5,0.25,16,18,"both free and reduced price meals",0,3.3,3,2,"February 1992",7,80,0.95,0.95,1.06,"northj",370,NA,"New Jersey",NA,NA,4.85,29.05,68.8468158347676
+"377","no","bk","no",NA,4,10,0.1,14,13,"reduced price meals",3,4,8,4,"February 1992",8,NA,0.96,0.95,0.95,"northj",376,NA,"New Jersey",NA,NA,4.5,13,30.7692307692308
+"378","yes","bk","no",NA,12,6,0.15,14,26,"reduced price meals",3,3,3,2,"February 1992",8,90,0.95,0.95,1.06,"northj",377,NA,"New Jersey",NA,NA,4.25,18,66.6666666666667
+"379","no","bk","no",NA,20,12,0.17,16,26,"both free and reduced price meals",0,4,3,2,"February 1992",7,30,0.95,1.06,1.06,"northj",379,NA,"New Jersey",NA,NA,4.62,30,66.6666666666667
+"380","no","bk","no",NA,10,15,0.2,16,52,"both free and reduced price meals",0,3,3,2,"February 1992",7,50,0.95,0.95,1.06,"northj",380,NA,"New Jersey",NA,NA,4.5,20.5,48.780487804878
+"381","no","bk","no",NA,6,4,0.25,16,26,"free meals",3,2,2,2,"February 1992",7,30,0.95,0.95,1.15,"northj",383,NA,"New Jersey",NA,NA,4.5,10,60
+"382","no","bk","no",NA,NA,NA,0.25,16,26,"reduced price meals",3,3,3,2,"February 1992",7,NA,0.95,0.95,1.06,"northj",384,NA,"New Jersey",NA,NA,4.65,NA,NA
+"383","yes","bk","no",NA,16,14,0.15,17,NA,"free meals",2,3,3,2,"February 1992",7,25,NA,NA,NA,"northj",385,NA,"New Jersey",NA,NA,4.25,26,61.5384615384615
+"384","no","bk","no",NA,0,19,0.25,17,39,"free meals",0,3,3,2,"February 1992",7,NA,0.95,0.95,1.06,"northj",386,NA,"New Jersey",NA,NA,4.25,12.5,0
+"385","no","kfc","no",NA,15,5,0.12,10,6,"reduced price meals",3,2,3,3,"February 1992",11,12,2.66,1.06,1.06,"northj",391,NA,"New Jersey",NA,NA,4.25,19.5,76.9230769230769
+"386","no","kfc","yes",NA,4,10,0.25,11,2,"reduced price meals",4,3,3,2,"February 1992",11,100,2.77,1.27,1.17,"northj",393,NA,"New Jersey",NA,NA,4.62,12,33.3333333333333
+"387","no","roys","yes",NA,24,16,0.37,17,9,"reduced price meals",1,4,5,3,"February 1992",6,10,2.13,1.07,1.27,"northj",396,NA,"New Jersey",NA,NA,4.87,36,66.6666666666667
+"388","no","roys","yes",NA,4,28,0.62,17,52,"reduced price meals",2,3,4,3,"February 1992",6,85,1.06,1.02,1.12,"northj",397,NA,"New Jersey",NA,NA,4.25,21,19.047619047619
+"389","no","roys","yes",NA,14,13,0.15,17,13,"reduced price meals",1,4,5,4,"February 1992",6,25,1.06,1.06,1.12,"northj",398,NA,"New Jersey",NA,NA,4.75,24.5,57.1428571428571
+"390","yes","roys","yes",NA,13,8,0.3,17,18,"reduced price meals",0,3,7,3,"February 1992",6,NA,1.12,1.04,1.27,"northj",399,NA,"New Jersey",NA,NA,4.87,20,65
+"391","no","roys","yes",NA,16,15,0.5,17,39,"both free and reduced price meals",0,3,5,5,"February 1992",6,50,1.06,1.06,1.2,"northj",400,NA,"New Jersey",NA,NA,4.5,26.5,60.377358490566
+"392","yes","roys","no",NA,8,6,0.17,16,13,"reduced price meals",0,4,6,4,"February 1992",7,18,1.02,1.02,1.12,"northj",401,NA,"New Jersey",NA,NA,4.25,15,53.3333333333333
+"393","no","roys","yes",NA,11,10,0.25,16,26,"reduced price meals",2,3,4,2,"February 1992",6,20,1.06,1.02,1.12,"northj",402,NA,"New Jersey",NA,NA,4.75,19,57.8947368421053
+"394","no","roys","yes",NA,6,17,0.12,17,26,"reduced price meals",3,3,7,4,"February 1992",6,57,1.06,1.02,1.12,"northj",405,NA,"New Jersey",NA,NA,4.32,17.5,34.2857142857143
+"395","no","bk","no",NA,0,35,0.1,16,26,"both free and reduced price meals",0,3,4,3,"February 1992",7,NA,1.02,1.12,1.04,"northj",410,NA,"New Jersey",NA,NA,4.25,20.5,0
+"396","no","bk","no",NA,0,36,0.1,16,26,"reduced price meals",1,3,5,4,"February 1992",7,100,1.09,1.02,1.16,"northj",411,NA,"New Jersey",NA,NA,4.5,21,0
+"397","no","kfc","no",NA,0,17,0.37,11,NA,"free meals",0,2,5,2,"February 1992",11,18,2.34,1.02,1.06,"centralj",412,NA,"New Jersey",NA,NA,4.5,10.5,0
+"398","no","bk","no",NA,0,36,0.5,17,9,"free meals",0,5,4,3,"February 1992",6,100,1.06,1.02,1.12,"northj",413,NA,"New Jersey",NA,NA,4.25,23,0
+"399","no","bk","no",NA,0,36,NA,16,26,"free meals",0,5,4,2,"February 1992",7,45,1.11,0.95,1.06,"northj",414,NA,"New Jersey",NA,NA,4.25,23,0
+"400","yes","bk","no",NA,8,32,NA,16,9,"reduced price meals",0,5,5,3,"February 1992",7,65,0.98,0.91,1.06,"northj",415,NA,"New Jersey",NA,NA,4.25,29,27.5862068965517
+"401","yes","bk","yes",NA,4,28,0.2,16,13,"reduced price meals",0,3,4,4,"February 1992",7,90,1.07,0.94,1.05,"northj",417,NA,"New Jersey",NA,NA,4.25,21,19.047619047619
+"402","yes","bk","no",NA,30,15,0.1,15,26,"reduced price meals",2,4,4,3,"February 1992",8,10,0.52,1.01,1.02,"northj",418,NA,"New Jersey",NA,NA,4.25,41.5,72.289156626506
+"403","no","kfc","yes",NA,3,10,0.5,11,NA,"reduced price meals",4,4,4,4,"February 1992",11,15,2.34,0.85,1.06,"northj",419,NA,"New Jersey",NA,NA,4.25,12,25
+"404","no","kfc","yes",NA,20,10,0.37,13,4,"reduced price meals",3,8,4,2,"February 1992",10.5,10,2.34,0.85,1.06,"northj",421,NA,"New Jersey",NA,NA,4.62,33,60.6060606060606
+"405","no","kfc","no",NA,0,7,0.25,11,NA,"reduced price meals",2,3,4,2,"February 1992",10,NA,2.34,0.85,1.06,"northj",422,NA,"New Jersey",NA,NA,4.75,6.5,0
+"406","yes","kfc","yes",NA,2,10,0.5,12,13,"free meals",3,2,3,2,"February 1992",11,33,2.34,0.85,1.06,"northj",423,NA,"New Jersey",NA,NA,4.95,9,22.2222222222222
+"407","no","kfc","yes",NA,3.5,6.5,0.25,11,13,"free meals",0,3,5,3,"February 1992",11,45,2.34,0.85,1.06,"northj",424,NA,"New Jersey",NA,NA,4.75,9.75,35.8974358974359
+"408","no","roys","yes",NA,3,33,0.15,19,26,"reduced price meals",0,5,5,3,"February 1992",5,75,1.06,1.02,1.18,"northj",426,NA,"New Jersey",NA,NA,4.25,24.5,12.2448979591837
+"409","no","wendys","no",NA,7,8,0.1,12.5,13,"reduced price meals",3,3,2,2,"February 1992",10.5,40,2.03,0.98,1.06,"northj",427,NA,"New Jersey",NA,NA,4.75,14,50
+"410","no","wendys","no",NA,0,33,0.12,12.5,13,"reduced price meals",2,3,2,2,"February 1992",10.5,100,1.06,0.98,1.06,"northj",428,NA,"New Jersey",NA,NA,4.62,19.5,0
+"411",NA,"bk","no",1992-11-17,3.5,35,0.08,16.5,26,"reduced price meals",1,3,4,4,"November 1992",6.5,NA,0.94,NA,1.03,"phillypa",46,"yes","Pennsylvania","answered 2nd interview","phone",4.3,24,14.5833333333333
+"412",NA,"kfc","no",1992-11-12,0,15,0.05,13,13,"reduced price meals",NA,4,4,4,"November 1992",10,NA,2.35,0.89,1.01,"phillypa",49,"no","Pennsylvania","answered 2nd interview","phone",4.45,11.5,0
+"413",NA,"kfc","yes",1992-11-12,3,7,0.25,11,19,"free meals",NA,4,4,3,"November 1992",11,NA,2.33,0.74,0.95,"phillypa",506,NA,"Pennsylvania","answered 2nd interview","phone",5,10.5,28.5714285714286
+"414",NA,"wendys","yes",1992-11-14,0,36,0.15,12,26,"reduced price meals",NA,2,2,2,"November 1992",10,NA,0.87,0.79,0.92,"phillypa",56,"no","Pennsylvania","answered 2nd interview","phone",5.25,20,0
+"415",NA,"wendys","yes",1992-11-14,28,3,0.15,12,13,"reduced price meals",NA,6,2,2,"November 1992",10,NA,0.95,0.84,1.01,"phillypa",61,"no","Pennsylvania","answered 2nd interview","phone",4.75,35.5,78.8732394366197
+"416",NA,"wendys","yes",1992-11-14,NA,NA,NA,12,26,"reduced price meals",NA,NA,3,3,"November 1992",10,NA,1.79,0.84,NA,"phillypa",62,"no","Pennsylvania","answered 2nd interview","phone",NA,NA,NA
+"417",NA,"bk","no",1992-11-07,15,18,0.15,18,26,"reduced price meals",NA,5,3,3,"November 1992",6,NA,0.94,0.86,1.04,"eastonpa",445,"no","Pennsylvania","answered 2nd interview","phone",4.75,29,51.7241379310345
+"418",NA,"bk","no",1992-11-17,26,9,0.2,24,26,"reduced price meals",2,6,6,3,"November 1992",0,NA,0.94,0.84,1.11,"eastonpa",451,"no","Pennsylvania","answered 2nd interview","phone",5,36.5,71.2328767123288
+"419",NA,"kfc","yes",1992-11-12,3,12,0.25,11,13,"reduced price meals",NA,2,4,3,"November 1992",11,NA,2.32,0.84,0.94,"eastonpa",455,"no","Pennsylvania","answered 2nd interview","phone",5,11,27.2727272727273
+"420",NA,"kfc","yes",1992-11-17,2,9,0.25,10.5,13,"free meals",1,2,4,3,"November 1992",11,NA,2.32,0.73,0.9,"phillypa",458,"no","Pennsylvania","answered 2nd interview","phone",5,8.5,23.5294117647059
+"421",NA,"roys","yes",1992-12-22,1,25,0.2,12,13,"reduced price meals",1,4,6,3,"November 1992",9,NA,0.89,1.01,1.01,"eastonpa",462,"no","Pennsylvania","answered 2nd interview","personal",4.75,17.5,5.71428571428571
+"422",NA,"bk","no",1992-11-07,9,32,0.13,18,26,"reduced price meals",NA,4,4,3,"November 1992",6,NA,0.86,0.84,0.97,"eastonpa",468,"yes","Pennsylvania","answered 2nd interview","phone",5,29,31.0344827586207
+"423",NA,"bk","no",1992-11-16,7,39,0.23,18,41,"reduced price meals",1,4,3,3,"November 1992",6,NA,0.87,0.81,0.92,"eastonpa",469,"no","Pennsylvania","answered 2nd interview","phone",4.5,30.5,22.9508196721311
+"424",NA,"bk","no",1992-11-17,18,10,0.15,18,13,"reduced price meals",2,3,3,2,"November 1992",6,NA,0.94,0.84,1.03,"eastonpa",470,"yes","Pennsylvania","answered 2nd interview","phone",4.75,26,69.2307692307692
+"425",NA,"bk","no",1992-12-22,5,20,0,13,NA,"reduced price meals",1,3,3,2,"November 1992",8.5,NA,0.94,0.94,1.09,"eastonpa",474,"no","Pennsylvania","answered 2nd interview","personal",4.5,18,27.7777777777778
+"426",NA,"kfc","yes",1992-11-17,15,4,0.25,11,26,"reduced price meals",2,3,3,3,"November 1992",11,NA,2.53,0.73,0.74,"eastonpa",481,"yes","Pennsylvania","answered 2nd interview","phone",5,20,75
+"427",NA,"kfc","yes",1992-11-12,4,13,0.18,11,13,"free meals",NA,3,4,3,"November 1992",11,NA,2.33,0.74,0.95,"eastonpa",483,"no","Pennsylvania","answered 2nd interview","phone",4.75,13.5,29.6296296296296
+"428",NA,"roys","yes",1992-11-11,6,20,0.1,11,26,"reduced price meals",NA,3,6,1,"November 1992",10.5,NA,0.94,1.01,1.05,"eastonpa",487,"no","Pennsylvania","answered 2nd interview","phone",4.75,19,31.5789473684211
+"429",NA,"roys","no",1992-11-11,5,15,0.13,15,26,"reduced price meals",NA,3,5,3,"November 1992",7,NA,0.94,1.01,1.01,"eastonpa",488,"no","Pennsylvania","answered 2nd interview","phone",4.75,15.5,32.258064516129
+"430",NA,"roys","no",1992-11-18,2,19,0.13,11.5,26,"reduced price meals",2,3,6,3,"November 1992",10,NA,1.05,1.01,1.01,"eastonpa",489,"no","Pennsylvania","answered 2nd interview","phone",4.25,14.5,13.7931034482759
+"431",NA,"roys","yes",1992-11-16,2,18,0.28,16,26,"reduced price meals",1,3,5,3,"November 1992",6,NA,1.05,1.01,1.01,"eastonpa",490,"no","Pennsylvania","answered 2nd interview","phone",5,14,14.2857142857143
+"432",NA,"roys","yes",1992-11-11,0,30,0.25,16,13,"reduced price meals",NA,4,3,3,"November 1992",6,NA,0.84,1.01,1.02,"phillypa",493,"no","Pennsylvania","answered 2nd interview","phone",4.9,19,0
+"433",NA,"roys","no",1992-11-11,8,20,0.25,16,26,"reduced price meals",NA,3,5,3,"November 1992",6,NA,1.01,1.01,0.96,"eastonpa",495,"yes","Pennsylvania","answered 2nd interview","phone",5,21,38.0952380952381
+"434",NA,"roys","yes",1992-11-11,10,10,0.18,16,19,"reduced price meals",NA,3,NA,NA,"November 1992",6,NA,0.89,1.01,1.01,"eastonpa",496,"no","Pennsylvania","answered 2nd interview","phone",4.75,18,55.5555555555556
+"435",NA,"wendys","yes",1992-11-14,0,31,0.1,12,26,"reduced price meals",1,5,2,2,"November 1992",10,NA,0.94,0.69,0.9,"eastonpa",499,"yes","Pennsylvania","answered 2nd interview","phone",5,20.5,0
+"436",NA,"roys","yes",1992-11-11,5.5,10,0.2,15.5,26,"reduced price meals",NA,3,3,2,"November 1992",6.5,NA,0.94,1.01,1,"eastonpa",509,"no","Pennsylvania","answered 2nd interview","phone",4.25,13.5,40.7407407407407
+"437",NA,"roys","yes",1992-11-11,5,19,0.18,16,13,"reduced price meals",NA,3,5,4,"November 1992",6,NA,0.94,1.01,1.01,"eastonpa",515,"no","Pennsylvania","answered 2nd interview","phone",4.75,17.5,28.5714285714286
+"438",NA,"bk","no",1992-11-10,6,25,0.18,16.5,52,"reduced price meals",NA,7,6,3,"November 1992",6.5,NA,0.86,0.84,0.98,"phillypa",37,"no","Pennsylvania","answered 2nd interview","phone",4.25,25.5,23.5294117647059
+"439",NA,"bk","no",1992-11-17,5,15,NA,16.5,NA,"reduced price meals",NA,3,4,2,"November 1992",6.5,NA,0.63,NA,1.05,"phillypa",39,"no","Pennsylvania","answered 2nd interview","phone",NA,15.5,32.258064516129
+"440",NA,"bk","no",1992-11-10,7,25,0.13,17.5,8,"reduced price meals",NA,6,3,2,"November 1992",6.5,NA,0.87,0.82,0.98,"phillypa",40,"no","Pennsylvania","answered 2nd interview","phone",4.25,25.5,27.4509803921569
+"441",NA,"bk","no",1992-11-18,0,42,NA,17.5,NA,"reduced price meals",2,6,3,2,"November 1992",6.5,NA,0.91,0.78,0.94,"phillypa",41,"no","Pennsylvania","answered 2nd interview","phone",4.25,27,0
+"442",NA,"bk","no",1992-11-17,0,22,0.25,16.5,26,"reduced price meals",1,5,3,2,"November 1992",6.5,NA,NA,NA,0.94,"phillypa",42,"no","Pennsylvania","answered 2nd interview","phone",4.25,16,0
+"443",NA,"bk","no",1992-11-10,11,12,0.15,17.5,26,"both free and reduced price meals",NA,2,3,3,"November 1992",6.5,NA,0.86,0.75,0.98,"phillypa",45,"no","Pennsylvania","answered 2nd interview","phone",4.25,19,57.8947368421053
+"444",NA,"bk","no",1992-11-10,0,45,NA,18,NA,"reduced price meals",NA,2,3,NA,"November 1992",6,NA,0.86,0.86,1.05,"phillypa",47,"no","Pennsylvania","answered 2nd interview","phone",4.25,24.5,0
+"445",NA,"bk","no",1992-11-10,7.5,25,0.25,14,13,"both free and reduced price meals",NA,5,4,3,"November 1992",7,NA,0.87,0.79,0.98,"phillypa",48,"yes","Pennsylvania","answered 2nd interview","phone",4.38,25,30
+"446",NA,"kfc","no",1992-11-12,4,20,0.1,13,13,"reduced price meals",NA,3,4,3,"November 1992",10,NA,2.35,0.89,1.01,"phillypa",50,"no","Pennsylvania","answered 2nd interview","phone",4.75,17,23.5294117647059
+"447",NA,"kfc","no",1992-11-17,6,15,NA,13,NA,"reduced price meals",2,3,5,3,"November 1992",10,NA,2.35,0.89,1,"phillypa",51,"no","Pennsylvania","answered 2nd interview","phone",4.25,16.5,36.3636363636364
+"448",NA,"wendys","yes",1992-11-14,7,18,0.13,12,26,"reduced price meals",1,4,2,2,"November 1992",10,NA,0.9,0.78,1.01,"phillypa",57,"yes","Pennsylvania","answered 2nd interview","phone",4.5,20,35
+"449",NA,"wendys","yes",1992-11-14,0,28,0.08,12,26,"reduced price meals",2,4,2,2,"November 1992",10,NA,0.94,0.84,1.04,"phillypa",58,"yes","Pennsylvania","answered 2nd interview","phone",4.5,18,0
+"450",NA,"wendys","no",1992-11-14,0,16,0.1,10.5,26,"free meals",1,4,2,2,"November 1992",7.5,NA,0.86,0.84,1.01,"phillypa",59,"no","Pennsylvania","answered 2nd interview","phone",4.25,12,0
+"451",NA,"wendys","no",1992-11-17,10,20,0.25,12,4,"free meals",2,5,2,2,"November 1992",10,NA,0.86,0.84,0.98,"phillypa",60,"no","Pennsylvania","answered 2nd interview","phone",4.25,25,40
+"452",NA,"kfc","yes",1992-11-14,1,14,0.3,11,4,"free meals",NA,3,4,3,"November 1992",11,NA,2.53,0.84,0.95,"eastonpa",407,"no","Pennsylvania","answered 2nd interview","phone",4.25,11,9.09090909090909
+"453",NA,"bk","no",1992-11-07,0,48,0.13,16,26,"reduced price meals",NA,3,3,3,"November 1992",7,NA,0.75,0.73,0.91,"phillypa",430,"no","Pennsylvania","answered 2nd interview","phone",4.25,27,0
+"454",NA,"bk","no",1992-11-07,25,10,0.2,16,26,"reduced price meals",1,4,3,1,"November 1992",7,NA,0.79,0.74,0.94,"phillypa",432,"no","Pennsylvania","answered 2nd interview","phone",5.05,34,73.5294117647059
+"455",NA,"bk","no",1992-12-30,0,42,NA,16,NA,"reduced price meals",6,4,3,3,"November 1992",7,NA,0.74,0.74,0.94,"phillypa",433,"no","Pennsylvania","answered 2nd interview","personal",NA,25,0
+"456",NA,"bk","no",1992-11-16,19,29,NA,16,NA,"reduced price meals",NA,4,3,3,"November 1992",7,NA,0.8,0.8,0.95,"phillypa",434,"no","Pennsylvania","answered 2nd interview","phone",4.25,37.5,50.6666666666667
+"457",NA,"bk","no",1992-11-07,0,32,0.15,15.5,6,"reduced price meals",NA,5,3,2,"November 1992",6.5,NA,0.79,0.74,0.94,"phillypa",435,"yes","Pennsylvania","answered 2nd interview","phone",4.25,21,0
+"458",NA,"kfc","no",1992-11-12,2,9,0.05,9,52,"reduced price meals",NA,3,2,1,"November 1992",11,NA,2.43,0.84,0.95,"phillypa",438,"no","Pennsylvania","answered 2nd interview","phone",4.25,9.5,21.0526315789474
+"459",NA,"wendys","no",1992-11-13,0,30,NA,11.5,NA,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,1.8,0.8,1,"phillypa",440,"no","Pennsylvania","answered 2nd interview","phone",NA,18,0
+"460",NA,"wendys","no",1992-11-13,0,30,0.25,11.5,4,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,1.81,0.8,1,"phillypa",441,"no","Pennsylvania","answered 2nd interview","phone",4.25,18,0
+"461",NA,"wendys","no",1992-11-13,5,20,0.18,11.5,17,"reduced price meals",NA,4,2,2,"November 1992",10.5,NA,1.81,0.8,1,"phillypa",443,"no","Pennsylvania","answered 2nd interview","phone",4.35,19,26.3157894736842
+"462",NA,"wendys","no",1992-11-13,10,35,0.3,11.5,4,"reduced price meals",NA,4,2,2,"November 1992",10.5,NA,0.79,NA,0.89,"phillypa",444,"no","Pennsylvania","answered 2nd interview","phone",4.5,31.5,31.7460317460317
+"463",NA,"bk","no",1992-11-07,7,24,0.25,18,4,"reduced price meals",NA,4,4,3,"November 1992",6,NA,0.91,0.84,0.97,"eastonpa",446,"yes","Pennsylvania","answered 2nd interview","phone",5,23,30.4347826086957
+"464",NA,"bk","no",1992-11-18,8,27,0.25,18,13,"reduced price meals",1,3,3,3,"November 1992",6,NA,0.87,0.83,0.96,"eastonpa",448,"no","Pennsylvania","answered 2nd interview","phone",4.5,24.5,32.6530612244898
+"465",NA,"bk","no",1992-11-07,15,15,0.25,18,52,"reduced price meals",NA,5,3,3,"November 1992",6,NA,0.73,0.84,0.97,"eastonpa",449,"no","Pennsylvania","answered 2nd interview","phone",5,27.5,54.5454545454545
+"466",NA,"bk","no",1992-11-18,27.5,8,0.25,18,13,"reduced price meals",2,3,3,3,"November 1992",6,NA,0.86,0.84,0.91,"eastonpa",450,"yes","Pennsylvania","answered 2nd interview","phone",4.75,34.5,79.7101449275362
+"467",NA,"kfc","yes",1992-11-12,0,18,0.25,11,13,"free meals",NA,5,4,3,"November 1992",11,NA,2.64,0.73,0.94,"eastonpa",454,"no","Pennsylvania","answered 2nd interview","phone",5,14,0
+"468",NA,"roys","yes",1992-12-22,0,20,0.15,15,28,"reduced price meals",1,5,4,2,"November 1992",7,NA,0.89,1.01,1.01,"eastonpa",459,"yes","Pennsylvania","answered 2nd interview","personal",4.35,15,0
+"469",NA,"wendys","no",1992-11-18,14,12,NA,11.5,52,"free meals",5,3,2,2,"November 1992",10.5,NA,NA,NA,0.94,"eastonpa",466,"no","Pennsylvania","answered 2nd interview","phone",NA,23,60.8695652173913
+"470",NA,"bk","no",1992-11-16,12,23,0.15,18,26,"reduced price meals",NA,3,3,1,"November 1992",6,NA,0.91,0.86,0.97,"eastonpa",471,"no","Pennsylvania","answered 2nd interview","phone",4.25,26.5,45.2830188679245
+"471",NA,"bk","no",1992-11-07,8,25,0.18,17,13,"reduced price meals",NA,3,3,3,"November 1992",6,NA,0.91,0.84,0.96,"eastonpa",472,"no","Pennsylvania","answered 2nd interview","phone",4.9,23.5,34.0425531914894
+"472",NA,"bk","no",1992-11-17,26,15,0.13,17,19,"reduced price meals",1,2,3,3,"November 1992",6,NA,0.86,0.84,0.97,"eastonpa",473,"no","Pennsylvania","answered 2nd interview","phone",4.5,35.5,73.2394366197183
+"473",NA,"bk","no",1992-11-07,10,16,0.15,15,26,"free meals",NA,3,3,3,"November 1992",7,NA,0.9,0.94,1.02,"eastonpa",475,"no","Pennsylvania","answered 2nd interview","phone",4.5,21,47.6190476190476
+"474",NA,"bk","no",1992-11-17,5,30,0.2,18,52,"reduced price meals",1,3,3,3,"November 1992",6,NA,1.18,0.84,0.96,"phillypa",476,"no","Pennsylvania","answered 2nd interview","phone",4.75,23,21.7391304347826
+"475",NA,"bk","no",1992-11-07,6,20,0.5,17,26,"reduced price meals",NA,4,3,3,"November 1992",6,NA,0.89,0.84,0.96,"eastonpa",477,"no","Pennsylvania","answered 2nd interview","phone",6.25,20,30
+"476",NA,"bk","no",1992-12-22,8,30,0.25,18,13,"reduced price meals",1,4,3,2,"November 1992",6,NA,0.91,0.88,1.01,"phillypa",478,"no","Pennsylvania","answered 2nd interview","personal",4.35,27,29.6296296296296
+"477",NA,"kfc","yes",1992-11-12,4,12,NA,11,19,"reduced price meals",NA,3,4,3,"November 1992",11,NA,2.32,0.73,1.01,"eastonpa",485,"no","Pennsylvania","answered 2nd interview","phone",4.5,13,30.7692307692308
+"478",NA,"roys","no",1992-12-30,0,0,NA,NA,NA,NA,3,0,NA,NA,"November 1992",NA,NA,NA,NA,NA,"eastonpa",491,NA,"Pennsylvania","closed permanently","personal",NA,0,NA
+"479",NA,"roys","yes",1992-11-11,4,15,0.1,12.5,19,"reduced price meals",NA,2,2,1,"November 1992",9,NA,1.05,1.11,1.11,"eastonpa",492,"no","Pennsylvania","answered 2nd interview","phone",4.5,13.5,29.6296296296296
+"480",NA,"wendys","yes",1992-11-13,NA,NA,NA,12,NA,"reduced price meals",NA,5,2,2,"November 1992",10,NA,0.79,0.9,1.01,"eastonpa",497,"no","Pennsylvania","answered 2nd interview","phone",NA,NA,NA
+"481",NA,"wendys","yes",1992-11-17,21,5.5,NA,12,26,"reduced price meals",2,3,2,2,"November 1992",10,NA,0.9,0.84,0.98,"eastonpa",498,"yes","Pennsylvania","answered 2nd interview","phone",5,26.75,78.5046728971963
+"482",NA,"bk","no",1992-11-17,30,15,0.35,18,4,"free meals",2,6,3,3,"November 1992",6,NA,0.91,0.91,1.03,"eastonpa",501,"yes","Pennsylvania","answered 2nd interview","phone",4.75,43.5,68.9655172413793
+"483",NA,"bk","no",1992-11-07,35,6.5,0.15,18,13,"reduced price meals",NA,3,3,3,"November 1992",6,NA,1,0.84,0.97,"eastonpa",503,"no","Pennsylvania","answered 2nd interview","phone",4.5,41.25,84.8484848484848
+"484",NA,"roys","yes",1992-11-18,2.5,17.5,NA,15,13,"reduced price meals",2,3,5,3,"November 1992",7,NA,NA,1.01,1.05,"eastonpa",510,"yes","Pennsylvania","answered 2nd interview","phone",NA,14.25,17.5438596491228
+"485",NA,"roys","yes",1992-11-11,3,13,NA,15,NA,"reduced price meals",NA,3,6,2,"November 1992",7,NA,0.89,1.01,1.01,"eastonpa",511,"no","Pennsylvania","answered 2nd interview","phone",4.75,12.5,24
+"486",NA,"roys","no",1992-11-11,23,16,0.2,16,10,"reduced price meals",1,3,6,4,"November 1992",6,NA,1.05,0.95,0.95,"eastonpa",514,"no","Pennsylvania","answered 2nd interview","phone",4.25,34,67.6470588235294
+"487",NA,"roys","yes",1992-11-16,2,12,0.18,14,14,"reduced price meals",NA,2,5,3,"November 1992",8,NA,0.89,0.95,1.01,"eastonpa",516,"yes","Pennsylvania","answered 2nd interview","phone",4.91,10,20
+"488",NA,"bk","no",1992-11-07,0,12,0.13,16,13,"reduced price meals",NA,8,4,2,"November 1992",7,NA,0.89,0.84,0.41,"phillypa",521,"yes","Pennsylvania","answered 2nd interview","phone",4.4,14,0
+"489",NA,"bk","no",1992-11-07,3,23,0.15,16,26,"both free and reduced price meals",NA,3,3,3,"November 1992",7,NA,0.95,0.74,1,"phillypa",522,"no","Pennsylvania","answered 2nd interview","phone",4.25,17.5,17.1428571428571
+"490",NA,"bk","no",1992-11-10,2,40,0.28,16,26,"reduced price meals",NA,5,3,2,"November 1992",7,NA,0.98,0.9,1.05,"centralj",113,"yes","New Jersey","answered 2nd interview","phone",5.05,27,7.40740740740741
+"491",NA,"bk","no",1992-11-10,5,25,0.15,14,26,"both free and reduced price meals",NA,4,3,2,"November 1992",7.5,NA,1,0.94,1.05,"centralj",123,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,23.2558139534884
+"492",NA,"roys","no",1992-11-16,8,24,0.25,11.5,NA,"reduced price meals",NA,3,5,3,"November 1992",10,NA,1.05,1.06,1.16,"centralj",135,"no","New Jersey","answered 2nd interview","phone",5.05,23,34.7826086956522
+"493",NA,"roys","yes",1992-11-16,2,33,0.2,11.5,26,"reduced price meals",NA,3,6,4,"November 1992",10,NA,0.94,1.01,1.21,"northj",138,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,9.30232558139535
+"494",NA,"bk","no",1992-11-10,26.5,10,0.15,17,26,"reduced price meals",NA,3,3,2,"November 1992",7,NA,0.95,0.95,1.05,"northj",153,"no","New Jersey","answered 2nd interview","phone",5.05,34.5,76.8115942028985
+"495",NA,"kfc","no",1992-11-11,1,15,0.25,11,NA,"free meals",NA,2,3,2,"November 1992",10.5,NA,2.49,0.9,0.95,"northj",181,"no","New Jersey","answered 2nd interview","phone",5.05,10.5,9.52380952380952
+"496",NA,"wendys","no",1992-11-17,0,25,0.25,12,6,"reduced price meals",1,4,2,2,"November 1992",10.5,NA,1.05,0.94,1.02,"northj",191,"yes","New Jersey","answered 2nd interview","phone",5.05,16.5,0
+"497",NA,"bk","no",1992-11-10,16,6,0.25,16,4,"free meals",NA,4,3,1,"November 1992",7,NA,0.95,0.95,0.9,"northj",231,"no","New Jersey","answered 2nd interview","phone",5.05,23,69.5652173913043
+"498",NA,"bk","no",1992-11-17,23,22,0.28,18,8,"free meals",2,4,4,3,"November 1992",7,NA,0.99,1.01,1.1,"northj",236,"yes","New Jersey","answered 2nd interview","phone",5.05,38,60.5263157894737
+"499",NA,"wendys","no",1992-11-14,28,10,0.2,15,8,"free meals",1,3,2,2,"November 1992",7,NA,1.05,0.85,1,"southj",254,"yes","New Jersey","answered 2nd interview","phone",5.25,36,77.7777777777778
+"500",NA,"wendys","no",1992-11-13,8,12,0.14,14,52,"free meals",NA,2,2,2,"November 1992",7,NA,2.11,0.85,1,"southj",255,"no","New Jersey","answered 2nd interview","phone",NA,16,50
+"501",NA,"bk","no",1992-11-09,0,35,0.2,16,26,"reduced price meals",NA,3,3,2,"November 1992",7,NA,0.94,0.94,1.05,"northj",294,"no","New Jersey","answered 2nd interview","phone",5.05,20.5,0
+"502",NA,"roys","yes",1992-11-17,6,20,0.23,18,26,"reduced price meals",1,3,NA,2,"November 1992",6,NA,1.05,1.05,1.11,"northj",306,"no","New Jersey","answered 2nd interview","phone",5.05,19,31.5789473684211
+"503",NA,"wendys","no",1992-11-13,35,30,0.2,11.5,NA,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,1.05,0.95,1.01,"northj",311,"no","New Jersey","answered 2nd interview","phone",5.05,53,66.0377358490566
+"504",NA,"bk","no",1992-11-09,4.5,20,0.08,16,8,"reduced price meals",NA,2,3,2,"November 1992",7,NA,0.87,0.84,1.05,"southj",315,"no","New Jersey","answered 2nd interview","phone",5.05,16.5,27.2727272727273
+"505",NA,"bk","yes",1992-11-18,7,13,0.13,17,26,"free meals",3,3,5,2,"November 1992",6,NA,0.94,0.94,1.05,"southj",335,"no","New Jersey","answered 2nd interview","phone",5.05,16.5,42.4242424242424
+"506",NA,"bk","yes",1992-11-17,30,20,0.08,18.5,8,"reduced price meals",1,5,4,3,"November 1992",6.5,NA,1.04,1.05,1.06,"northj",372,"no","New Jersey","answered 2nd interview","phone",5.05,45,66.6666666666667
+"507",NA,"roys","yes",1992-11-17,5,2,0.15,8,13,"free meals",1,2,4,2,"November 1992",10,NA,2.23,1.01,1.11,"centralj",6,"no","New Jersey","answered 2nd interview","phone",5.05,8,62.5
+"508",NA,"kfc","no",1992-11-05,4,17,0.25,11,13,"reduced price meals",NA,3,6,3,"November 1992",11,NA,2.6,0.94,1.05,"centralj",14,"yes","New Jersey","answered 2nd interview","phone",5.05,15.5,25.8064516129032
+"509",NA,"bk","no",1992-11-17,10,20,NA,16,NA,"reduced price meals",2,4,5,4,"November 1992",7,NA,0.94,0.94,1.01,"northj",26,"no","New Jersey","answered 2nd interview","phone",5.05,24,41.6666666666667
+"510",NA,"kfc","yes",1992-11-12,0,7,0.25,10,26,"free meals",NA,4,4,3,"November 1992",11,NA,2.53,0.84,1.05,"centralj",27,"no","New Jersey","answered 2nd interview","phone",5.05,7.5,0
+"511",NA,"kfc","no",1992-11-12,4,3,0.25,10,19,"free meals",NA,2,2,2,"November 1992",11,NA,2.69,0.92,0.94,"northj",30,"yes","New Jersey","answered 2nd interview","phone",5.05,7.5,53.3333333333333
+"512",NA,"kfc","no",1992-11-14,6,15,0.25,12.5,26,"free meals",3,5,4,4,"November 1992",10.5,NA,2.64,1.05,1,"centralj",31,"no","New Jersey","answered 2nd interview","phone",5.05,18.5,32.4324324324324
+"513",NA,"roys","no",1992-11-13,6,11,0.2,17,NA,"reduced price meals",NA,5,4,2,"November 1992",6,NA,1.05,1.06,1.11,"northj",33,"no","New Jersey","answered 2nd interview","phone",5.05,16.5,36.3636363636364
+"514",NA,"wendys","no",1992-11-14,10,35,0.15,12.5,26,"reduced price meals",NA,6,2,2,"November 1992",10.5,NA,1.19,0.89,0.95,"centralj",36,"yes","New Jersey","answered 2nd interview","phone",5.05,33.5,29.8507462686567
+"515",NA,"roys","no",1992-11-19,4,60,0.15,19,52,"reduced price meals",4,3,6,2,"November 1992",6,NA,1.05,1.06,1.06,"northj",77,"no","New Jersey","answered 2nd interview","phone",5.05,37,10.8108108108108
+"516",NA,"roys","yes",1992-11-13,10,12,0.1,16,26,"reduced price meals",NA,2,5,3,"November 1992",7,NA,1.05,1.01,1.11,"northj",78,"no","New Jersey","answered 2nd interview","phone",5.05,18,55.5555555555556
+"517",NA,"wendys","no",1992-12-15,0,45,NA,11.5,NA,"reduced price meals",3,4,2,1,"November 1992",10.5,NA,2.07,0.98,1.11,"northj",81,"yes","New Jersey","answered 2nd interview","personal",5.05,26.5,0
+"518",NA,"wendys","no",1992-11-14,25,8,0.18,13.5,13,"reduced price meals",NA,4,2,2,"November 1992",10.5,NA,1.05,0.98,1.11,"northj",82,"yes","New Jersey","answered 2nd interview","phone",5.05,33,75.7575757575758
+"519",NA,"wendys","no",1992-11-17,NA,NA,0.5,14,26,"reduced price meals",2,4,2,2,"November 1992",10,NA,0.99,0.89,1.11,"northj",83,"no","New Jersey","answered 2nd interview","phone",5.05,NA,NA
+"520",NA,"bk","no",1992-11-16,0,35,0.18,12.5,26,"free meals",NA,3,5,1,"November 1992",9,NA,1.05,1.01,1.11,"centralj",85,"no","New Jersey","answered 2nd interview","phone",5.05,20.5,0
+"521",NA,"bk","yes",1992-11-10,6,25,0.63,16,4,"reduced price meals",NA,6,3,3,"November 1992",7,NA,1.05,1.01,1.11,"centralj",89,"no","New Jersey","answered 2nd interview","phone",5.5,24.5,24.4897959183673
+"522",NA,"kfc","no",1992-11-12,2,20,0.25,10,52,"free meals",NA,4,3,NA,"November 1992",11,NA,2.53,0.79,1.05,"centralj",94,"no","New Jersey","answered 2nd interview","phone",5.05,16,12.5
+"523",NA,"wendys","no",1992-11-14,NA,NA,NA,12.5,13,"reduced price meals",2,2,2,2,"November 1992",10.5,NA,1.26,0.84,1.05,"northj",103,"no","New Jersey","answered 2nd interview","phone",5.05,NA,NA
+"524",NA,"wendys","no",1992-12-13,5,25,0.18,12.5,28,"reduced price meals",9,6,NA,NA,"November 1992",10.5,NA,2.07,1.09,1.11,"northj",112,"no","New Jersey","answered 2nd interview","personal",5.05,23.5,21.2765957446809
+"525",NA,"kfc","yes",1992-11-14,3,16,0.25,11,26,"free meals",1,2,3,2,"November 1992",11,NA,2.32,0.79,1.05,"centralj",128,"no","New Jersey","answered 2nd interview","phone",5.05,13,23.0769230769231
+"526",NA,"roys","no",1992-11-13,7,18,0.25,16,52,"reduced price meals",NA,4,4,3,"November 1992",6,NA,0.89,1,1.11,"centralj",129,"no","New Jersey","answered 2nd interview","phone",5.05,20,35
+"527",NA,"roys","no",1992-12-16,8,22,NA,15,NA,"reduced price meals",2,3,5,4,"November 1992",7,NA,1.05,1.11,1.05,"centralj",131,"no","New Jersey","answered 2nd interview","personal",5.05,22,36.3636363636364
+"528",NA,"wendys","no",1992-11-14,11,25,0.25,12,19,"reduced price meals",NA,5,NA,NA,"November 1992",11,NA,NA,NA,NA,"centralj",139,"yes","New Jersey","answered 2nd interview","phone",5.5,28.5,38.5964912280702
+"529",NA,"wendys","no",1992-12-16,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,"November 1992",NA,NA,NA,NA,NA,"centralj",143,NA,"New Jersey","closed for highway construction","personal",NA,NA,NA
+"530",NA,"wendys","no",1992-11-17,4,37,0.35,12.5,26,"reduced price meals",1,3,2,2,"November 1992",10.5,NA,1.26,0.94,0.94,"centralj",144,"yes","New Jersey","answered 2nd interview","phone",5.05,25.5,15.6862745098039
+"531",NA,"bk","no",1992-11-10,10,8,0.13,16,26,"reduced price meals",NA,4,3,2,"November 1992",7,NA,0.95,0.96,1.05,"northj",145,"yes","New Jersey","answered 2nd interview","phone",5.28,18,55.5555555555556
+"532",NA,"bk","no",1992-11-18,6,0,0.38,14,13,"reduced price meals",1,3,2,2,"November 1992",7,NA,0.91,0.91,1.13,"northj",147,"no","New Jersey","answered 2nd interview","phone",5.25,9,66.6666666666667
+"533",NA,"bk","no",1992-11-10,7.5,30,0.2,17,26,"reduced price meals",NA,4,3,3,"November 1992",7,NA,0.94,0.94,1.05,"northj",148,"yes","New Jersey","answered 2nd interview","phone",5.05,26.5,28.3018867924528
+"534",NA,"bk","no",1992-12-30,0,0,NA,NA,NA,NA,2,0,NA,NA,"November 1992",NA,NA,NA,NA,NA,"northj",151,NA,"New Jersey","closed permanently","personal",NA,0,NA
+"535",NA,"bk","no",1992-11-10,12,13.5,0.28,15,13,"reduced price meals",NA,5,3,3,"November 1992",7,NA,0.94,0.94,1.16,"northj",152,"no","New Jersey","answered 2nd interview","phone",5.05,23.75,50.5263157894737
+"536",NA,"kfc","no",1992-11-17,12,8,0.25,11,26,"free meals",2,2,2,2,"November 1992",10.5,NA,2.47,0.83,0.95,"northj",157,"no","New Jersey","answered 2nd interview","phone",5.5,18,66.6666666666667
+"537",NA,"roys","yes",1992-11-19,26,12,NA,17,NA,"reduced price meals",4,4,7,5,"November 1992",6,NA,1.05,1.06,1.11,"northj",161,"no","New Jersey","answered 2nd interview","phone",5.05,36,72.2222222222222
+"538",NA,"roys","yes",1992-11-12,1.5,33,0.15,15,26,"reduced price meals",NA,3,NA,NA,"November 1992",7,NA,NA,NA,NA,"northj",163,"no","New Jersey","answered 2nd interview","phone",5.05,21,7.14285714285714
+"539",NA,"roys","yes",1992-11-12,5,15,0.15,17,52,"reduced price meals",NA,3,5,3,"November 1992",6,NA,1.05,1.06,1.11,"northj",164,"no","New Jersey","answered 2nd interview","phone",5.05,15.5,32.258064516129
+"540",NA,"wendys","no",1992-11-17,10,17,0.13,12.5,14,"reduced price meals",1,4,2,2,"November 1992",10.5,NA,1.05,0.98,1.05,"northj",165,"no","New Jersey","answered 2nd interview","phone",5.05,22.5,44.4444444444444
+"541",NA,"bk","yes",1992-11-16,20,6,0.15,16,52,"reduced price meals",NA,4,3,3,"November 1992",7,NA,1.05,1.05,1.11,"northj",169,"no","New Jersey","answered 2nd interview","phone",5.05,27,74.0740740740741
+"542",NA,"bk","yes",1992-11-10,20,20,NA,16,4,"free meals",NA,4,4,4,"November 1992",7,NA,1.18,1.11,1.29,"northj",170,"no","New Jersey","answered 2nd interview","phone",5.05,34,58.8235294117647
+"543",NA,"roys","no",1992-11-12,5,17.5,0.2,15,13,"reduced price meals",NA,3,4,4,"November 1992",7,NA,1.05,1.06,1.11,"northj",187,"no","New Jersey","answered 2nd interview","phone",5.05,16.75,29.8507462686567
+"544",NA,"roys","yes",1992-11-12,7,30,0.18,15,26,"reduced price meals",NA,4,5,3,"November 1992",7,NA,1.74,1.01,1.05,"northj",190,"no","New Jersey","answered 2nd interview","phone",5.05,26,26.9230769230769
+"545",NA,"wendys","yes",1992-11-13,0,30,0.18,12.5,26,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,2.11,0.9,1,"northj",196,"no","New Jersey","answered 2nd interview","phone",5.05,18,0
+"546",NA,"bk","no",1992-11-17,5,21,0.13,17,26,"both free and reduced price meals",1,5,3,1,"November 1992",7,NA,0.95,0.95,1.05,"northj",197,"no","New Jersey","answered 2nd interview","phone",5.05,20.5,24.390243902439
+"547",NA,"bk","no",1992-11-18,10,4,NA,16,26,"reduced price meals",2,3,3,2,"November 1992",7,NA,0.58,1.01,1.04,"northj",234,"no","New Jersey","answered 2nd interview","phone",5.05,15,66.6666666666667
+"548",NA,"roys","yes",1992-11-16,15,15,0.15,17,26,"reduced price meals",1,3,6,4,"November 1992",6,NA,1.05,1,1.1,"northj",240,"no","New Jersey","answered 2nd interview","phone",5.05,25.5,58.8235294117647
+"549",NA,"roys","no",1992-11-11,15,NA,0.1,16,26,"reduced price meals",1,4,5,5,"November 1992",7,NA,1.05,1.05,1.15,"northj",241,"no","New Jersey","answered 2nd interview","phone",5.05,NA,NA
+"550",NA,"roys","yes",1992-11-11,12,10,0.2,16,8,"reduced price meals",NA,3,6,4,"November 1992",7,NA,1.05,1.06,1.11,"northj",242,"yes","New Jersey","answered 2nd interview","phone",5.05,20,60
+"551",NA,"roys","no",1992-11-17,8,12,NA,13,26,"free meals",3,4,5,1,"November 1992",8.5,NA,1.05,1.11,1.11,"northj",245,"no","New Jersey","answered 2nd interview","phone",5.05,18,44.4444444444444
+"552",NA,"bk","no",1992-11-09,15,15,NA,14.5,NA,"reduced price meals",NA,4,3,3,"November 1992",7.5,NA,0.84,NA,1.05,"southj",259,"no","New Jersey","answered 2nd interview","phone",5.05,26.5,56.6037735849057
+"553",NA,"bk","yes",1992-11-09,0,42.5,0.25,15,26,"reduced price meals",NA,2,4,4,"November 1992",7,NA,0.84,0.78,0.94,"southj",268,"yes","New Jersey","answered 2nd interview","phone",5.05,23.25,0
+"554",NA,"kfc","yes",1992-11-17,0,15,0.1,12,8,"reduced price meals",1,3,4,3,"November 1992",11,NA,2.28,0.73,0.9,"southj",271,"no","New Jersey","answered 2nd interview","phone",5.05,10.5,0
+"555",NA,"kfc","yes",1992-11-14,2,14,0.2,12,26,"reduced price meals",1,3,4,3,"November 1992",11,NA,2.32,0.73,0.94,"southj",272,"no","New Jersey","answered 2nd interview","phone",5.25,12,16.6666666666667
+"556",NA,"kfc","yes",1992-11-13,3,7,0.2,11,26,"free meals",NA,3,NA,NA,"November 1992",11,NA,2.32,NA,NA,"southj",274,"no","New Jersey","answered 2nd interview","phone",5.05,9.5,31.5789473684211
+"557",NA,"kfc","yes",1992-11-13,5,15,0.28,12,26,"both free and reduced price meals",NA,3,5,3,"November 1992",11,NA,2.32,0.73,0.95,"southj",276,"no","New Jersey","answered 2nd interview","phone",5.05,15.5,32.258064516129
+"558",NA,"bk","yes",1992-11-18,4,9,NA,16,13,"reduced price meals",3,6,3,2,"November 1992",7,NA,1,0.94,1.05,"northj",296,"no","New Jersey","answered 2nd interview","phone",5.05,14.5,27.5862068965517
+"559",NA,"kfc","yes",1992-11-17,6,12,0.25,11.5,13,"free meals",1,2,3,2,"November 1992",11,NA,2.32,0.84,1.05,"northj",299,"no","New Jersey","answered 2nd interview","phone",5.05,14,42.8571428571429
+"560",NA,"kfc","yes",1992-11-14,2,7,0.5,10.5,4,"reduced price meals",1,1,3,2,"November 1992",11,NA,2.32,0.84,0.94,"northj",301,"no","New Jersey","answered 2nd interview","phone",5.05,6.5,30.7692307692308
+"561",NA,"kfc","no",1992-11-13,4,6,NA,11,NA,"free meals",NA,3,4,3,"November 1992",11,NA,2.43,0.84,1.05,"southj",320,"no","New Jersey","answered 2nd interview","phone",5.05,10,40
+"562",NA,"kfc","no",1992-11-14,4,11,0.15,12,13,"free meals",2,2,4,3,"November 1992",11,NA,2.43,0.84,1.05,"southj",321,"no","New Jersey","answered 2nd interview","phone",5.05,11.5,34.7826086956522
+"563",NA,"roys","no",1992-12-18,22,39,0.25,24,52,"reduced price meals",4,5,5,2,"November 1992",0,NA,1.05,1.05,1.22,"southj",324,"yes","New Jersey","answered 2nd interview","personal",5.05,46.5,47.3118279569892
+"564",NA,"roys","yes",1992-11-18,0,45,NA,24,NA,"reduced price meals",1,4,4,2,"November 1992",0,NA,1.05,NA,1.22,"southj",326,"no","New Jersey","answered 2nd interview","phone",5.05,26.5,0
+"565",NA,"wendys","no",1992-11-13,3,20,0.25,14.5,52,"free meals",NA,3,2,2,"November 1992",10.5,NA,1.26,0.79,0.94,"southj",330,"no","New Jersey","answered 2nd interview","phone",5.67,16,18.75
+"566",NA,"bk","no",1992-11-09,0,20,0.18,12.5,26,"both free and reduced price meals",NA,3,3,2,"November 1992",9,NA,0.85,0.9,0.9,"southj",334,NA,"New Jersey","answered 2nd interview","phone",5.05,13,0
+"567",NA,"roys","yes",1992-11-11,0,20,0.18,15,4,"reduced price meals",NA,4,3,3,"November 1992",7,NA,0.94,1.01,1.01,"southj",349,"no","New Jersey","answered 2nd interview","phone",5.05,14,0
+"568",NA,"wendys","no",1992-11-13,9,7,0.23,10.5,13,"free meals",NA,3,2,2,"November 1992",10.5,NA,0.94,0.85,1,"southj",354,"no","New Jersey","answered 2nd interview","phone",5.05,15.5,58.0645161290323
+"569",NA,"wendys","no",1992-11-14,0,28,0.15,11.5,17,"free meals",NA,4,2,2,"November 1992",10.5,NA,1.05,0.85,1,"southj",356,"yes","New Jersey","answered 2nd interview","phone",5.05,18,0
+"570",NA,"wendys","no",1992-11-13,21,6,0.25,12.5,13,"free meals",NA,3,2,2,"November 1992",10.5,NA,2.35,0.84,1,"northj",357,"no","New Jersey","answered 2nd interview","phone",5.25,27,77.7777777777778
+"571",NA,"bk","no",1992-11-07,11,22,NA,16,26,"both free and reduced price meals",NA,5,4,2,"November 1992",7,NA,NA,NA,NA,"northj",371,"no","New Jersey","answered 2nd interview","phone",5.25,27,40.7407407407407
+"572",NA,"bk","yes",1992-11-07,18,15,0.25,15.5,13,"reduced price meals",NA,4,6,5,"November 1992",6.5,NA,1.02,0.94,1.1,"northj",373,"yes","New Jersey","answered 2nd interview","phone",5.05,29.5,61.0169491525424
+"573",NA,"bk","no",1992-11-16,0,25,0.1,15,26,"free meals",1,4,3,3,"November 1992",7,NA,1.01,0.94,1.05,"northj",375,"yes","New Jersey","answered 2nd interview","phone",5.5,16.5,0
+"574",NA,"bk","yes",1992-11-07,20,15,0.25,19,52,"reduced price meals",NA,4,6,4,"November 1992",6,NA,1.03,0.99,1.05,"northj",378,"yes","New Jersey","answered 2nd interview","phone",5.05,31.5,63.4920634920635
+"575",NA,"bk","no",1992-11-16,15,15,0.47,16.5,8,"reduced price meals",NA,5,4,2,"November 1992",6.5,NA,1.16,1.16,1.37,"northj",381,"yes","New Jersey","answered 2nd interview","phone",5.05,27.5,54.5454545454545
+"576",NA,"roys","yes",1992-11-18,11,23,NA,16,13,"reduced price meals",3,3,4,4,"November 1992",7,NA,1.05,1.06,1.11,"northj",403,"yes","New Jersey","answered 2nd interview","phone",5.05,25.5,43.1372549019608
+"577",NA,"wendys","yes",1992-11-13,17,22,NA,12.5,13,"free meals",NA,4,2,2,"November 1992",10.5,NA,1.99,0.94,0.84,"northj",406,NA,"New Jersey","answered 2nd interview","phone",5.5,32,53.125
+"578",NA,"wendys","yes",1992-11-13,8,7,0.15,10.5,26,"reduced price meals",NA,3,1,1,"November 1992",11,NA,2.32,1.16,1.05,"northj",408,"no","New Jersey","answered 2nd interview","phone",5.5,14.5,55.1724137931034
+"579",NA,"bk","no",1992-11-17,0,15,NA,15,NA,"free meals",2,3,3,3,"November 1992",7,NA,1.01,1.04,1.09,"northj",409,"no","New Jersey","answered 2nd interview","phone",5.05,10.5,0
+"580",NA,"bk","no",1992-11-05,20,40,NA,16,NA,"reduced price meals",NA,4,4,3,"November 1992",7,NA,0.9,0.79,1.05,"centralj",1,"no","New Jersey","answered 2nd interview","phone",5.05,44,45.4545454545455
+"581",NA,"bk","no",1992-11-05,7.5,10,0.38,15,19,"free meals",NA,3,2,2,"November 1992",7,NA,0.94,1.01,1.05,"centralj",2,"yes","New Jersey","answered 2nd interview","phone",5.25,15.5,48.3870967741936
+"582",NA,"kfc","no",1992-11-17,4,7,0.25,11,26,"free meals",2,3,5,3,"November 1992",11,NA,2.75,0.94,1.05,"centralj",3,"no","New Jersey","answered 2nd interview","phone",5.05,10.5,38.0952380952381
+"583",NA,"roys","no",1992-11-05,5,30,0.28,13.5,26,"reduced price meals",NA,4,6,4,"November 1992",8,NA,0.89,1.37,1.22,"centralj",4,"no","New Jersey","answered 2nd interview","phone",5.05,24,20.8333333333333
+"584",NA,"roys","no",1992-11-18,10,30,0.18,17,4,"reduced price meals",2,4,5,5,"November 1992",6,NA,0.94,0.94,1.05,"centralj",5,"no","New Jersey","answered 2nd interview","phone",5.15,29,34.4827586206897
+"585",NA,"wendys","no",1992-11-05,15,25,0.33,13,26,"reduced price meals",NA,3,2,2,"November 1992",10,NA,0.94,1.01,1.01,"centralj",8,"no","New Jersey","answered 2nd interview","phone",5.05,30.5,49.1803278688525
+"586",NA,"bk","no",1992-11-05,0,32,0.13,16,26,"reduced price meals",NA,4,4,3,"November 1992",7,NA,1.01,0.92,1.11,"centralj",9,"no","New Jersey","answered 2nd interview","phone",5.05,20,0
+"587",NA,"bk","no",1992-11-05,15,15,0.28,16,4,"reduced price meals",NA,4,3,2,"November 1992",7,NA,0.94,0.87,0.94,"centralj",10,"no","New Jersey","answered 2nd interview","phone",5.05,26.5,56.6037735849057
+"588",NA,"bk","no",1992-11-17,12,24,NA,16,NA,"reduced price meals",1,3,3,2,"November 1992",7,NA,0.94,0.87,1.05,"centralj",11,"no","New Jersey","answered 2nd interview","phone",5.05,27,44.4444444444444
+"589",NA,"bk","no",1992-11-18,15,15,0.25,16,26,"both free and reduced price meals",3,4,3,2,"November 1992",7,NA,0.94,0.92,1.01,"centralj",12,"no","New Jersey","answered 2nd interview","phone",5.05,26.5,56.6037735849057
+"590",NA,"kfc","no",1992-11-17,2,11,0.25,11,13,"free meals",1,3,4,3,"November 1992",11,NA,2.75,0.94,1.01,"centralj",13,"no","New Jersey","answered 2nd interview","phone",5,10.5,19.047619047619
+"591",NA,"roys","no",1992-12-10,5,20,0.25,17,NA,"reduced price meals",5,3,3,3,"November 1992",6,NA,2,1.01,1.05,"centralj",15,"no","New Jersey","answered 2nd interview","personal",5.05,18,27.7777777777778
+"592",NA,"roys","no",1992-11-05,7,17,0.25,17,19,"reduced price meals",NA,3,5,5,"November 1992",6,NA,0.94,1.01,1.05,"centralj",16,"no","New Jersey","answered 2nd interview","phone",5.05,18.5,37.8378378378378
+"593",NA,"roys","no",1992-11-16,4,35,0.2,17,13,"reduced price meals",1,4,6,5,"November 1992",6,NA,0.95,0.94,1.05,"centralj",17,"no","New Jersey","answered 2nd interview","phone",5.05,25.5,15.6862745098039
+"594",NA,"roys","no",1992-11-05,8,38,0.25,17,NA,"reduced price meals",NA,5,7,7,"November 1992",6,NA,0.63,1,1.05,"centralj",18,"yes","New Jersey","answered 2nd interview","phone",5.05,32,25
+"595",NA,"bk","no",1992-11-05,6,44,0.3,16,52,"reduced price meals",NA,5,2,2,"November 1992",6,NA,0.95,0.93,1.04,"southj",19,"no","New Jersey","answered 2nd interview","phone",5.05,33,18.1818181818182
+"596",NA,"kfc","no",1992-11-14,0,11,NA,10,NA,"reduced price meals",1,2,3,3,"November 1992",11,NA,2.43,0.94,0.94,"southj",21,"no","New Jersey","answered 2nd interview","phone",5.05,7.5,0
+"597",NA,"roys","no",1992-11-05,3,15,0.13,15,19,"reduced price meals",NA,2,4,4,"November 1992",7,NA,0.94,1.05,1.05,"southj",22,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,24
+"598",NA,"bk","no",1992-11-17,14,14,NA,16.5,NA,"free meals",1,3,3,2,"November 1992",6.5,NA,0.94,0.94,1.05,"northj",23,"no","New Jersey","answered 2nd interview","phone",5.05,24,58.3333333333333
+"599",NA,"bk","no",1992-12-21,15,20,0.15,NA,52,"reduced price meals",3,4,4,3,"November 1992",NA,NA,1,0.94,1.05,"centralj",24,"no","New Jersey","answered 2nd interview","personal",5.05,29,51.7241379310345
+"600",NA,"kfc","no",1992-11-18,6,2,NA,10,NA,"free meals",3,3,3,2,"November 1992",11,NA,2.64,1.05,NA,"northj",28,"no","New Jersey","answered 2nd interview","phone",NA,10,60
+"601",NA,"kfc","no",1992-11-12,0,13,0.25,11,26,"free meals",NA,3,3,3,"November 1992",11,NA,2.64,1.05,1.05,"northj",29,"no","New Jersey","answered 2nd interview","phone",5.05,9.5,0
+"602",NA,"roys","no",1992-11-17,2,25,0.23,11.5,26,"reduced price meals",1,3,4,4,"November 1992",10.5,NA,2.28,1.11,1.22,"northj",32,"no","New Jersey","answered 2nd interview","phone",5.05,17.5,11.4285714285714
+"603",NA,"roys","yes",1992-11-13,11,7,0.5,11.5,26,"reduced price meals",NA,3,5,2,"November 1992",10.5,NA,0.73,1.11,1.22,"northj",34,"no","New Jersey","answered 2nd interview","phone",5.05,17.5,62.8571428571429
+"604",NA,"wendys","no",1992-11-19,13,18,0.25,11.5,13,"reduced price meals",6,3,2,2,"November 1992",10.5,NA,NA,NA,1.03,"northj",35,"no","New Jersey","answered 2nd interview","phone",5.05,25,52
+"605",NA,"bk","no",1992-11-10,10,20,0.25,17.5,NA,"both free and reduced price meals",NA,6,3,2,"November 1992",6.5,NA,0.76,0.82,0.98,"centralj",38,"no","New Jersey","answered 2nd interview","phone",5.05,26,38.4615384615385
+"606",NA,"bk","yes",1992-11-17,15,10,0.1,18,26,"reduced price meals",1,4,4,3,"November 1992",7,NA,1.09,1.01,1.11,"northj",63,"no","New Jersey","answered 2nd interview","phone",5.05,24,62.5
+"607",NA,"bk","no",1992-11-10,13,13,0.25,16,26,"reduced price meals",NA,3,3,3,"November 1992",7,NA,0.95,0.95,1.05,"northj",64,"no","New Jersey","answered 2nd interview","phone",5.05,22.5,57.7777777777778
+"608",NA,"bk","no",1992-12-15,NA,NA,NA,NA,NA,NA,3,3,NA,NA,"November 1992",NA,NA,NA,NA,NA,"northj",65,NA,"New Jersey","closed for renovations","personal",5.05,NA,NA
+"609",NA,"bk","no",1992-11-10,26,10,0.25,17,26,"free meals",NA,4,3,3,"November 1992",7,NA,0.95,0.95,1.05,"northj",66,"yes","New Jersey","answered 2nd interview","phone",5.05,35,74.2857142857143
+"610",NA,"bk","no",1992-11-10,4,17.5,NA,13.5,NA,"free meals",NA,5,3,3,"November 1992",8,NA,1.22,1.05,1.32,"northj",67,"no","New Jersey","answered 2nd interview","phone",5.05,17.75,22.5352112676056
+"611",NA,"bk","no",1992-11-10,13,17,0.28,17,13,"both free and reduced price meals",NA,3,3,1,"November 1992",7,NA,0.95,0.95,1.05,"northj",68,"no","New Jersey","answered 2nd interview","phone",5.05,24.5,53.0612244897959
+"612",NA,"bk","no",1992-11-17,0,27,0.2,18,13,"reduced price meals",NA,3,4,2,"November 1992",7,NA,1,1.01,1.26,"northj",69,"no","New Jersey","answered 2nd interview","phone",5.05,16.5,0
+"613",NA,"bk","no",1992-11-10,10,30,0.23,16,4,"free meals",NA,5,3,3,"November 1992",7,NA,1.01,0.95,1.05,"northj",70,NA,"New Jersey","answered 2nd interview","phone",5.05,30,33.3333333333333
+"614",NA,"bk","no",1992-11-16,29,14,0.18,17,26,"both free and reduced price meals",NA,3,3,2,"November 1992",7,NA,0.95,0.95,1.05,"northj",71,"yes","New Jersey","answered 2nd interview","phone",5.05,39,74.3589743589744
+"615",NA,"kfc","no",1992-11-17,14,0,0.05,11,4,"reduced price meals",2,3,3,NA,"November 1992",11,NA,2.43,1.05,1.05,"northj",73,"no","New Jersey","answered 2nd interview","phone",5.05,17,82.3529411764706
+"616",NA,"kfc","no",1992-11-12,4,11,0.25,11,6,"reduced price meals",NA,3,3,3,"November 1992",11,NA,2.75,1.16,1.16,"northj",75,"yes","New Jersey","answered 2nd interview","phone",5.05,12.5,32
+"617",NA,"roys","yes",1992-11-13,25,15,0.15,16.5,13,"reduced price meals",NA,6,6,3,"November 1992",6.5,NA,1.05,1.06,1.11,"northj",76,"yes","New Jersey","answered 2nd interview","phone",5.05,38.5,64.9350649350649
+"618",NA,"roys","yes",1992-11-13,8,18,0.13,16,41,"reduced price meals",NA,3,5,4,"November 1992",7,NA,1.05,1.06,1.11,"northj",79,"no","New Jersey","answered 2nd interview","phone",5.05,20,40
+"619",NA,"wendys","no",1992-11-14,11,14,0.1,12.5,13,"reduced price meals",2,3,2,1,"November 1992",10.5,NA,0.99,0.98,1.12,"northj",80,"no","New Jersey","answered 2nd interview","phone",5.05,21,52.3809523809524
+"620",NA,"bk","no",1992-11-16,12,30,0.2,16,52,"reduced price meals",NA,5,3,3,"November 1992",7,NA,0.94,0.9,1.05,"centralj",84,"no","New Jersey","answered 2nd interview","phone",5.05,32,37.5
+"621",NA,"bk","no",1992-11-10,9,12,0.13,15,4,"both free and reduced price meals",NA,4,3,3,"November 1992",7,NA,1.04,1.05,1.05,"centralj",86,"no","New Jersey","answered 2nd interview","phone",5.05,19,47.3684210526316
+"622",NA,"bk","no",1992-11-10,0,30,0.18,15,41,"both free and reduced price meals",NA,5,3,3,"November 1992",7,NA,1.04,0.99,1,"centralj",87,"no","New Jersey","answered 2nd interview","phone",5.05,20,0
+"623",NA,"bk","no",1992-12-18,4,37,0.18,15,42,"reduced price meals",2,4,5,2,"November 1992",7,NA,0.94,0.87,1.05,"southj",88,"no","New Jersey","answered 2nd interview","personal",5.05,26.5,15.0943396226415
+"624",NA,"bk","yes",1992-11-17,0,30,0.18,17,26,"free meals",1,4,3,3,"November 1992",7,NA,1.05,1.05,1.11,"centralj",91,"no","New Jersey","answered 2nd interview","phone",5.05,19,0
+"625",NA,"bk","yes",1992-11-10,14,6,0.25,15,NA,"reduced price meals",NA,3,3,3,"November 1992",7,NA,1.05,1.01,1.11,"centralj",92,"no","New Jersey","answered 2nd interview","phone",5.05,20,70
+"626",NA,"bk","yes",1992-11-10,5,25,0.15,16,13,"reduced price meals",NA,5,4,3,"November 1992",7,NA,1.05,1.05,1.11,"northj",93,"no","New Jersey","answered 2nd interview","phone",5.05,22.5,22.2222222222222
+"627",NA,"kfc","no",1992-11-12,0,14,0.25,10,13,"free meals",NA,3,3,3,"November 1992",11,NA,2.53,0.75,1.05,"centralj",95,"no","New Jersey","answered 2nd interview","phone",5.05,10,0
+"628",NA,"kfc","no",1992-11-18,0,15,0.15,10.5,26,"reduced price meals",3,5,4,0,"November 1992",11.5,NA,2.59,0.94,1.05,"northj",96,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,0
+"629",NA,"kfc","no",1992-11-12,2.5,11,0.3,10,13,"reduced price meals",NA,3,3,2,"November 1992",11,NA,2.54,0.8,1.05,"centralj",97,"no","New Jersey","answered 2nd interview","phone",5.05,11,22.7272727272727
+"630",NA,"kfc","no",1992-11-12,3,13,0.45,10,13,"free meals",NA,3,3,3,"November 1992",11,NA,2.53,0.9,1.05,"centralj",98,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,24
+"631",NA,"roys","yes",1992-12-18,30,50,0.25,24,15,"reduced price meals",6,4,5,2,"November 1992",0,NA,2.32,1.17,1.22,"centralj",99,"yes","New Jersey","answered 2nd interview","personal",5.05,59,50.8474576271186
+"632",NA,"roys","no",1992-11-13,10,12,0.15,15,26,"reduced price meals",NA,3,8,3,"November 1992",7,NA,1.05,1.1,1.15,"centralj",101,"no","New Jersey","answered 2nd interview","phone",5.05,19,52.6315789473684
+"633",NA,"roys","no",1992-11-13,0,27,0.25,15,52,"reduced price meals",NA,2,5,5,"November 1992",7,NA,1.05,1.01,1.07,"southj",102,"no","New Jersey","answered 2nd interview","phone",5.05,15.5,0
+"634",NA,"wendys","no",1992-11-14,11,10,0.08,12.5,26,"reduced price meals",1,3,2,2,"November 1992",10.5,NA,0.94,0.84,1,"centralj",104,"yes","New Jersey","answered 2nd interview","phone",5.05,19,57.8947368421053
+"635",NA,"bk","no",1992-11-10,0,45,0.25,16.5,13,"reduced price meals",NA,4,4,3,"November 1992",6.5,NA,1.16,0.99,1.05,"northj",105,"no","New Jersey","answered 2nd interview","phone",5.05,26.5,0
+"636",NA,"bk","no",1992-11-10,2,25,0.2,16,26,"none",NA,3,2,2,"November 1992",7,NA,0.95,0.95,1.05,"northj",106,"no","New Jersey","answered 2nd interview","phone",5.05,17.5,11.4285714285714
+"637",NA,"bk","yes",1992-12-30,13.5,10,NA,14,NA,"free meals",9,2,4,2,"November 1992",8,NA,1,1.01,NA,"northj",107,"no","New Jersey","answered 2nd interview","personal",5.05,20.5,65.8536585365854
+"638",NA,"bk","no",1992-11-16,11,24,0.15,17,26,"free meals",NA,5,3,3,"November 1992",7,NA,1.05,1.02,1.37,"northj",108,"no","New Jersey","answered 2nd interview","phone",5.05,28,39.2857142857143
+"639",NA,"roys","no",1992-11-18,20,14.5,NA,16,26,"reduced price meals",1,3,5,4,"November 1992",7,NA,1,1.16,1.16,"northj",111,"no","New Jersey","answered 2nd interview","phone",5.05,30.25,66.1157024793389
+"640",NA,"bk","no",1992-11-17,20,40,0.25,16.5,26,"reduced price meals",1,4,3,3,"November 1992",6.5,NA,0.94,0.94,1.11,"centralj",114,"no","New Jersey","answered 2nd interview","phone",5.25,44,45.4545454545455
+"641",NA,"bk","no",1992-11-10,6,15,NA,17,NA,"free meals",NA,4,4,4,"November 1992",7,NA,1.01,0.95,1.05,"centralj",115,NA,"New Jersey","answered 2nd interview","phone",5.05,17.5,34.2857142857143
+"642",NA,"bk","no",1992-11-10,22,12,0.45,13,13,"reduced price meals",NA,3,8,2,"November 1992",8.5,NA,1.21,0.95,1.39,"centralj",116,"yes","New Jersey","answered 2nd interview","phone",5.05,31,70.9677419354839
+"643",NA,"bk","no",1992-11-16,18,20,0.38,15,26,"reduced price meals",NA,3,4,2,"November 1992",7,NA,1,0.94,1.05,"northj",118,"no","New Jersey","answered 2nd interview","phone",5.05,31,58.0645161290323
+"644",NA,"bk","no",1992-11-16,18,13,NA,17.5,26,"both free and reduced price meals",1,4,3,3,"November 1992",6.5,NA,0.95,0.89,1.05,"northj",119,"no","New Jersey","answered 2nd interview","phone",5.05,28.5,63.1578947368421
+"645",NA,"bk","yes",1992-11-19,0,30,NA,16,NA,"reduced price meals",3,4,3,2,"November 1992",7,NA,1.05,1.05,1.05,"centralj",120,"no","New Jersey","answered 2nd interview","phone",5.05,19,0
+"646",NA,"bk","no",1992-11-10,10,50,0.1,12.5,26,"free meals",NA,6,6,4,"November 1992",9,NA,1.15,0.94,1.15,"northj",122,"no","New Jersey","answered 2nd interview","phone",5.05,41,24.390243902439
+"647",NA,"bk","no",1992-11-10,21,6,0.5,15,13,"both free and reduced price meals",NA,4,2,2,"November 1992",7,NA,1.12,0.94,1.16,"centralj",124,"yes","New Jersey","answered 2nd interview","phone",5.05,28,75
+"648",NA,"kfc","no",1992-11-14,0,15,0.4,12,52,"free meals",NA,2,4,3,"November 1992",10,NA,2.49,1.01,1.01,"centralj",125,"no","New Jersey","answered 2nd interview","phone",5.05,9.5,0
+"649",NA,"roys","yes",1992-12-21,2,38,0.15,16,4,"reduced price meals",6,4,5,3,"November 1992",7,NA,1.05,1.06,1.11,"centralj",130,"no","New Jersey","answered 2nd interview","personal",5.05,25,8
+"650",NA,"roys","yes",1992-11-16,15,20,0.25,14,52,"reduced price meals",NA,3,2,2,"November 1992",7,NA,NA,NA,NA,"centralj",132,"no","New Jersey","answered 2nd interview","phone",5.5,28,53.5714285714286
+"651",NA,"roys","yes",1992-11-13,3,20,NA,15,26,"reduced price meals",NA,3,5,3,"November 1992",7,NA,2.11,1.06,1.11,"centralj",133,"no","New Jersey","answered 2nd interview","phone",5.05,16,18.75
+"652",NA,"roys","no",1992-11-13,6,27.5,0.25,16,52,"reduced price meals",NA,3,4,3,"November 1992",6,NA,0.94,1.06,1.11,"centralj",134,"no","New Jersey","answered 2nd interview","phone",5.05,22.75,26.3736263736264
+"653",NA,"roys","yes",1992-12-16,NA,NA,NA,16,NA,NA,3,NA,NA,NA,"November 1992",7,NA,NA,NA,NA,"centralj",136,NA,"New Jersey","refused second interview","personal",NA,NA,NA
+"654",NA,"roys","yes",1992-11-16,12,30,0.25,15,26,"reduced price meals",1,5,5,3,"November 1992",7,NA,1.05,1.11,1.11,"northj",137,"no","New Jersey","answered 2nd interview","phone",5.05,32,37.5
+"655",NA,"wendys","no",1992-11-14,5,35,0.25,11.5,4,"reduced price meals",NA,5,2,2,"November 1992",10.5,NA,1.05,0.94,1,"centralj",140,"yes","New Jersey","answered 2nd interview","phone",5.67,27.5,18.1818181818182
+"656",NA,"wendys","no",1992-11-18,10,25,0.18,12.5,13,"reduced price meals",2,3,2,2,"November 1992",10.5,NA,1.34,0.84,1.05,"centralj",141,"yes","New Jersey","answered 2nd interview","phone",5.05,25.5,39.2156862745098
+"657",NA,"wendys","no",1992-11-14,40,31,0.18,11.5,26,"reduced price meals",NA,5,2,2,"November 1992",10,NA,1.26,0.89,1.01,"northj",142,"no","New Jersey","answered 2nd interview","phone",5.05,60.5,66.1157024793389
+"658",NA,"bk","no",1992-11-10,0,32,0.17,16,26,"reduced price meals",NA,4.5,4,3,"November 1992",7,NA,1.05,0.99,1.05,"northj",146,"no","New Jersey","answered 2nd interview","phone",5.05,20.5,0
+"659",NA,"bk","no",1992-11-10,8,10,0.25,16,26,"reduced price meals",NA,3,2,2,"November 1992",7,NA,0.94,0.94,1.05,"northj",149,"no","New Jersey","answered 2nd interview","phone",5.05,16,50
+"660",NA,"bk","no",1992-12-31,12,20,0.58,15,28,"reduced price meals",8,3,3,2,"November 1992",7,NA,0.88,0.88,1.11,"northj",150,"no","New Jersey","answered 2nd interview","personal",5.75,25,48
+"661",NA,"bk","no",1992-11-10,2,18,0.3,15,NA,"reduced price meals",NA,2,3,NA,"November 1992",7,NA,1.01,0.94,0.95,"northj",156,"no","New Jersey","answered 2nd interview","phone",5.05,13,15.3846153846154
+"662",NA,"kfc","no",1992-11-11,3,4,0.25,11.5,13,"free meals",NA,4,3,2,"November 1992",11,NA,2.49,0.94,0.95,"northj",158,"no","New Jersey","answered 2nd interview","phone",5.05,9,33.3333333333333
+"663",NA,"kfc","no",1992-11-14,10,5,0.25,11.5,13,"free meals",NA,4,4,3,"November 1992",10.5,NA,2.49,0.84,0.95,"northj",159,"no","New Jersey","answered 2nd interview","phone",5.25,16.5,60.6060606060606
+"664",NA,"roys","yes",1992-11-12,3,30,0.18,15.5,26,"reduced price meals",NA,3,6,5,"November 1992",7,NA,1.05,1.01,1.11,"northj",162,"no","New Jersey","answered 2nd interview","phone",5.05,21,14.2857142857143
+"665",NA,"wendys","no",1992-11-13,0,35,0.18,12.5,26,"reduced price meals",1,4,2,2,"November 1992",10.5,NA,1.26,0.84,1.11,"northj",166,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,0
+"666",NA,"bk","no",1992-11-16,0,32,0.18,16,10,"free meals",NA,4,3,1,"November 1992",6,NA,1.14,0.95,1.11,"northj",168,"no","New Jersey","answered 2nd interview","phone",5.25,20,0
+"667",NA,"bk","yes",1992-11-10,10,12.5,0.1,16,4,"reduced price meals",NA,5,3,3,"November 1992",7,NA,1.03,1.04,1.18,"northj",171,"yes","New Jersey","answered 2nd interview","phone",5.05,21.25,47.0588235294118
+"668",NA,"bk","no",1992-11-16,7,23,0.18,13,8,"free meals",2,3,6,3,"November 1992",9,NA,1.05,1.01,1.11,"northj",172,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,32.5581395348837
+"669",NA,"bk","no",1992-11-17,11,30,0.15,18,26,"reduced price meals",1,5,4,3,"November 1992",6,NA,1.04,0.94,1.05,"northj",173,"no","New Jersey","answered 2nd interview","phone",5.05,31,35.4838709677419
+"670",NA,"bk","no",1992-11-10,20,20,0.2,16,4,"reduced price meals",NA,3,3,3,"November 1992",7,NA,0.98,0.9,1.05,"northj",174,"no","New Jersey","answered 2nd interview","phone",5.05,33,60.6060606060606
+"671",NA,"bk","no",1992-11-17,20,27.5,NA,16,NA,"reduced price meals",1,4,NA,NA,"November 1992",7,NA,NA,1.06,1.04,"northj",176,"no","New Jersey","answered 2nd interview","phone",5.05,37.75,52.9801324503311
+"672",NA,"kfc","yes",1991-11-11,1,10,0.25,10.5,26,"free meals",NA,3,3,2,"November 1992",11,NA,2.64,0.94,1.01,"northj",178,"yes","New Jersey","answered 2nd interview","phone",5.05,9,11.1111111111111
+"673",NA,"kfc","no",1992-11-18,2,10,0.2,11,26,"free meals",3,4,3,3,"November 1992",10.5,NA,2.49,0.84,0.94,"northj",179,"no","New Jersey","answered 2nd interview","phone",5.05,11,18.1818181818182
+"674",NA,"kfc","no",1992-11-11,0,17.5,NA,12,NA,"reduced price meals",NA,4,4,4,"November 1992",11,NA,2.85,1.05,1.05,"northj",180,"no","New Jersey","answered 2nd interview","phone",5.05,12.75,0
+"675",NA,"kfc","no",1992-11-11,0,15,0.25,10,26,"reduced price meals",NA,3,4,3,"November 1992",11.5,NA,2.73,1,1.05,"southj",182,"no","New Jersey","answered 2nd interview","phone",5.05,10.5,0
+"676",NA,"kfc","no",1992-11-18,15,10,0.25,10.5,13,"reduced price meals",4,2,4,3,"November 1992",11,NA,2.75,1,1.05,"northj",183,"no","New Jersey","answered 2nd interview","phone",5.05,22,68.1818181818182
+"677",NA,"kfc","no",1992-11-11,2,6,0.25,10.5,26,"free meals",NA,3,3,3,"November 1992",11,NA,2.75,1,1.05,"centralj",185,"yes","New Jersey","answered 2nd interview","phone",5.05,8,25
+"678",NA,"roys","no",1992-11-18,12,18,NA,16,26,"reduced price meals",3,4,5,3,"November 1992",6,NA,0.95,1.06,1.17,"northj",186,"no","New Jersey","answered 2nd interview","phone",5.05,25,48
+"679",NA,"roys","no",1992-11-12,0,19,0.2,15,52,"reduced price meals",NA,3,5,3,"November 1992",7,NA,1.05,1.06,1.11,"northj",189,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,0
+"680",NA,"wendys","no",1992-11-13,4.5,30,0.18,12.5,19,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,1.26,0.84,1.05,"northj",192,"no","New Jersey","answered 2nd interview","phone",5.25,22.5,20
+"681",NA,"wendys","no",1992-11-17,4,9,0.13,13,26,"reduced price meals",2,3,2,1,"November 1992",9,NA,1.26,0.9,1.01,"northj",193,"yes","New Jersey","answered 2nd interview","phone",5.05,11.5,34.7826086956522
+"682",NA,"wendys","no",1992-11-18,8,25,0.15,12.5,26,"reduced price meals",2,3,2,2,"November 1992",10.5,NA,2.11,0.84,0.94,"northj",195,"no","New Jersey","answered 2nd interview","phone",5.05,23.5,34.0425531914894
+"683",NA,"bk","no",1992-11-17,10,32,0.15,16,26,"reduced price meals",8,4,3,3,"November 1992",7,NA,0.94,0.94,1.05,"northj",198,"no","New Jersey","answered 2nd interview","phone",5.05,30,33.3333333333333
+"684",NA,"kfc","no",1992-11-11,11,3,0.45,10.5,2,"free meals",NA,4,4,3,"November 1992",11,NA,2.45,0.9,0.91,"northj",199,NA,"New Jersey","answered 2nd interview","phone",5.05,16.5,66.6666666666667
+"685",NA,"bk","no",1992-11-10,5,40,0.25,17.5,52,"reduced price meals",NA,4,5,4,"November 1992",6.5,NA,0.98,0.94,1.05,"northj",200,"no","New Jersey","answered 2nd interview","phone",5.05,29,17.2413793103448
+"686",NA,"bk","no",1992-11-10,16,22,0.28,17,26,"free meals",NA,3,3,3,"November 1992",7,NA,0.95,0.95,1.05,"northj",201,"yes","New Jersey","answered 2nd interview","phone",5.05,30,53.3333333333333
+"687",NA,"bk","no",1992-11-16,13,11,0.08,19,4,"both free and reduced price meals",NA,4,3,3,"November 1992",6,NA,0.64,0.95,1.15,"northj",202,"no","New Jersey","answered 2nd interview","phone",5.05,22.5,57.7777777777778
+"688",NA,"bk","no",1992-11-10,4,34,0.18,17,26,"none",NA,3,3,2,"November 1992",7,NA,0.95,0.95,1.05,"northj",203,"no","New Jersey","answered 2nd interview","phone",5.05,24,16.6666666666667
+"689",NA,"bk","no",1992-11-10,12,13.5,0.25,17.5,13,"reduced price meals",NA,3,3,2,"November 1992",6.5,NA,1.05,0.99,1.05,"northj",204,"no","New Jersey","answered 2nd interview","phone",5.05,21.75,55.1724137931034
+"690",NA,"kfc","yes",1992-11-11,8.5,6,0.5,12,52,"free meals",NA,2,5,3,"November 1992",11,NA,2.32,0.84,1.05,"northj",207,"yes","New Jersey","answered 2nd interview","phone",5.2,13.5,62.962962962963
+"691",NA,"roys","yes",1992-11-17,5,32,NA,14,26,"reduced price meals",2,3,5,5,"November 1992",8,NA,1.05,1.06,1.06,"northj",208,"no","New Jersey","answered 2nd interview","phone",5.05,24,20.8333333333333
+"692",NA,"roys","yes",1992-11-11,6,37,0.2,16,26,"reduced price meals",NA,4,5,5,"November 1992",7,NA,1.05,1.06,1.11,"northj",209,"no","New Jersey","answered 2nd interview","phone",5.05,28.5,21.0526315789474
+"693",NA,"wendys","yes",1992-11-13,0,14,0.2,11,13,"reduced price meals",NA,3,4,NA,"November 1992",10,NA,NA,NA,NA,"northj",210,"no","New Jersey","answered 2nd interview","phone",5.05,10,0
+"694",NA,"bk","no",1992-11-16,2,35,NA,15,4,"reduced price meals",NA,4,3,2,"November 1992",7,NA,NA,0.9,NA,"southj",211,"no","New Jersey","answered 2nd interview","phone",5.05,23.5,8.51063829787234
+"695",NA,"bk","no",1992-11-10,20,15,0.53,16,4,"reduced price meals",NA,3,2,2,"November 1992",7,NA,0.89,0.94,1.05,"southj",212,"yes","New Jersey","answered 2nd interview","phone",5.05,30.5,65.5737704918033
+"696",NA,"bk","yes",1992-12-18,12,17.5,0.15,17.5,19,"reduced price meals",2,4,4,3,"November 1992",6.5,NA,0.94,0.94,1.05,"southj",213,"yes","New Jersey","answered 2nd interview","personal",5.05,24.75,48.4848484848485
+"697",NA,"bk","no",1992-11-18,0,35,NA,16.25,NA,"reduced price meals",1,5,3,2,"November 1992",6.75,NA,0.96,0.93,1.04,"southj",214,"no","New Jersey","answered 2nd interview","phone",5.05,22.5,0
+"698",NA,"bk","no",1992-11-10,20,10,0.15,16,26,"both free and reduced price meals",NA,3,3,3,"November 1992",7,NA,0.93,0.84,0.93,"southj",215,"no","New Jersey","answered 2nd interview","phone",5.05,28,71.4285714285714
+"699",NA,"kfc","no",1992-11-11,2,18,0.2,10.5,13,"reduced price meals",NA,3,5,3,"November 1992",11,NA,2.75,0.94,1.05,"southj",216,"no","New Jersey","answered 2nd interview","phone",5.05,14,14.2857142857143
+"700",NA,"kfc","yes",1992-11-11,0,12,0.2,10.5,26,"free meals",NA,3,4,4,"November 1992",10.5,NA,2.32,0.73,0.94,"southj",217,"no","New Jersey","answered 2nd interview","phone",5.05,9,0
+"701",NA,"kfc","yes",1992-11-11,5,3,0.25,11,26,"free meals",NA,3,3,3,"November 1992",11,NA,2.19,0.73,0.95,"southj",218,"no","New Jersey","answered 2nd interview","phone",5.05,9.5,52.6315789473684
+"702",NA,"kfc","yes",1992-11-11,9,9,0.18,10.5,26,"free meals",NA,2,NA,NA,"November 1992",10.5,NA,2.53,0.73,0.94,"southj",219,"no","New Jersey","answered 2nd interview","phone",5.05,15.5,58.0645161290323
+"703",NA,"kfc","no",1992-11-14,3,12,0.13,10,13,"free meals",1,3,4,3,"November 1992",11,NA,2.75,0.9,1.09,"southj",220,"no","New Jersey","answered 2nd interview","phone",5.05,12,25
+"704",NA,"kfc","no",1992-11-11,1,15,0.15,11,13,"free meals",NA,3,4,3,"November 1992",11,NA,2.53,0.94,1.05,"southj",221,"no","New Jersey","answered 2nd interview","phone",5.05,11.5,8.69565217391304
+"705",NA,"roys","yes",1992-11-11,2,15,0.2,11.5,26,"reduced price meals",NA,3,3,1,"November 1992",10,NA,0.89,1.01,1.01,"southj",222,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,16
+"706",NA,"roys","yes",1992-12-18,3,20,0.25,15,28,"reduced price meals",2,3,3,2,"November 1992",7,NA,0.94,1.01,1.01,"southj",223,"no","New Jersey","answered 2nd interview","personal",5.05,16,18.75
+"707",NA,"roys","yes",1992-11-11,12,25,0.1,17,4,"reduced price meals",NA,4,5,3,"November 1992",6,NA,0.94,1.01,1.01,"southj",225,"no","New Jersey","answered 2nd interview","phone",5.05,28.5,42.1052631578947
+"708",NA,"wendys","no",1992-11-17,0,26,0.15,10.5,52,"free meals",1,2,2,2,"November 1992",10.5,NA,0.94,0.85,1,"southj",226,"no","New Jersey","answered 2nd interview","phone",5.3,15,0
+"709",NA,"wendys","no",1992-11-13,11,19,NA,12.5,NA,"free meals",NA,3,2,NA,"November 1992",10.5,NA,0.89,0.84,1,"southj",228,"no","New Jersey","answered 2nd interview","phone",5.05,23.5,46.8085106382979
+"710",NA,"bk","no",1992-11-16,22,11,0.15,13.5,26,"reduced price meals",NA,3,4,3,"November 1992",8.5,NA,0.94,0.94,1.01,"northj",229,"yes","New Jersey","answered 2nd interview","phone",5.5,30.5,72.1311475409836
+"711",NA,"bk","no",1992-11-16,15,17,0.18,17,26,"free meals",NA,3,3,2,"November 1992",7,NA,0.94,0.94,1.05,"northj",230,"no","New Jersey","answered 2nd interview","phone",5.05,26.5,56.6037735849057
+"712",NA,"bk","no",1992-11-18,18,10,0.25,15,13,"reduced price meals",3,4,3,2,"November 1992",7,NA,0.95,0.95,1.05,"northj",232,"no","New Jersey","answered 2nd interview","phone",5.05,27,66.6666666666667
+"713",NA,"bk","no",1992-11-10,15,7,0.25,16,26,"reduced price meals",NA,3,2,2,"November 1992",7,NA,0.94,0.94,1.05,"northj",233,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,69.7674418604651
+"714",NA,"bk","no",1992-12-15,NA,28,0.5,15,28,"reduced price meals",4,3,4,2,"November 1992",8,NA,1.03,1.11,1.11,"northj",235,"yes","New Jersey","answered 2nd interview","personal",5.05,NA,NA
+"715",NA,"bk","no",1992-11-09,9,17,0.2,15.5,4,"reduced price meals",NA,4,2,2,"November 1992",7,NA,1,0.94,0.94,"northj",237,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,41.8604651162791
+"716",NA,"kfc","yes",1992-11-11,25,15,0.25,12,13,"free meals",NA,5,5,3,"November 1992",11,NA,2.32,1.05,1.05,"northj",238,"yes","New Jersey","answered 2nd interview","phone",5.05,37.5,66.6666666666667
+"717",NA,"kfc","no",1992-11-12,0,19,0.28,12.5,26,"free meals",NA,2,5,3,"November 1992",10.5,NA,2.32,0.84,1.05,"northj",239,"no","New Jersey","answered 2nd interview","phone",5.05,11.5,0
+"718",NA,"roys","yes",1992-11-11,7,22,0.1,15.5,26,"reduced price meals",NA,3,6,2,"November 1992",7,NA,1.05,1.06,1.11,"northj",243,"no","New Jersey","answered 2nd interview","phone",5.05,21,33.3333333333333
+"719",NA,"roys","yes",1992-11-11,16,12,0.25,17,26,"reduced price meals",NA,6,5,3,"November 1992",7,NA,1.05,1.12,1.11,"northj",244,"no","New Jersey","answered 2nd interview","phone",5.05,28,57.1428571428571
+"720",NA,"wendys","no",1992-12-17,0,40,NA,15.5,NA,"reduced price meals",7,4,2,2,"November 1992",10.5,NA,2.07,1.09,1.11,"northj",247,"yes","New Jersey","answered 2nd interview","personal",5.05,24,0
+"721",NA,"wendys","no",1992-11-13,10,14,0.25,16,26,"reduced price meals",NA,6,2,1,"November 1992",10,NA,2.03,0.95,1.37,"northj",248,"no","New Jersey","answered 2nd interview","phone",5.05,23,43.4782608695652
+"722",NA,"bk","no",1992-11-09,10,12,0.1,15,4,"free meals",NA,3,3,2,"November 1992",7,NA,0.94,1.01,1.01,"southj",249,"no","New Jersey","answered 2nd interview","phone",5.05,19,52.6315789473684
+"723",NA,"kfc","yes",1992-11-12,2,4,0.25,10,6,"free meals",NA,3,5,3,"November 1992",11,NA,2.52,0.84,0.94,"southj",250,"no","New Jersey","answered 2nd interview","phone",5.05,7,28.5714285714286
+"724",NA,"roys","yes",1992-11-11,4,8,0.23,16,52,"reduced price meals",NA,6,3,2,"November 1992",7,NA,2.28,1.11,1.23,"southj",253,NA,"New Jersey","answered 2nd interview","phone",5.05,14,28.5714285714286
+"725",NA,"bk","no",1992-12-14,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,"November 1992",NA,NA,NA,NA,NA,"southj",257,NA,"New Jersey","closed for renovations","personal",NA,NA,NA
+"726",NA,"bk","no",1992-11-09,20,18,NA,18,13,"reduced price meals",NA,3,3,3,"November 1992",6,NA,0.84,0.94,1.08,"southj",258,"no","New Jersey","answered 2nd interview","phone",5.05,32,62.5
+"727",NA,"bk","yes",1992-11-09,4,26,0.28,16,8,"reduced price meals",NA,5,3,3,"November 1992",7,NA,0.93,0.94,1.09,"southj",260,"no","New Jersey","answered 2nd interview","phone",5.05,22,18.1818181818182
+"728",NA,"bk","no",1992-11-09,0,22.5,0.25,17.5,NA,"reduced price meals",NA,3,3,3,"November 1992",6.5,NA,0.87,1.02,1.08,"southj",262,"no","New Jersey","answered 2nd interview","phone",5.05,14.25,0
+"729",NA,"bk","no",1992-12-14,0,23,NA,16,14,"reduced price meals",2,5,3,3,"November 1992",7,NA,0.94,1.11,1.05,"southj",264,"no","New Jersey","answered 2nd interview","personal",5.05,16.5,0
+"730",NA,"bk","no",1992-12-14,0,0,NA,NA,NA,NA,1,0,NA,NA,"November 1992",NA,NA,NA,NA,NA,"southj",265,NA,"New Jersey","closed permanently","personal",NA,0,NA
+"731",NA,"bk","no",1992-11-09,30,25,0.2,16,26,"both free and reduced price meals",NA,5,3,2,"November 1992",7,NA,0.91,0.88,1.05,"southj",267,"no","New Jersey","answered 2nd interview","phone",5.05,47.5,63.1578947368421
+"732",NA,"kfc","yes",1992-11-18,10,3,0.17,11,26,"reduced price meals",3,4,4,3,"November 1992",11,NA,2.32,0.73,0.94,"southj",269,"no","New Jersey","answered 2nd interview","phone",5.05,15.5,64.5161290322581
+"733",NA,"kfc","yes",1992-11-17,2,11,0.18,10,6,"free meals",2,3,4,3,"November 1992",11,NA,2.32,0.74,0.95,"southj",273,"no","New Jersey","answered 2nd interview","phone",5.05,10.5,19.047619047619
+"734",NA,"kfc","yes",1992-11-14,1,8,0.39,10.5,13,"free meals",2,2,4,2,"November 1992",11,NA,2.32,0.73,0.94,"southj",275,"no","New Jersey","answered 2nd interview","phone",5.05,7,14.2857142857143
+"735",NA,"kfc","yes",1992-11-14,1,14,NA,10,NA,"free meals",1,3,3,3,"November 1992",11,NA,2.32,0.73,0.94,"southj",277,"no","New Jersey","answered 2nd interview","phone",5.05,11,9.09090909090909
+"736",NA,"kfc","yes",1992-11-13,0,9,NA,11,NA,"free meals",NA,4,5,3,"November 1992",11,NA,2.32,0.73,0.95,"southj",278,"no","New Jersey","answered 2nd interview","phone",5.05,8.5,0
+"737",NA,"roys","yes",1992-12-14,0,0,NA,NA,NA,NA,1,0,NA,NA,"November 1992",NA,NA,NA,NA,NA,"southj",282,NA,"New Jersey","closed permanently","personal",NA,0,NA
+"738",NA,"roys","yes",1992-11-16,6,12,0.28,16,26,"reduced price meals",1,3,4,3,"November 1992",6,NA,0.94,1.01,1.01,"southj",284,"no","New Jersey","answered 2nd interview","phone",5.05,15,40
+"739",NA,"roys","yes",1992-11-12,3,15,0.13,16,52,"reduced price meals",NA,3,4,2,"November 1992",6,NA,1.01,1.01,1.01,"southj",285,"no","New Jersey","answered 2nd interview","phone",5.05,13.5,22.2222222222222
+"740",NA,"roys","yes",1992-11-16,2,15,0.18,11.5,26,"reduced price meals",1,3,2,1,"November 1992",10,NA,0.94,1.01,1.02,"southj",286,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,16
+"741",NA,"roys","yes",1992-11-12,2,15,0.15,16,4,"reduced price meals",NA,3,5,3,"November 1992",6,NA,0.94,1.01,1.01,"southj",287,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,16
+"742",NA,"roys","yes",1992-11-12,5,9,0.15,16,19,"reduced price meals",NA,3,5,2,"November 1992",6,NA,0.89,1.01,1.01,"southj",288,"no","New Jersey","answered 2nd interview","phone",5.05,12.5,40
+"743",NA,"roys","yes",1992-11-12,3,10,0.25,15,26,"reduced price meals",NA,2,6,3,"November 1992",7,NA,2,1.01,1.01,"southj",289,"no","New Jersey","answered 2nd interview","phone",5.05,10,30
+"744",NA,"wendys","no",1992-11-13,0,23,NA,11.5,NA,"free meals",1,2,2,2,"November 1992",10.5,NA,0.94,0.85,1,"southj",290,"no","New Jersey","answered 2nd interview","phone",5.05,13.5,0
+"745",NA,"wendys","no",1992-11-13,5,16,0.1,11.5,17,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,0.94,0.85,1,"southj",291,"yes","New Jersey","answered 2nd interview","phone",5.1,16,31.25
+"746",NA,"wendys","no",1992-11-13,15,11,0.25,16,52,"free meals",NA,3,2,2,"November 1992",7,NA,2.69,0.84,1,"southj",292,"yes","New Jersey","answered 2nd interview","phone",5.05,23.5,63.8297872340426
+"747",NA,"bk","no",1992-12-15,NA,21,0.18,18,28,"reduced price meals",1,4,3,3,"November 1992",6,NA,0.94,0.94,1.05,"northj",295,"no","New Jersey","answered 2nd interview","personal",5.05,NA,NA
+"748",NA,"bk","yes",1992-11-17,15,30,0.15,16,26,"reduced price meals",2,4,3,2,"November 1992",7,NA,0.98,0.94,1.05,"northj",297,"no","New Jersey","answered 2nd interview","phone",5.05,34,44.1176470588235
+"749",NA,"roys","yes",1992-11-16,12,35,0.15,16,13,"reduced price meals",NA,3,5,3,"November 1992",7,NA,1.05,1.05,1.05,"northj",303,"no","New Jersey","answered 2nd interview","phone",5.05,32.5,36.9230769230769
+"750",NA,"roys","no",1992-11-12,10,15,0.38,24,26,"free meals",NA,4,5,5,"November 1992",0,NA,1.05,1.29,1.4,"northj",304,"yes","New Jersey","answered 2nd interview","phone",5.05,21.5,46.5116279069767
+"751",NA,"roys","yes",1992-11-17,5,22,0.35,18,2,"free meals",1,4,5,4,"November 1992",6,NA,1.05,1.31,1.37,"northj",305,"no","New Jersey","answered 2nd interview","phone",5.05,20,25
+"752",NA,"roys","yes",1992-11-18,25,25,NA,24,NA,"reduced price meals",1,6,5,5,"November 1992",0,NA,1.05,NA,1.26,"northj",307,"no","New Jersey","answered 2nd interview","phone",5.2,43.5,57.4712643678161
+"753",NA,"wendys","no",1992-11-13,3,23,0.3,11.5,26,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,2.06,0.9,0.97,"northj",310,"no","New Jersey","answered 2nd interview","phone",5.05,17.5,17.1428571428571
+"754",NA,"bk","no",1992-11-09,3,2,0.25,10,4,"free meals",NA,3,3,1,"November 1992",9,NA,1.02,1.05,1.26,"southj",312,"no","New Jersey","answered 2nd interview","phone",5.05,7,42.8571428571429
+"755",NA,"bk","no",1992-11-09,0,30,0.25,15,8,"free meals",NA,NA,3,3,"November 1992",7,NA,0.89,1.01,1,"southj",313,"no","New Jersey","answered 2nd interview","phone",5.05,NA,NA
+"756",NA,"bk","no",1992-11-09,15,6,0.15,16,13,"free meals",NA,4,3,3,"November 1992",6,NA,0.94,0.74,1.05,"southj",314,"no","New Jersey","answered 2nd interview","phone",5.25,22,68.1818181818182
+"757",NA,"bk","yes",1992-11-16,12,14,0.15,16,26,"reduced price meals",NA,3,NA,NA,"November 1992",7,NA,0.94,0.94,1.05,"southj",316,"yes","New Jersey","answered 2nd interview","phone",5.05,22,54.5454545454545
+"758",NA,"bk","no",1992-11-17,4,0,0.13,10.5,8,"free meals",1,3,2,1,"November 1992",8,NA,1.05,1.05,1.26,"southj",317,"no","New Jersey","answered 2nd interview","phone",5.05,7,57.1428571428571
+"759",NA,"kfc","no",1992-11-12,7,6,0.5,11.5,13,"free meals",NA,4,3,3,"November 1992",10.5,NA,2.59,0.95,1.11,"southj",318,"yes","New Jersey","answered 2nd interview","phone",5.05,14,50
+"760",NA,"kfc","no",1992-11-12,22,4,0.25,11.5,13,"free meals",NA,3,4,3,"November 1992",10.5,NA,2.43,0.9,0.95,"southj",319,"yes","New Jersey","answered 2nd interview","phone",5.05,27,81.4814814814815
+"761",NA,"roys","yes",1992-11-16,12,5,NA,15,13,"reduced price meals",1,4,6,3,"November 1992",7,NA,0.94,1.01,0.96,"southj",322,"no","New Jersey","answered 2nd interview","phone",5.05,18.5,64.8648648648649
+"762",NA,"roys","yes",1992-11-16,1,15,0.1,15,26,"reduced price meals",NA,3,6,3,"November 1992",7,NA,1.01,1.01,1.02,"southj",325,"no","New Jersey","answered 2nd interview","phone",5.05,11.5,8.69565217391304
+"763",NA,"bk","no",1992-11-09,3,20,0.18,15,13,"reduced price meals",NA,3,3,3,"November 1992",7,NA,0.87,0.87,1.04,"centralj",333,"no","New Jersey","answered 2nd interview","phone",5.05,16,18.75
+"764",NA,"bk","no",1992-11-09,10,20,0.2,16,6,"reduced price meals",NA,5,3,3,"November 1992",6,NA,0.94,1.05,0.95,"southj",336,"no","New Jersey","answered 2nd interview","phone",5.05,25,40
+"765",NA,"bk","yes",1992-11-09,25,5,NA,17,26,"reduced price meals",NA,3,NA,NA,"November 1992",7,NA,NA,NA,NA,"southj",337,"no","New Jersey","answered 2nd interview","phone",5.05,30.5,81.9672131147541
+"766",NA,"bk","yes",1992-11-16,5,9,0.25,16,13,"free meals",NA,2,3,3,"November 1992",7,NA,0.95,0.95,0.95,"southj",339,"yes","New Jersey","answered 2nd interview","phone",5.05,11.5,43.4782608695652
+"767",NA,"bk","no",1992-11-16,15,17,0.15,16,8,"reduced price meals",NA,2,5,4,"November 1992",6,NA,0.84,0.84,1.05,"southj",340,"no","New Jersey","answered 2nd interview","phone",5.05,25.5,58.8235294117647
+"768",NA,"kfc","yes",1992-11-14,3,7,NA,11,NA,"free meals",NA,3,4,2,"November 1992",11,NA,2.32,0.84,0.9,"southj",341,"no","New Jersey","answered 2nd interview","phone",5.05,9.5,31.5789473684211
+"769",NA,"kfc","yes",1992-11-18,4,11,0.15,12,6,"reduced price meals",4,2,4,3,"November 1992",11,NA,2.32,0.85,0.95,"southj",343,"no","New Jersey","answered 2nd interview","phone",5.05,11.5,34.7826086956522
+"770",NA,"kfc","yes",1992-11-12,3,12,NA,11,NA,"free meals",NA,3,NA,NA,"November 1992",11,NA,NA,NA,0.85,"southj",346,"no","New Jersey","answered 2nd interview","phone",NA,12,25
+"771",NA,"roys","yes",1992-12-18,0,0,NA,NA,NA,NA,1,0,NA,NA,"November 1992",NA,NA,NA,NA,NA,"centralj",348,NA,"New Jersey","closed permanently","personal",NA,0,NA
+"772",NA,"roys","yes",1992-11-18,5,20,0.23,17,13,"reduced price meals",1,2,5,4,"November 1992",6,NA,0.89,1.01,1.01,"southj",350,"no","New Jersey","answered 2nd interview","phone",5.05,17,29.4117647058824
+"773",NA,"roys","yes",1992-11-17,10,20,0.53,16,52,"reduced price meals",2,4,4,2,"November 1992",6,NA,0.73,1.01,1.01,"southj",351,"no","New Jersey","answered 2nd interview","phone",5.05,24,41.6666666666667
+"774",NA,"roys","yes",1992-12-23,NA,NA,NA,NA,NA,NA,9,NA,NA,NA,"November 1992",NA,NA,0.89,0.95,0.95,"northj",352,NA,"New Jersey","closed due to Mall fire","personal",NA,NA,NA
+"775",NA,"roys","yes",1992-12-14,NA,31,NA,16,28,"reduced price meals",4,4,3,3,"November 1992",6,NA,0.89,1.01,1.01,"southj",353,"no","New Jersey","answered 2nd interview","personal",5.05,NA,NA
+"776",NA,"wendys","no",1992-11-13,3,17,NA,11.5,NA,"free meals",NA,2,2,2,"November 1992",10.5,NA,0.89,0.85,1,"centralj",355,"no","New Jersey","answered 2nd interview","phone",NA,13.5,22.2222222222222
+"777",NA,"bk","yes",1992-11-16,0,26,0.25,16,26,"reduced price meals",NA,4,3,2,"November 1992",7,NA,0.82,0.87,1.05,"southj",359,"no","New Jersey","answered 2nd interview","phone",5.05,17,0
+"778",NA,"bk","no",1992-11-16,5,32,0.25,16,4,"reduced price meals",NA,7,3,3,"November 1992",7,NA,0.82,0.87,1.05,"southj",360,"no","New Jersey","answered 2nd interview","phone",5.05,28,17.8571428571429
+"779",NA,"bk","no",1992-11-07,4,23,0.18,16,26,"reduced price meals",NA,6,3,2,"November 1992",7,NA,0.92,0.93,0.9,"southj",361,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,18.6046511627907
+"780",NA,"kfc","no",1992-11-12,24,4,0.18,12.5,13,"free meals",NA,4,5,3,"November 1992",10.5,NA,2.43,0.84,1.05,"southj",362,"no","New Jersey","answered 2nd interview","phone",5.05,30,80
+"781",NA,"kfc","no",1992-11-12,14,7,0.13,12.5,4,"reduced price meals",NA,2,4,4,"November 1992",10.5,NA,2.43,0.8,1.01,"southj",363,"no","New Jersey","answered 2nd interview","phone",5.2,19.5,71.7948717948718
+"782",NA,"kfc","no",1992-11-14,1,30,0.25,12.5,52,"free meals",NA,4,5,3,"November 1992",10.5,NA,2.43,0.84,1.05,"southj",364,"no","New Jersey","answered 2nd interview","phone",5.05,20,5
+"783",NA,"roys","no",1992-11-18,1,19,0.25,11.5,13,"reduced price meals",1,4,4,3,"November 1992",10.5,NA,0.63,0.9,1.01,"southj",366,"no","New Jersey","answered 2nd interview","phone",5.05,14.5,6.89655172413793
+"784",NA,"wendys","no",1992-11-13,0,25,0.15,11.5,19,"free meals",NA,2,2,2,"November 1992",10.5,NA,0.95,0.85,1,"southj",368,"no","New Jersey","answered 2nd interview","phone",5.05,14.5,0
+"785",NA,"bk","yes",1992-12-09,0,0,NA,NA,NA,NA,NA,0,NA,NA,"November 1992",NA,NA,NA,NA,NA,"northj",369,NA,"New Jersey","closed permanently","personal",NA,0,NA
+"786",NA,"bk","no",1992-11-07,26,5,0.1,16,NA,"both free and reduced price meals",NA,3,3,2,"November 1992",7,NA,NA,NA,NA,"northj",370,"yes","New Jersey","answered 2nd interview","phone",5.05,31.5,82.5396825396825
+"787",NA,"bk","no",1992-11-17,0,17,0.2,14,15,"reduced price meals",2,3,3,3,"November 1992",8,NA,1,1.01,1.26,"northj",376,"yes","New Jersey","answered 2nd interview","phone",5.05,11.5,0
+"788",NA,"bk","no",1992-11-07,11,12,0.2,14,26,"reduced price meals",NA,3,3,1,"November 1992",8,NA,0.94,0.95,1.05,"northj",377,"no","New Jersey","answered 2nd interview","phone",5.05,20,55
+"789",NA,"bk","no",1992-11-17,28,6,0.15,16,52,"free meals",1,3,3,2,"November 1992",7,NA,1.06,1.06,1.06,"northj",379,"yes","New Jersey","answered 2nd interview","phone",5.05,34,82.3529411764706
+"790",NA,"bk","no",1992-11-07,15,14,0.13,16,26,"free meals",NA,3,3,2,"November 1992",7,NA,0.94,0.94,1.05,"northj",380,"no","New Jersey","answered 2nd interview","phone",5.05,25,60
+"791",NA,"bk","no",1992-11-18,7,2,0.38,16,26,"free meals",2,2,2,2,"November 1992",7,NA,1.05,1.01,1.16,"northj",383,"no","New Jersey","answered 2nd interview","phone",5.05,10,70
+"792",NA,"bk","no",1992-11-07,0,30,0.1,16,26,"both free and reduced price meals",NA,3,3,2,"November 1992",7,NA,0.89,1.05,1.05,"northj",384,"no","New Jersey","answered 2nd interview","phone",5.05,18,0
+"793",NA,"bk","no",1992-12-09,15,14,0.1,17,28,"reduced price meals",4,3,3,3,"November 1992",7,NA,0.41,1.22,1.16,"northj",385,"no","New Jersey","answered 2nd interview","personal",5.05,25,60
+"794",NA,"bk","no",1992-11-16,14,10,0.25,17,26,"free meals",NA,4,4,2,"November 1992",7,NA,0.95,0.95,1.05,"northj",386,"no","New Jersey","answered 2nd interview","phone",5.05,23,60.8695652173913
+"795",NA,"kfc","no",1992-11-14,12,7,NA,10,NA,"reduced price meals",2,2,4,3,"November 1992",11,NA,2.64,1.05,1.05,"northj",391,"no","New Jersey","answered 2nd interview","phone",5.05,17.5,68.5714285714286
+"796",NA,"kfc","yes",1992-11-17,18,4,0.25,11,13,"free meals",3,3,3,2,"November 1992",11,NA,2.75,1.26,1.16,"northj",393,"yes","New Jersey","answered 2nd interview","phone",5.25,23,78.2608695652174
+"797",NA,"roys","yes",1992-11-11,8,30,0.1,16,26,"reduced price meals",NA,3,5,3,"November 1992",7,NA,1.05,1.05,1.11,"northj",396,"no","New Jersey","answered 2nd interview","phone",5.4,26,30.7692307692308
+"798",NA,"roys","yes",1992-12-28,6,15,0.24,17,52,"reduced price meals",9,3,4,3,"November 1992",6,NA,2.11,1.06,1.17,"northj",397,"no","New Jersey","answered 2nd interview","personal",5.05,16.5,36.3636363636364
+"799",NA,"roys","yes",1992-12-10,25,15,NA,17,28,"reduced price meals",2,3,5,3,"November 1992",6,NA,1.05,1.06,1.11,"northj",398,"no","New Jersey","answered 2nd interview","personal",5.05,35.5,70.4225352112676
+"800",NA,"roys","yes",1992-11-11,18,18,0.23,16,26,"reduced price meals",NA,4,7,4,"November 1992",7,NA,1.05,1.08,1.26,"northj",399,"no","New Jersey","answered 2nd interview","phone",5.05,31,58.0645161290323
+"801",NA,"roys","yes",1992-11-11,8,24,0.15,16,41,"reduced price meals",NA,3,5,3,"November 1992",7,NA,1.05,1.01,1.17,"northj",400,"no","New Jersey","answered 2nd interview","phone",5.05,23,34.7826086956522
+"802",NA,"roys","no",1992-11-17,5,27,0.15,16,26,"reduced price meals",2,4,6,4,"November 1992",6,NA,1.05,1.05,1.12,"northj",401,"no","New Jersey","answered 2nd interview","phone",5.05,22.5,22.2222222222222
+"803",NA,"roys","yes",1992-11-16,17,5,0.13,15,26,"reduced price meals",NA,2,4,1,"November 1992",7,NA,1.05,1.05,1.11,"northj",402,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,79.0697674418605
+"804",NA,"roys","yes",1992-11-16,1.5,15,0.15,16,26,"reduced price meals",NA,3,6,3,"November 1992",7,NA,1.05,1.01,1.12,"northj",405,"no","New Jersey","answered 2nd interview","phone",5.05,12,12.5
+"805",NA,"bk","no",1992-11-16,0,35,0.1,16,26,"reduced price meals",NA,3,4,3,"November 1992",7,NA,1.01,0.98,1.19,"northj",410,"yes","New Jersey","answered 2nd interview","phone",5.05,20.5,0
+"806",NA,"bk","no",1992-11-16,4,36,0.13,16,4,"reduced price meals",NA,3,5,4,"November 1992",7,NA,1.01,1.01,1.15,"northj",411,"yes","New Jersey","answered 2nd interview","phone",5.05,25,16
+"807",NA,"kfc","no",1992-11-12,0,13,NA,11,NA,"free meals",NA,2,5,3,"November 1992",11,NA,2.64,1.05,1.15,"centralj",412,"no","New Jersey","answered 2nd interview","phone",5.05,8.5,0
+"808",NA,"bk","no",1992-11-07,0,20,0.13,17,26,"free meals",NA,3,4,2,"November 1992",7,NA,1.05,1.01,1.11,"northj",413,"yes","New Jersey","answered 2nd interview","phone",5.05,13,0
+"809",NA,"bk","no",1992-11-16,13,9,0.38,16,26,"both free and reduced price meals",NA,4,4,3,"November 1992",7,NA,1.13,0.95,1.15,"northj",414,"yes","New Jersey","answered 2nd interview","phone",5.05,21.5,60.4651162790698
+"810",NA,"bk","no",1992-11-07,0,38,NA,16,52,"reduced price meals",NA,4,4,2,"November 1992",7,NA,1.04,0.9,1.05,"northj",415,"no","New Jersey","answered 2nd interview","phone",5.05,23,0
+"811",NA,"bk","yes",1992-11-09,13,17,0.15,16,26,"both free and reduced price meals",NA,4,3,2,"November 1992",7,NA,1,1.09,1.11,"northj",417,"yes","New Jersey","answered 2nd interview","phone",5.05,25.5,50.9803921568627
+"812",NA,"bk","no",1992-11-09,0,35,0.15,16,26,"reduced price meals",NA,4,3,3,"November 1992",7,NA,0.59,0.9,1.03,"northj",418,"no","New Jersey","answered 2nd interview","phone",5.05,21.5,0
+"813",NA,"kfc","yes",1992-12-15,5,5,NA,11,NA,"free meals",4,2,4,3,"November 1992",11,NA,2.53,0.84,1.05,"northj",419,"no","New Jersey","answered 2nd interview","personal",5.05,9.5,52.6315789473684
+"814",NA,"kfc","yes",1992-11-17,25,7,1,13,4,"reduced price meals",3,8,4,2,"November 1992",10.5,NA,2.32,0.84,1.05,"northj",421,"no","New Jersey","answered 2nd interview","phone",5.05,36.5,68.4931506849315
+"815",NA,"kfc","no",1992-11-14,5,10,NA,11,NA,"free meals",2,6,4,4,"November 1992",11,NA,2.32,0.84,1.01,"northj",422,"no","New Jersey","answered 2nd interview","phone",5.05,16,31.25
+"816",NA,"kfc","yes",1992-11-14,19,3.5,0.5,11,13,"free meals",1,3,3,2,"November 1992",11,NA,2.32,0.84,1.05,"northj",423,"no","New Jersey","answered 2nd interview","phone",5.25,23.75,80
+"817",NA,"kfc","yes",1992-11-17,12,3,0.5,14,19,"free meals",1,4,5,3,"November 1992",11,NA,2.32,0.94,1.05,"northj",424,"no","New Jersey","answered 2nd interview","phone",5.25,17.5,68.5714285714286
+"818",NA,"roys","yes",1992-11-11,5,25,0.25,18,19,"reduced price meals",NA,3,6,5,"November 1992",6,NA,1.05,1.05,1.11,"northj",426,"yes","New Jersey","answered 2nd interview","phone",5.05,20.5,24.390243902439
+"819",NA,"wendys","no",1992-12-17,0,35,NA,12.5,NA,"reduced price meals",4,3,2,2,"November 1992",10.5,NA,2.07,1.09,1.11,"northj",427,"yes","New Jersey","answered 2nd interview","personal",5.05,20.5,0
+"820",NA,"wendys","no",1992-11-13,10,24,0.1,12.5,13,"reduced price meals",NA,3,2,2,"November 1992",10.5,NA,2.11,0.89,1.05,"northj",428,"no","New Jersey","answered 2nd interview","phone",5.14,25,40
