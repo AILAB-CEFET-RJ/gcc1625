@@ -166,3 +166,4 @@ notebooks/*.png
 notebooks/.DS_Store
 .DS_Store
 .DS_Store
+notebooks/aulas/.gitkeep
