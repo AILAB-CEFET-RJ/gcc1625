@@ -45,6 +45,25 @@ Em outras palavras, o TLC afirma algo sobre a **forma** da distribuição de $\o
 - Em populações aproximadamente simétricas, a aproximação costuma funcionar com tamanhos menores.
 - Regra prática comum: para muitos cenários, $n > 30$ já produz boa aproximação. **Atenção:** essa é uma heurística grosseira. Ela pode falhar em distribuições com forte assimetria, caudas pesadas ou variância muito elevada. Sempre que possível, verifique a adequação da aproximação para a distribuição específica do problema.
 
+## Limite importante das hipóteses
+
+O TLC clássico apresentado aqui depende de variância populacional finita ($\sigma^2 < \infty$).  
+Quando a distribuição tem caudas muito pesadas, essa hipótese pode falhar, e a aproximação normal para $\overline{x}$ pode deixar de ser adequada mesmo com amostras grandes.
+
+Intuição didática: "variância infinita" não significa valores infinitos observados na amostra; significa que eventos extremos têm peso suficiente para impedir a estabilização do segundo momento.
+
+---
+
+> 📝 **Pergunta 02b.6**
+>
+> Com base na seção **Limite importante das hipóteses**:
+>
+> **(a)** Qual hipótese do TLC clássico pode falhar em distribuições com caudas muito pesadas?
+>
+> **(b)** Se essa hipótese falhar, qual consequência o texto aponta para a aproximação normal de $\overline{x}$?
+>
+> **(c)** Explique, em uma frase, por que "variância infinita" não significa observar valores infinitos na amostra.
+
 ---
 
 > 📝 **Pergunta 02b.2**
