@@ -92,8 +92,8 @@ h3 {
 h1 {
   max-width: 850px;
   margin: 0;
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  letter-spacing: -0.035em;
+  font-size: clamp(1.32rem, 3vw, 2.52rem);
+  letter-spacing: 0;
 }
 
 .subtitle {
