@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Simulador da estatística F (ANOVA)</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f3f1ec;--panel:#fbfaf7;--ink:#23262b;--mute:#6b6f76;--line:#cfcbc0;
+  --within:#c9740a;--between:#1c58b8;--mean:#c0302b;--g1:#2b5aa8;--g2:#2e8a4a;--g3:#8a4aa8;--shade:#e0a39f;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#16181d;--panel:#1e2128;--ink:#e6e7ea;--mute:#9aa0aa;--line:#363a44;
+  --within:#f0a54a;--between:#7fb0ff;--mean:#ff7a72;--g1:#7fa8f0;--g2:#6fd08c;--g3:#c795e6;--shade:#7a3a38;}}
+:root[data-theme="dark"]{
+  --bg:#16181d;--panel:#1e2128;--ink:#e6e7ea;--mute:#9aa0aa;--line:#363a44;
+  --within:#f0a54a;--between:#7fb0ff;--mean:#ff7a72;--g1:#7fa8f0;--g2:#6fd08c;--g3:#c795e6;--shade:#7a3a38;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 "Trebuchet MS","Segoe UI",system-ui,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:18px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
+@media(max-width:860px){main{grid-template-columns:1fr}}
+h1{font:700 22px/1.2 Georgia,serif;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 12px;font-size:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:14px}
+.panel h2{font:700 15px Georgia,serif;margin:0 0 8px}
+svg{width:100%;height:auto;display:block;touch-action:none;user-select:none}
+text{fill:var(--ink);font:12px "Trebuchet MS",sans-serif}
+.mut{fill:var(--mute)}
+.pt{cursor:ew-resize}.mh{cursor:ew-resize}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+button{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}
+button:hover{border-color:var(--between)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--within);outline-offset:1px}
+label{display:flex;gap:6px;align-items:center;font-size:14px}
+input[type=range]{accent-color:var(--between);width:150px}
+.bigF{font:700 40px Georgia,serif;line-height:1}
+.bigF small{font:14px "Trebuchet MS",sans-serif;color:var(--mute);margin-left:6px}
+.bar{height:20px;border-radius:4px;transition:width .08s}
+.brow{display:grid;grid-template-columns:120px 1fr 64px;gap:8px;align-items:center;margin:5px 0;font-size:13.5px}
+.brow b{text-align:right;font-family:monospace}
+table{border-collapse:collapse;width:100%;font-size:13px}
+td,th{padding:3px 6px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}
+.verdict{font-weight:700;margin:6px 0 0}
+.hint{font-size:12.5px;color:var(--mute);margin:6px 0 0}
+</style>
+</head>
+<body>
+<main>
+<section>
+  <h1>Simulador da estatística F</h1>
+  <p class="sub">Arraste os pontos (ou a marca vermelha da média de um grupo) e veja F mudar.</p>
+  <div class="panel">
+    <svg id="sv" viewBox="0 0 640 290" role="img" aria-label="Pontos de três grupos num eixo horizontal"></svg>
+    <div class="row">
+      <label>Dispersão dentro dos grupos <input type="range" id="sp" min="0.1" max="3" step="0.05" value="1"></label>
+      <label><input type="checkbox" id="cw" checked> desvios dentro</label>
+      <label><input type="checkbox" id="cb" checked> desvios entre</label>
+    </div>
+    <div class="row">
+      <button data-p="nota">Exemplo da nota (F = 12)</button>
+      <button data-p="low">F ≈ 1</button>
+      <button data-p="high">F grande</button>
+    </div>
+    <p class="hint">Clique duplo numa linha adiciona um ponto; clique direito (ou toque longo) em um ponto o remove (mínimo de 2 por grupo).</p>
+  </div>
+  <div class="panel">
+    <h2>Distribuição F(d₁, d₂) sob H₀</h2>
+    <svg id="sf" viewBox="0 0 640 190" role="img" aria-label="Densidade da distribuição F"></svg>
+  </div>
+</section>
+
+<section>
+  <div class="panel">
+    <div class="bigF"><span id="F">–</span><small>F = QM<sub>entre</sub> / QM<sub>dentro</sub></small></div>
+    <p class="verdict" id="vd"></p>
+  </div>
+  <div class="panel">
+    <h2>Quem é maior?</h2>
+    <div class="brow"><span>QM entre</span><div><div class="bar" id="b1" style="background:var(--between)"></div></div><b id="v1"></b></div>
+    <div class="brow"><span>QM dentro</span><div><div class="bar" id="b2" style="background:var(--within)"></div></div><b id="v2"></b></div>
+    <p class="hint">Mesma escala nas duas barras. F é a razão entre elas.</p>
+  </div>
+  <div class="panel">
+    <h2>Tabela ANOVA</h2>
+    <table id="tb"></table>
+    <p class="hint" id="info"></p>
+  </div>
+</section>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const fm=(x,d=2)=>!isFinite(x)?(x>0?'∞':'–'):x.toFixed(d).replace('.',',');
+const PRE={
+  nota:[[2,3,4],[4,5,6],[6,7,8]],
+  low:[[2.4,2.9,3.3,3.8,4.4,4.8],[2.6,3,3.5,4,4.5,4.9],[2.3,2.8,3.2,3.8,4.2,4.7]],
+  high:[[1.8,1.9,2.1,2.2,2.4,2.6],[3.4,3.6,3.7,3.9,4,4.2],[5,5.2,5.3,5.5,5.7,5.8]]
+};
+let G=PRE.nota.map(a=>[...a]),oldSp=1,drag=null;
+const GC=['var(--g1)','var(--g2)','var(--g3)'],GN=['G₁','G₂','G₃'];
+const X0=70,SX=54,YS=[55,120,185],YAX=245;
+const px=v=>X0+v*SX, val=x=>Math.max(0,Math.min(10,(x-X0)/SX));
+const mean=a=>a.reduce((s,x)=>s+x,0)/a.length;
+
+// ---- distribuição F ----
+function lgam(x){const c=[76.18009172947146,-86.50532032941677,24.01409824083091,-1.231739572450155,0.1208650973866179e-2,-0.5395239384953e-5];let y=x,t=x+5.5;t-=(x+.5)*Math.log(t);let s=1.000000000190015;for(let j=0;j<6;j++)s+=c[j]/++y;return -t+Math.log(2.5066282746310005*s/x);}
+function bcf(a,b,x){const T=1e-300;let qab=a+b,qap=a+1,qam=a-1,c=1,d=1-qab*x/qap;if(Math.abs(d)<T)d=T;d=1/d;let h=d;
+  for(let m=1;m<=200;m++){const m2=2*m;let aa=m*(b-m)*x/((qam+m2)*(a+m2));d=1+aa*d;if(Math.abs(d)<T)d=T;c=1+aa/c;if(Math.abs(c)<T)c=T;d=1/d;h*=d*c;
+    aa=-(a+m)*(qab+m)*x/((a+m2)*(qap+m2));d=1+aa*d;if(Math.abs(d)<T)d=T;c=1+aa/c;if(Math.abs(c)<T)c=T;d=1/d;const del=d*c;h*=del;if(Math.abs(del-1)<3e-12)break;}return h;}
+function ib(x,a,b){if(x<=0)return 0;if(x>=1)return 1;const bt=Math.exp(lgam(a+b)-lgam(a)-lgam(b)+a*Math.log(x)+b*Math.log(1-x));
+  return x<(a+1)/(a+b+2)?bt*bcf(a,b,x)/a:1-bt*bcf(b,a,1-x)/b;}
+const pF=(F,d1,d2)=>!isFinite(F)?0:ib(d2/(d2+d1*F),d2/2,d1/2);
+const dF=(x,d1,d2)=>x<=0?(d1===2?1:0):Math.exp(lgam((d1+d2)/2)-lgam(d1/2)-lgam(d2/2)+(d1/2)*Math.log(d1/d2)+(d1/2-1)*Math.log(x)-((d1+d2)/2)*Math.log(1+d1*x/d2));
+function fcrit(d1,d2,al=.05){let lo=0,hi=1e4;for(let i=0;i<80;i++){const m=(lo+hi)/2;pF(m,d1,d2)>al?lo=m:hi=m;}return (lo+hi)/2;}
+
+function calc(){
+  const k=G.length,N=G.reduce((s,g)=>s+g.length,0),ms=G.map(mean);
+  const gm=G.flat().reduce((s,x)=>s+x,0)/N;
+  const SSb=G.reduce((s,g,i)=>s+g.length*(ms[i]-gm)**2,0);
+  const SSw=G.reduce((s,g,i)=>s+g.reduce((t,x)=>t+(x-ms[i])**2,0),0);
+  const d1=k-1,d2=N-k,MSb=SSb/d1,MSw=SSw/d2;
+  const F=MSw<1e-12?(MSb<1e-12?NaN:Infinity):MSb/MSw;
+  return{k,N,ms,gm,SSb,SSw,d1,d2,MSb,MSw,F,p:pF(F,d1,d2)};
+}
+
+function draw(){
+  const c=calc();let s='';
+  for(let v=0;v<=10;v+=1){s+=`<line x1="${px(v)}" x2="${px(v)}" y1="${YAX}" y2="${YAX+5}" stroke="var(--mute)"/><text class="mut" x="${px(v)}" y="${YAX+18}" text-anchor="middle">${v}</text>`;}
+  s+=`<line x1="${px(0)}" x2="${px(10)}" y1="${YAX}" y2="${YAX}" stroke="var(--mute)"/><text class="mut" x="${px(5)}" y="${YAX+36}" text-anchor="middle">valor da variável</text>`;
+  s+=`<line x1="${px(c.gm)}" x2="${px(c.gm)}" y1="20" y2="${YAX}" stroke="var(--between)" stroke-width="2" stroke-dasharray="6 4"/><text x="${px(c.gm)}" y="14" text-anchor="middle" style="fill:var(--between)">média global ${fm(c.gm)}</text>`;
+  G.forEach((g,i)=>{
+    const y=YS[i],m=c.ms[i];
+    s+=`<line x1="${px(0)}" x2="${px(10)}" y1="${y}" y2="${y}" stroke="var(--line)"/><text x="8" y="${y+4}" style="fill:${GC[i]};font-weight:700">${GN[i]}</text><text class="mut" x="8" y="${y+18}">n=${g.length}</text>`;
+    if($('cw').checked)g.forEach(x=>{s+=`<line x1="${px(x)}" x2="${px(m)}" y1="${y-18}" y2="${y-18}" stroke="var(--within)" stroke-width="2" opacity=".45"/>`;});
+    if($('cb').checked)s+=`<line x1="${px(m)}" x2="${px(c.gm)}" y1="${y+22}" y2="${y+22}" stroke="var(--between)" stroke-width="4" opacity=".7"/>`;
+    s+=`<line x1="${px(m)}" x2="${px(m)}" y1="${y-26}" y2="${y+14}" stroke="var(--mean)" stroke-width="3"/>`;
+    s+=`<rect class="mh" data-m="${i}" x="${px(m)-9}" y="${y-28}" width="18" height="44" fill="transparent"/>`;
+    g.forEach((x,j)=>{s+=`<circle class="pt" data-g="${i}" data-i="${j}" cx="${px(x)}" cy="${y}" r="7" fill="${GC[i]}" stroke="var(--panel)" stroke-width="1.5"/>`;});
+    s+=`<text class="mut" x="${px(m)}" y="${y+36}" text-anchor="middle">x̄ ${fm(m)}</text>`;
+  });
+  $('sv').innerHTML=s;
+  // painel
+  $('F').textContent=fm(c.F);
+  const al=.05,Fc=fcrit(c.d1,c.d2);
+  $('vd').textContent=isNaN(c.F)?'Todos os valores são idênticos: F indefinido.':
+    `p = ${c.p<1e-4?'< 0,0001':fm(c.p,4)} · ${c.p<=al?'rejeita H₀':'não rejeita H₀'} (α = 0,05)`;
+  const mx=Math.max(c.MSb,c.MSw,1e-9);
+  $('b1').style.width=(100*c.MSb/mx)+'%';$('b2').style.width=(100*c.MSw/mx)+'%';
+  $('v1').textContent=fm(c.MSb);$('v2').textContent=fm(c.MSw);
+  $('tb').innerHTML=`<tr><th>Fonte</th><th>SQ</th><th>GL</th><th>QM</th><th>F</th></tr>
+   <tr><td>Entre</td><td>${fm(c.SSb)}</td><td>${c.d1}</td><td>${fm(c.MSb)}</td><td>${fm(c.F)}</td></tr>
+   <tr><td>Dentro</td><td>${fm(c.SSw)}</td><td>${c.d2}</td><td>${fm(c.MSw)}</td><td>–</td></tr>
+   <tr><td>Total</td><td>${fm(c.SSb+c.SSw)}</td><td>${c.N-1}</td><td>–</td><td>–</td></tr>`;
+  $('info').textContent=`k = ${c.k} grupos, N = ${c.N} observações. F crítico (α = 0,05) = ${fm(Fc)}.`;
+  drawF(c,Fc);
+}
+
+function drawF(c,Fc){
+  const W=640,H=190,L=40,R=620,T=14,B=150;
+  const xmax=Math.max(6,Math.min(30,(isFinite(c.F)?c.F:30)*1.25,Fc*3));
+  const xs=[];for(let i=0;i<=240;i++)xs.push(xmax*i/240);
+  const ys=xs.map(x=>dF(Math.max(x,xmax*0.002),c.d1,c.d2));
+  const ymax=Math.min(Math.max(...ys.slice(2))*1.1,3);
+  const X=v=>L+(R-L)*v/xmax,Y=v=>B-(B-T)*Math.min(v,ymax)/ymax;
+  let s=`<line x1="${L}" x2="${R}" y1="${B}" y2="${B}" stroke="var(--mute)"/>`;
+  const step=xmax>12?5:1;for(let v=0;v<=xmax;v+=step)s+=`<line x1="${X(v)}" x2="${X(v)}" y1="${B}" y2="${B+4}" stroke="var(--mute)"/><text class="mut" x="${X(v)}" y="${B+17}" text-anchor="middle">${v}</text>`;
+  const line=xs.map((x,i)=>`${X(x)},${Y(ys[i])}`).join(' ');
+  if(isFinite(c.F)&&c.F<xmax){const a=xs.map((x,i)=>[x,ys[i]]).filter(([x])=>x>=c.F);
+    s+=`<polygon points="${X(c.F)},${B} ${a.map(([x,y])=>`${X(x)},${Y(y)}`).join(' ')} ${X(xmax)},${B}" fill="var(--shade)" opacity=".8"/>`;}
+  s+=`<polyline points="${line}" fill="none" stroke="var(--between)" stroke-width="2.5"/>`;
+  if(Fc<xmax)s+=`<line x1="${X(Fc)}" x2="${X(Fc)}" y1="${T}" y2="${B}" stroke="var(--mute)" stroke-dasharray="4 4"/><text class="mut" x="${X(Fc)+4}" y="${T+10}">F crít.</text>`;
+  if(isFinite(c.F)){const fx=Math.min(c.F,xmax);s+=`<line x1="${X(fx)}" x2="${X(fx)}" y1="${T+16}" y2="${B}" stroke="var(--mean)" stroke-width="2.5"/><text x="${Math.min(X(fx),R-30)}" y="${T+12}" text-anchor="${X(fx)>R-40?'end':'middle'}" style="fill:var(--mean);font-weight:700">F obs = ${fm(c.F)}${c.F>xmax?' →':''}</text>`;}
+  s+=`<text class="mut" x="${L}" y="${H-6}">F(${c.d1}, ${c.d2}) · área sombreada = p-valor (cauda direita)</text>`;
+  $('sf').innerHTML=s;
+}
+
+// ---- interação ----
+const sv=$('sv');
+function pt(e){const r=sv.getBoundingClientRect();return[(e.clientX-r.left)*640/r.width,(e.clientY-r.top)*290/r.height];}
+sv.addEventListener('pointerdown',e=>{
+  if(e.button===2)return;
+  const t=e.target;
+  if(t.dataset.g!==undefined){drag={t:'p',g:+t.dataset.g,i:+t.dataset.i};}
+  else if(t.dataset.m!==undefined){const g=+t.dataset.m;drag={t:'m',g,x0:val(pt(e)[0]),orig:[...G[g]]};}
+  if(drag){sv.setPointerCapture(e.pointerId);e.preventDefault();}
+});
+sv.addEventListener('pointermove',e=>{
+  if(!drag)return;const v=val(pt(e)[0]);
+  if(drag.t==='p')G[drag.g][drag.i]=v;
+  else{const lo=Math.min(...drag.orig),hi=Math.max(...drag.orig);
+    const d=Math.max(-lo,Math.min(10-hi,v-drag.x0));G[drag.g]=drag.orig.map(x=>x+d);}
+  draw();
+});
+['pointerup','pointercancel'].forEach(n=>sv.addEventListener(n,()=>{drag=null;}));
+sv.addEventListener('dblclick',e=>{
+  const [x,y]=pt(e);let gi=0,best=1e9;YS.forEach((yy,i)=>{if(Math.abs(y-yy)<best){best=Math.abs(y-yy);gi=i;}});
+  if(best<45&&x>=X0-5&&G[gi].length<12){G[gi].push(val(x));draw();}
+});
+sv.addEventListener('contextmenu',e=>{
+  const t=e.target;if(t.dataset.g===undefined)return;e.preventDefault();
+  const g=+t.dataset.g;if(G[g].length>2){G[g].splice(+t.dataset.i,1);draw();}
+});
+$('sp').oninput=()=>{const n=+$('sp').value,r=n/oldSp;oldSp=n;
+  G=G.map(g=>{const m=mean(g);return g.map(x=>Math.max(0,Math.min(10,m+(x-m)*r)));});draw();};
+$('cw').onchange=$('cb').onchange=draw;
+document.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{G=PRE[b.dataset.p].map(a=>[...a]);$('sp').value=1;oldSp=1;draw();});
+draw();
+</script>
+</body>
+</html>
