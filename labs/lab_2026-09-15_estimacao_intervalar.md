@@ -59,6 +59,8 @@ Nas Partes 1 a 3, organizem os intervalos em uma tabela:
 | Estudo | Parâmetro e unidade | Método | Confiança | Estimativa pontual | Erro padrão | Valor crítico | Margem de erro | Limite inferior | Limite superior |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
 
+Na coluna **Estudo**, indiquem o contexto dos dados e, quando houver mais de um intervalo para os mesmos dados, o nível de confiança correspondente. Por exemplo: ``Tempo de resposta (95\%)'', ``Satisfação dos estudantes (95\%)'' ou ``Tempo de conclusão da tarefa (95\%)''. Na coluna **Método**, registrem o procedimento que justifica o intervalo: por exemplo, ``IC-z para média ($\sigma$ conhecido)'', ``IC de Wald para proporção'' ou ``IC-t para média ($\sigma$ desconhecido)''.
+
 Lembrem-se: a margem de erro é **metade** da largura do intervalo. Usem os valores críticos sem arredondamento nos cálculos e arredondem apenas a apresentação dos resultados.
 
 ---
