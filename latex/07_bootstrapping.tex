@@ -1,0 +1,679 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{portuguese}
+\setotherlanguage{english}
+\usepackage{geometry,amsmath,amssymb,hyperref,enumitem,tabularx,caption,booktabs,listings,array}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor,tikz,pgfplots,fancyhdr}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,positioning}
+\geometry{margin=2.5cm}
+\setlength{\headheight}{15pt}
+\setlength{\emergencystretch}{5em}
+\tolerance=2000
+\definecolor{boxblue}{RGB}{25,45,140}
+\definecolor{boxbg}{RGB}{240,240,245}
+\definecolor{codegray}{RGB}{248,248,248}
+\definecolor{codeframe}{RGB}{180,180,200}
+\renewcommand{\lstlistingname}{Listagem}
+\lstset{backgroundcolor=\color{codegray},frame=single,rulecolor=\color{codeframe},basicstyle=\ttfamily\small,keywordstyle=\bfseries,showstringspaces=false,breaklines=true,columns=fullflexible,keepspaces=true,tabsize=4,xleftmargin=8pt,xrightmargin=4pt,language=Python}
+\newtcolorbox[auto counter]{perguntabox}{breakable,colback=boxbg,colframe=boxblue,title=Pergunta~\thetcbcounter}
+\newtcolorbox{exemplobox}[1]{breakable,colback=green!4,colframe=green!40!black,title={#1}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Bacharelado em Ciência da Computação (Cefet/RJ)}
+\fancyhead[R]{\small GCC1625 -- Inferência Estatística}
+\fancyfoot[C]{\thepage}
+\title{\vspace{-1.2cm}\Large\bfseries Bootstrapping: Inferência Não-Paramétrica por Reamostragem\\[0.3em]\normalsize Nota de Aula 07}
+\author{Prof. Eduardo Bezerra}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\tableofcontents
+\newpage
+
+\section*{Objetivos e Orientações para a Leitura}
+\addcontentsline{toc}{section}{Objetivos e Orientações para a Leitura}
+Ao final da leitura, você deverá ser capaz de explicar como a reamostragem aproxima a variabilidade de uma estatística; distinguir a distribuição dos dados da distribuição das estatísticas bootstrap; estimar erro padrão e viés; construir e interpretar um intervalo de confiança percentil; e explicar por que um teste de hipóteses requer um cenário de reamostragem compatível com a hipótese nula.
+
+O conteúdo principal acompanha esse percurso. A Seção~\ref{sec:parametricos} apresenta o problema inferencial; a Seção~\ref{sec:fundamentos} constrói o mecanismo de reamostragem; a Seção~\ref{sec:aplicacoes} desenvolve erro padrão, viés e intervalos; e a Seção~\ref{sec:teste} introduz testes de hipóteses. A Seção~\ref{sec:exemplos} retoma as ideias em exemplos computacionais e a Seção~\ref{sec:exercicios} propõe sua aplicação a outras situações. Os apêndices reúnem aprofundamentos e respostas comentadas para autoverificação.
+
+Faça uma primeira leitura acompanhando os exemplos numéricos antes de executar os programas. Ao chegar a uma pergunta, registre sua resposta e só depois consulte o Apêndice~\ref{ap:respostas}. Nos códigos, procure antecipar o significado de cada vetor e de cada saída: saber executar um programa não basta para interpretar a inferência. Leve para a aula as dúvidas e as diferenças entre sua justificativa inicial e a resposta comentada.
+
+Os exemplos centrais são autocontidos e usam dados explícitos ou simulados. Os estudos com os arquivos Boston e Facebook são aplicações complementares e exigem os CSVs indicados; os demais exemplos podem ser executados sem esses arquivos. Utilizamos Python com NumPy, SciPy e Matplotlib; Pandas é necessário apenas nas aplicações com CSV.
+
+\section{Métodos Paramétricos e Não-Paramétricos}
+\label{sec:parametricos}
+Uma estimativa calculada em uma amostra não costuma coincidir exatamente com o parâmetro populacional. Se selecionássemos outra amostra pelo mesmo procedimento, obteríamos, em geral, outra estimativa. A inferência estatística procura quantificar essa variabilidade para construir intervalos de confiança e avaliar hipóteses. O bootstrap oferece uma maneira computacional de realizar parte desse trabalho, especialmente quando a distribuição amostral da estatística é difícil de obter analiticamente.
+
+Considere o tempo de resposta de um sistema. Podemos usar a média para resumir o tempo esperado ou a mediana para descrever o valor central, menos sensível a respostas excepcionalmente demoradas. Depois de calcular uma dessas estatísticas, surge uma pergunta: quanto seu valor mudaria se observássemos uma nova amostra de respostas? A questão envolve a distribuição da \emph{estatística entre amostras}, e não apenas a dispersão dos tempos individuais.
+
+\subsection{Distribuição Amostral e Erro Padrão}
+A \emph{distribuição amostral} de uma estatística descreve os valores que ela pode assumir quando repetimos a amostragem da mesma população, mantendo o tamanho da amostra e o plano de coleta. Não precisamos executar esse experimento inúmeras vezes para defini-la: trata-se do modelo probabilístico da variabilidade do estimador.
+
+Para a média de $n$ observações independentes e identicamente distribuídas, com variância populacional finita $\sigma^2$, conhecemos uma expressão para o desvio padrão dessa distribuição:
+\[
+SE(\bar X)=\frac{\sigma}{\sqrt n}.
+\]
+Esse desvio padrão recebe o nome de \emph{erro padrão}. Quando $\sigma$ é desconhecido, usamos frequentemente $s/\sqrt n$ como estimativa. A fórmula do erro padrão, nessas condições, não exige normalidade; outras etapas da inferência, como a escolha de uma distribuição de referência para um teste ou intervalo, podem exigir condições adicionais ou aproximações.
+
+Para estatísticas como medianas e determinados quantis, a incerteza também pode ser estudada teoricamente, mas não há uma expressão simples e geral comparável a $s/\sqrt n$ que dispense informações sobre a distribuição populacional. Essa dificuldade motiva a reamostragem: em vez de derivar uma fórmula específica para cada estatística, podemos recalculá-la em amostras simuladas e observar sua variação.
+
+\subsection{O que Muda em uma Abordagem Não-Paramétrica}
+Em uma abordagem paramétrica, especificamos uma família de distribuições para representar os dados e realizamos a inferência a partir desse modelo. As condições variam conforme o procedimento: um intervalo $t$ para uma média, um teste de Welch e uma ANOVA clássica não exigem exatamente as mesmas hipóteses. Independência das observações e adequação do desenho de coleta, por exemplo, são questões distintas da forma da distribuição.
+
+Métodos não-paramétricos permitem realizar inferência sem restringir a população a uma família paramétrica específica, como a normal. Isso não significa ausência de condições. Nesta nota, estudaremos principalmente o \emph{bootstrap não-paramétrico ordinário}, que reamostra observações individuais e pressupõe, no seu uso básico, dados independentes e identicamente distribuídos. Dados pareados, agrupados ou temporais exigem esquemas que preservem a estrutura relevante.
+
+Uma amostra pequena ou assimétrica não determina automaticamente a escolha do método. Uma amostra pequena pode oferecer informação insuficiente tanto para uma aproximação paramétrica quanto para o bootstrap. Uma distribuição assimétrica, por sua vez, não impede toda inferência sobre médias: importam o tamanho da amostra, as caudas, a estatística e a precisão pretendida. A escolha deve começar pela pergunta de pesquisa e pelas condições de coleta.
+
+Outros procedimentos não-paramétricos incluem Mann--Whitney, Wilcoxon e Kruskal--Wallis. Eles não devem ser vistos simplesmente como versões dos testes $t$ e da ANOVA que dispensam normalidade: suas hipóteses e interpretações podem ser diferentes. Nosso foco será a reamostragem para uma estatística explicitamente escolhida, como média, mediana ou diferença de médias.
+
+\begin{perguntabox}
+Um pesquisador dispõe de 20 tempos de resposta de um sistema e deseja estimar a mediana populacional e sua incerteza. Por que a dificuldade de obter um erro padrão simples pode motivar o bootstrap? Por que o fato de haver apenas 20 observações não garante que o método produzirá uma boa aproximação?
+\end{perguntabox}
+
+\section{Bootstrapping: Fundamentos}
+\label{sec:fundamentos}
+Idealmente, observaríamos muitas amostras da população e calcularíamos a estatística em cada uma. Na prática, geralmente temos uma única amostra. O bootstrap substitui a população desconhecida por uma aproximação construída com essa amostra e simula novas amostragens a partir dela. O método não coleta informação nova sobre a população: explora repetidamente a informação já observada.
+
+Para acompanhar o procedimento, usaremos uma amostra didática de cinco tempos de resposta, em milissegundos:
+\[
+x=(4,5,4,7,2).
+\]
+Sua média é $\bar x=4{,}4$ e sua mediana é $4$. O tamanho reduzido facilita acompanhar os sorteios; não deve ser entendido como recomendação de que cinco observações bastam para uma inferência confiável.
+
+\subsection{A Distribuição Empírica como Aproximação da Distribuição Populacional}
+
+Para estudar como uma estatística varia entre amostras, gostaríamos de selecionar repetidamente novas amostras da população e recalcular a estatística em cada uma. Entretanto, geralmente dispomos apenas dos dados já coletados e não conhecemos a distribuição populacional que permitiria simular essas novas amostras. O bootstrap contorna essa dificuldade usando uma distribuição construída a partir da própria amostra: a \emph{distribuição empírica}.
+
+Na situação estudada aqui, em que as observações recebem pesos iguais, a distribuição empírica atribui a cada valor distinto uma probabilidade igual à sua frequência relativa na amostra. Considere novamente os tempos $x=(4,5,4,7,2)$. O valor 4 aparece em duas das cinco observações e, portanto, recebe probabilidade $2/5$. Os valores 2, 5 e 7 aparecem uma vez cada e recebem probabilidade $1/5$ cada. Essa distribuição descreve as frequências efetivamente observadas, sem pressupor que os tempos sigam uma distribuição normal, exponencial ou outra família paramétrica.
+
+Uma maneira equivalente de realizar sorteios dessa distribuição é selecionar, com a mesma probabilidade, uma das cinco posições da amostra e registrar o valor encontrado. Cada posição tem probabilidade $1/5$ de seleção, mas o valor 4 pode ser obtido por duas posições diferentes. Assim, sortear uniformemente entre as observações preserva as frequências relativas dos valores; sortear uniformemente apenas entre os quatro valores distintos produziria outra distribuição.
+
+No bootstrap, usamos a distribuição empírica como uma aproximação da distribuição populacional desconhecida para gerar reamostras no computador. A analogia é a seguinte: assim como uma nova amostra da população produziria uma nova estimativa, uma reamostra da distribuição empírica produz uma nova estimativa bootstrap. Repetindo esse procedimento, procuramos aproximar a variabilidade que a estatística apresentaria se pudéssemos repetir a coleta original.
+
+Essa aproximação utiliza apenas a informação disponível na amostra. No exemplo, a distribuição empírica permite sortear os valores 2, 4, 5 e 7, mas não inclui outros tempos que poderiam existir na população e não foram observados. Portanto, a qualidade da aproximação depende de quanto a amostra informa sobre as características populacionais relevantes para a estatística de interesse. Uma coleta adequada e uma amostra suficientemente informativa são fundamentais; repetir os sorteios muitas vezes não compensa informação ausente nem garante que o bootstrap funcione bem para qualquer estatística.
+
+\subsection{Reamostragem com Reposição}
+\label{subsec:reamostragem}
+Uma \emph{reamostra bootstrap} é obtida sorteando $n$ observações da amostra original, com reposição. Depois de cada sorteio, a observação continua disponível para o próximo. Por isso, uma observação pode aparecer várias vezes ou não aparecer em determinada reamostra. No bootstrap ordinário estudado aqui, cada reamostra tem o mesmo tamanho da amostra original, pois desejamos aproximar a variabilidade de uma estatística calculada em amostras de tamanho $n$.
+
+Para os cinco tempos apresentados, três reamostras possíveis são as seguintes. Elas foram escolhidas apenas para ilustrar o mecanismo, e não constituem uma simulação suficiente para inferência.
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Reamostra} & \textbf{Média} & \textbf{Mediana}\\
+\midrule
+$(4,4,7,2,5)$ & $4{,}4$ & $4$\\
+$(7,7,5,4,7)$ & $6{,}0$ & $7$\\
+$(2,2,4,5,4)$ & $3{,}4$ & $4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+A repetição não representa pessoas ou medições novas: representa os resultados de sorteios da distribuição empírica. É justamente a variação das frequências dos elementos entre reamostras que permite observar diferentes médias e medianas. Sem reposição, selecionar todas as $n$ observações apenas mudaria sua ordem, deixando essas estatísticas inalteradas. A Listagem~\ref{lst:reamostragem} implementa um único sorteio com reposição e calcula a média da reamostra obtida.
+
+\begin{lstlisting}[caption={Uma reamostra com reposição.},label={lst:reamostragem}]
+import numpy as np
+rng = np.random.default_rng(42)
+x = np.array([4, 5, 4, 7, 2])
+reamostra = rng.choice(x, size=len(x), replace=True)
+print("Reamostra:", reamostra)
+print("Media:", reamostra.mean())
+\end{lstlisting}
+O objeto \texttt{rng} controla os sorteios. A semente 42 torna a execução reproduzível no mesmo ambiente computacional; ela não melhora a qualidade estatística do método. Em \texttt{choice}, \texttt{size} define quantos sorteios faremos e \texttt{replace=True} permite selecionar novamente uma observação já sorteada.
+
+\begin{perguntabox}
+Para $x=(4,5,4,7,2)$: \textbf{(a)} qual é a probabilidade de sortear o valor 4 em uma extração? \textbf{(b)} a reamostra $(7,7,7,7,7)$ é possível? \textbf{(c)} por que embaralhar os cinco elementos sem reposição não permite estimar a variabilidade da média?
+\end{perguntabox}
+
+\subsection{Dos Sorteios à Distribuição Bootstrap}
+Denotaremos por $\theta$ o parâmetro populacional de interesse e por $\hat\theta=T(x)$ a estimativa obtida na amostra original. O símbolo $T$ identifica a regra de cálculo, como média ou mediana. Para a reamostra de índice $b$, escreveremos $x^{*(b)}$ e calcularemos $\hat\theta^{*(b)}=T(x^{*(b)})$. O asterisco indica que a quantidade foi obtida por reamostragem, e não por uma nova coleta populacional.
+
+O algoritmo consiste em calcular $\hat\theta$, sortear uma reamostra de tamanho $n$, recalcular a mesma estatística e repetir esse sorteio e cálculo $B$ vezes. Ao final, teremos $B$ números:
+\[
+\hat\theta^{*(1)},\hat\theta^{*(2)},\ldots,\hat\theta^{*(B)}.
+\]
+Esses números, e não todos os dados das reamostras misturados, formam a aproximação computacional da \emph{distribuição bootstrap da estatística}. Seu desvio padrão será usado para estimar o erro padrão; sua média ajudará a estimar o viés; e seus quantis serão usados no intervalo percentil.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\textwidth}{p{3.5cm}XX}
+\toprule
+\textbf{Distribuição} & \textbf{O que ela descreve?} & \textbf{Como é obtida?}\\
+\midrule
+Empírica dos dados & Valores individuais da variável & Observações da amostra original\\
+Amostral da estatística & Estatística entre novas amostras da população & Modelo de repetição da coleta\\
+Bootstrap da estatística & Estatística entre reamostras da distribuição empírica & Sorteios computacionais condicionados aos dados\\
+\bottomrule
+\end{tabularx}
+\end{center}
+Um histograma dos tempos individuais responde onde se concentram os tempos. Um histograma de médias bootstrap responde onde se concentram as médias obtidas por reamostragem. A diferença de objeto é fundamental: os dois histogramas têm interpretações e dispersões diferentes, embora ambos usem a unidade de tempo.
+
+\subsection{Tamanho da Amostra e Número de Reamostras}
+O tamanho $n$ informa quantas observações originais dispomos; $B$ informa quantas vezes repetimos o cálculo por simulação. Aumentar $n$ por meio de uma coleta adequada pode acrescentar informação populacional. Aumentar $B$ apenas torna mais precisa a aproximação computacional construída a partir dos mesmos dados.
+
+A diferença entre duas execuções com sementes distintas é uma manifestação da \emph{variabilidade de Monte Carlo}. Ao aumentar $B$, essa variação tende a diminuir: o erro padrão e os limites de intervalo calculados tornam-se mais estáveis. Entretanto, a distribuição bootstrap não deve se concentrar indefinidamente em um único ponto. Sua dispersão representa incerteza amostral, que não desaparece por repetirmos os sorteios no computador.
+
+Usaremos frequentemente $B=10\,000$ como escolha didática. Esse número não é uma garantia de precisão universal; probabilidades de cauda muito pequenas podem exigir mais simulações. O número de reamostras possíveis e a diferença entre sequências e multiconjuntos são discutidos no Apêndice~\ref{ap:contagem}.
+
+\begin{perguntabox}
+Dois estudantes usam a mesma amostra: um gera 20 reamostras e outro gera $10\,000$. Qual deles tende a obter resultados computacionalmente mais estáveis? O segundo passa a dispor de $10\,000$ novas amostras da população? Aumentar $B$ resolve a ausência de valores extremos que não apareceram na amostra original?
+\end{perguntabox}
+
+\subsection{Condições e Limitações}
+O bootstrap ordinário não corrige seleção tendenciosa, erros de medição ou dependência ignorada. Se respostas de uma mesma pessoa estão relacionadas, reamostrar cada resposta isoladamente pode destruir essa relação. Se duas medidas formam um par, devemos preservar o par. Para séries temporais ou observações em grupos, podem ser necessários métodos por blocos ou por conglomerados.
+
+Mesmo com observações independentes, certas estatísticas exigem cuidado. Dados arredondados ou discretos podem gerar muitos empates e tornar a distribuição bootstrap de medianas ou quantis discreta, o que afeta a localização de seus percentis. Em outro problema, pode haver poucos dados perto da mediana ou do quantil de interesse; nesse caso, pequenas mudanças nas observações podem alterar bastante a estatística e prejudicar a qualidade da aproximação. Extremos amostrais também merecem atenção. Na reamostragem ordinária, nenhum valor maior que o máximo observado ou menor que o mínimo observado será sorteado. Aumentar $B$ não elimina essas limitações. O método é uma ferramenta para aproximar a incerteza sob um esquema de coleta, e não uma autorização para ignorar esse esquema.
+
+\section{Aplicações do Bootstrapping}
+\label{sec:aplicacoes}
+Depois de gerar as estatísticas bootstrap, precisamos decidir qual característica de sua distribuição responde à pergunta inferencial. Começaremos pelo erro padrão, que mede dispersão entre estimativas. Em seguida, estudaremos o viés, que envolve deslocamento médio, e os intervalos de confiança, que procuram expressar a incerteza por uma faixa de valores.
+
+\subsection{Estimativa do Erro Padrão}
+\label{subsec:ep}
+O erro padrão é o desvio padrão da distribuição amostral de um estimador. Ele descreve o quanto as estimativas variariam entre novas amostras obtidas pelo mesmo procedimento. No bootstrap, substituímos essa distribuição desconhecida pela distribuição das estatísticas reamostradas e calculamos o desvio padrão desses $B$ números:
+\[
+\widehat{SE}_{\mathrm{boot}}=
+\sqrt{\frac{1}{B-1}\sum_{b=1}^B
+\left(\hat\theta^{*(b)}-\bar\theta^*\right)^2},
+\qquad
+\bar\theta^*=\frac1B\sum_{b=1}^B\hat\theta^{*(b)}.
+\]
+A média $\bar\theta^*$ é o centro das estatísticas bootstrap. Na fórmula, medimos o afastamento de cada estatística em relação a esse centro. Não estamos calculando o desvio padrão dos dados originais nem a média dos desvios padrão das reamostras. O vetor submetido ao cálculo contém uma estatística por reamostra.
+
+\begin{exemplobox}{Exemplo resolvido: ler um erro padrão}
+Suponha que as medianas de $10\,000$ reamostras de tempos tenham desvio padrão de $1{,}8$ ms. Estimamos, então, um erro padrão da mediana de $1{,}8$ ms. O número descreve a variabilidade das medianas entre amostras, aproximada pelo bootstrap; não significa que os tempos individuais tenham desvio padrão de $1{,}8$ ms.
+\end{exemplobox}
+
+A Listagem~\ref{lst:ep} gera $B$ reamostras em uma matriz e mostra como extrair, para cada uma delas, a média e a mediana antes de calcular seus erros padrão bootstrap.
+
+\begin{lstlisting}[caption={Erro padrão bootstrap da média e da mediana.},label={lst:ep}]
+import numpy as np
+rng = np.random.default_rng(42)
+x = np.array([3, 5, 6, 8, 10])
+B = 10000
+reamostras = rng.choice(x, size=(B, len(x)), replace=True)
+boot_medias = reamostras.mean(axis=1)
+boot_medianas = np.median(reamostras, axis=1)
+print("EP bootstrap da media:", boot_medias.std(ddof=1))
+print("EP bootstrap da mediana:", boot_medianas.std(ddof=1))
+print("EP classico da media:", x.std(ddof=1) / np.sqrt(len(x)))
+\end{lstlisting}
+A matriz \texttt{reamostras} tem uma reamostra por linha. O argumento \texttt{axis=1} manda calcular a estatística ao longo das colunas de cada linha. Assim, \texttt{boot\_medias} e \texttt{boot\_medianas} têm $B$ elementos cada. O argumento \texttt{ddof=1} faz o desvio padrão usar denominador $B-1$. Para amostras ou valores de $B$ muito grandes, armazenar toda a matriz pode ser custoso; uma implementação em laço ou em lotes permite controlar a memória.
+
+A comparação com $s/\sqrt n$ exige uma ressalva. No limite de infinitas reamostras, o erro padrão bootstrap da média é:
+\[
+SE_{\mathrm{boot},\infty}(\bar X^*)=
+\sqrt{\frac{\frac1n\sum_{i=1}^n(x_i-\bar x)^2}{n}}
+=\sqrt{\frac{n-1}{n}}\frac{s}{\sqrt n}.
+\]
+Isso ocorre porque a variância da distribuição empírica tem denominador $n$. Para $n$ grande, a diferença é pequena; para $n=5$, é perceptível. Na amostra do código, o limite bootstrap é aproximadamente $1{,}081$, enquanto $s/\sqrt n\approx1{,}208$. Aumentar $B$ estabiliza o primeiro valor, sem obrigá-lo a coincidir com o segundo. A expressão exata vale para a média; não devemos transportá-la automaticamente para outras estatísticas.
+
+\begin{perguntabox}
+Uma estudante calcula o desvio padrão dos dados originais e o chama de erro padrão bootstrap da mediana. O que está faltando em seu procedimento? Se as medianas bootstrap já foram calculadas, qual vetor deve entrar no cálculo do desvio padrão?
+\end{perguntabox}
+
+\subsection{Estimativa de Viés}
+\label{subsec:vies}
+Além de variar, um estimador pode apresentar deslocamento sistemático. Seu \emph{viés} é definido como a diferença entre sua esperança e o parâmetro estimado:
+\[
+\operatorname{Viés}(\hat\theta)=E(\hat\theta)-\theta.
+\]
+A esperança se refere a novas amostras da população, não à média dos valores individuais da amostra. Um viés positivo indica que, em média, o estimador superestima o parâmetro; um viés negativo indica subestimação. Como não conhecemos a população nem $\theta$, não podemos calcular diretamente esse viés em um problema real apenas observando uma amostra.
+
+O bootstrap repete a comparação na população substituta. Para uma estatística definida como a aplicação da mesma regra à distribuição, o parâmetro dessa população empírica é $\hat\theta$. Já a média das estimativas reamostradas aproxima a esperança do estimador nesse cenário. Isso motiva:
+\[
+\widehat{\operatorname{Viés}}_{\mathrm{boot}}
+=\bar\theta^*-\hat\theta.
+\]
+Essa interpretação deve respeitar a definição do estimador e do parâmetro; não basta aplicar a expressão a qualquer procedimento sem verificar o que ele estima. O resultado é uma estimativa de viés construída com a distribuição empírica, e não uma observação direta do viés populacional.
+
+\begin{exemplobox}{Exemplo resolvido: viés e correção}
+Se $\hat\theta=6{,}40$ e $\bar\theta^*=6{,}52$, o viés estimado é $+0{,}12$. O bootstrap sugere uma tendência de superestimação nesse cenário. Uma correção possível é subtrair o viés estimado: $\hat\theta_{\mathrm{corr}}=6{,}40-0{,}12=6{,}28$. Não sabemos, porém, se $6{,}28$ está mais perto do parâmetro verdadeiro nessa amostra. Uma correção pode reduzir viés e aumentar variabilidade; não há garantia automática de melhoria global.
+\end{exemplobox}
+
+Um exemplo instrutivo é o estimador da variância com denominador $n$:
+\[
+v_n=\frac1n\sum_{i=1}^n(x_i-\bar x)^2.
+\]
+Sob observações independentes e identicamente distribuídas, com variância finita, sua esperança é $(n-1)\sigma^2/n$, de modo que ele subestima a variância em média. No mundo bootstrap, a variância da população substituta é o próprio $v_n$ e a esperança de $v_n^*$ é $(n-1)v_n/n$. Portanto, o viés bootstrap limite é $-v_n/n$. A Listagem~\ref{lst:vies} simula essa estimativa de viés e a compara tanto com seu limite bootstrap quanto com a variância corrigida por $n-1$.
+
+\begin{lstlisting}[caption={Estimativa do viés de uma variância com denominador n.},label={lst:vies}]
+import numpy as np
+rng = np.random.default_rng(42)
+x = np.array([3, 5, 6, 8, 10])
+B = 10000
+v_obs = np.var(x, ddof=0)
+reamostras = rng.choice(x, size=(B, len(x)), replace=True)
+boot_var = np.var(reamostras, axis=1, ddof=0)
+vies_boot = boot_var.mean() - v_obs
+print("Variancia com denominador n:", v_obs)
+print("Vies bootstrap estimado:", vies_boot)
+print("Vies bootstrap limite:", -v_obs / len(x))
+print("Estimativa corrigida:", v_obs - vies_boot)
+print("Variancia com denominador n-1:", np.var(x, ddof=1))
+\end{lstlisting}
+Na amostra acima, $v_n=5{,}84$ e o viés bootstrap limite é $-1{,}168$. A correção bootstrap de primeira ordem tende a $7{,}008$, enquanto a correção analítica com denominador $n-1$ produz $7{,}3$. Elas não precisam coincidir: a correção bootstrap é uma aproximação baseada no viés estimado na população substituta.
+
+Para a média amostral, a esperança bootstrap coincide exatamente com a média original. Um pequeno viés estimado por um número finito de reamostras pode, nesse caso, ser apenas ruído de Monte Carlo. Essa é uma razão para não aplicar mecanicamente uma correção sempre que a simulação produzir um valor diferente de zero.
+
+\begin{perguntabox}
+Um estimador tem viés bootstrap estimado próximo de zero e erro padrão estimado elevado. Podemos concluir que suas estimativas são precisas? Explique a diferença entre deslocamento médio e dispersão entre estimativas.
+\end{perguntabox}
+
+\subsection{Intervalos de Confiança pelo Método dos Percentis}
+\label{subsec:ic}
+O erro padrão resume a dispersão por um número. Um intervalo de confiança procura expressar a incerteza por uma faixa de valores para o parâmetro. Uma maneira de construí-lo é usar diretamente quantis da distribuição bootstrap, conhecida como \emph{método dos percentis}.
+
+Depois de calcular $B$ estatísticas bootstrap, examinamos seus valores ordenados. O percentil 2,5 marca a região abaixo da qual estão aproximadamente 2,5\% dessas estimativas; o percentil 97,5 deixa aproximadamente 97,5\% abaixo dele. Entre os dois limites estão aproximadamente 95\% das estatísticas bootstrap. O método usa esses limites como um intervalo de confiança aproximado para o parâmetro.
+
+Se $q_p^*$ denota o quantil de ordem $p$ da distribuição bootstrap da estatística, o intervalo bilateral de nível nominal $1-\alpha$ é:
+\[
+IC_{1-\alpha}^{\mathrm{percentil}}=[q_{\alpha/2}^*,q_{1-\alpha/2}^*].
+\]
+Na notação $q_p^*$, $p$ varia de 0 a 1. A função \texttt{np.percentile}, por sua vez, recebe percentuais de 0 a 100; para um intervalo de 95\%, usamos os argumentos 2.5 e 97.5. Detalhes de interpolação podem produzir pequenas diferenças entre implementações, especialmente com poucos valores ou muitos empates.
+
+\begin{exemplobox}{Exemplo resolvido: intervalo para a mediana}
+Se os percentis 2,5 e 97,5 das medianas bootstrap são $3{,}82$ e $5{,}14$ ms, o intervalo percentil de nível nominal 95\% é $[3{,}82;5{,}14]$ ms. O procedimento fornece uma faixa de incerteza para a mediana populacional, não uma faixa que conterá 95\% dos tempos individuais.
+\end{exemplobox}
+
+O fato de 95\% das estatísticas bootstrap estarem entre os limites não demonstra, sozinho, cobertura populacional de 95\%. A interpretação frequentista se refere à repetição de toda a coleta e construção do intervalo: sob condições adequadas, esperamos que uma proporção próxima ao nível nominal dos intervalos contenha o parâmetro fixo. A cobertura é aproximada e pode ser ruim em amostras pequenas ou em situações nas quais o bootstrap não reproduz bem a incerteza do estimador.
+
+O método percentil não exige que o intervalo seja simétrico em torno da estimativa. Assimetria, por si só, não o invalida. Entretanto, viés relevante, baixa qualidade da aproximação bootstrap e estatísticas pouco regulares podem prejudicar sua cobertura. Existem alternativas, como os métodos basic e BCa, apresentadas no Apêndice~\ref{ap:ic}; nenhum método resolve automaticamente todas as limitações dos dados.
+
+\begin{perguntabox}
+Os percentis 2,5 e 97,5 das medianas bootstrap são $3{,}82$ e $5{,}14$ ms. \textbf{(a)} qual intervalo será relatado? \textbf{(b)} quais percentis devem ser usados para nível nominal 99\%? \textbf{(c)} por que o intervalo não significa que 95\% das observações individuais estejam entre seus limites?
+\end{perguntabox}
+
+\subsection{Construção Manual e Uso de SciPy}
+Para tornar o cálculo explícito, simularemos uma amostra de uma distribuição exponencial com média 2. Conhecemos a média porque somos os autores da simulação, mas o procedimento inferencial utilizará apenas a amostra. Em uma aplicação real, a distribuição geradora não seria conhecida. A assimetria fornece um exemplo útil, sem implicar que um intervalo clássico para a média seja necessariamente inadequado. A Listagem~\ref{lst:ic-bootstrap} constrói o intervalo percentil manualmente e o compara a uma execução equivalente de \texttt{scipy.stats.bootstrap}.
+
+\begin{lstlisting}[caption={Intervalo percentil manual para a media.},label={lst:ic-bootstrap}]
+import numpy as np
+from scipy.stats import bootstrap
+rng_dados = np.random.default_rng(42)
+x = rng_dados.exponential(scale=2.0, size=50)
+B = 10000
+rng_manual = np.random.default_rng(123)
+reamostras = rng_manual.choice(x, size=(B, len(x)), replace=True)
+boot_medias = reamostras.mean(axis=1)
+limites = np.percentile(boot_medias, [2.5, 97.5])
+print("Media observada:", x.mean())
+print("EP bootstrap:", boot_medias.std(ddof=1))
+print("IC percentil manual:", limites)
+
+# Mesmos dados, mesma estatistica e mesmo metodo de intervalo.
+resultado = bootstrap(
+    (x,), np.mean, confidence_level=0.95,
+    n_resamples=B, method="percentile",
+    rng=np.random.default_rng(456)
+)
+print("IC percentil SciPy:", resultado.confidence_interval)
+print("EP SciPy:", resultado.standard_error)
+\end{lstlisting}
+A tupla \texttt{(x,)} é uma sequência contendo uma amostra; a vírgula é necessária para criar a tupla com um único elemento. A função pode receber várias amostras, o que será útil em comparações de grupos. Usamos \texttt{np.mean} nos dois cálculos: trocar por \texttt{np.median} mudaria o parâmetro estimado e impediria a comparação direta dos intervalos.
+
+O método \texttt{percentile} é indicado explicitamente porque o padrão de \texttt{scipy.stats.}\allowbreak\texttt{bootstrap} é BCa. As sementes diferentes geram reamostras diferentes, de modo que os resultados devem ser próximos, não necessariamente idênticos. O argumento \texttt{rng} pressupõe uma versão recente de SciPy; em versões anteriores à adoção dessa interface, o controle do gerador pode exigir \texttt{random\_state}. Consulte a documentação da versão instalada.
+
+\section{Realização de Testes de Hipóteses}
+\label{sec:teste}
+Os intervalos anteriores foram obtidos reamostrando a distribuição empírica tal como ela aparece nos dados. Um teste de hipóteses exige uma pergunta adicional: como a estatística se comportaria \emph{se a hipótese nula fosse verdadeira}? A distribuição bootstrap usual não impõe automaticamente $H_0$; por exemplo, se duas amostras têm médias diferentes, reamostrá-las diretamente preserva, em média, essa diferença observada.
+
+Precisamos construir um cenário compatível com a hipótese testada antes dos sorteios. Desenvolveremos um procedimento aproximado para duas amostras independentes, com variâncias finitas, no qual o interesse é a diferença de médias. Outras estatísticas e outros desenhos podem exigir construções diferentes; o algoritmo não deve ser aplicado como receita universal.
+
+\subsection{Hipóteses e Estatística de Comparação}
+Sejam $\mu_A$ e $\mu_B$ as médias populacionais. Para investigar uma diferença em qualquer direção, formulamos:
+\[
+H_0:\mu_A-\mu_B=0,
+\qquad H_a:\mu_A-\mu_B\ne0.
+\]
+Uma estatística possível é a diferença de médias dividida por uma estimativa de seu erro padrão:
+\[
+T_{\mathrm{obs}}=
+\frac{\bar x_A-\bar x_B}
+{\sqrt{s_A^2/n_A+s_B^2/n_B}}.
+\]
+Essa é a estatística de Welch. Sua construção leva em conta que uma mesma diferença de médias pode ser mais ou menos expressiva conforme a variabilidade e os tamanhos dos grupos. Chamamos essa divisão por um erro padrão estimado de \emph{studentização}. O procedimento não pressupõe variâncias iguais, mas ainda depende de condições de amostragem e de aproximação.
+
+A estatística é calculada primeiro nos dados originais. A seguir, devemos gerar uma distribuição nula para uma estatística construída da mesma maneira, recalculando também os erros padrão em cada reamostra.
+
+\subsection{Como Impor a Igualdade de Médias}
+Para igualar as médias sem misturar os grupos, subtraímos a média observada de cada grupo e somamos uma média comum $m_0$. Uma escolha é a média de todas as observações combinadas:
+\[
+x_{Ai}^{0}=x_{Ai}-\bar x_A+m_0,
+\qquad
+x_{Bj}^{0}=x_{Bj}-\bar x_B+m_0.
+\]
+Os dois grupos transformados têm média $m_0$, mas mantêm suas dispersões e formas empíricas, pois apenas deslocamos seus valores. Igualdade de médias não exige igualdade das distribuições completas. Por isso, reamostramos cada grupo transformado separadamente, preservando seus respectivos tamanhos. A escolha da média combinada para $m_0$ é conveniente, mas não tem papel inferencial especial: qualquer valor comum deslocaria as duas populações substitutas pela mesma constante e produziria a mesma distribuição para a estatística de Welch. Ela não equivale, portanto, a supor uma distribuição comum para os grupos.
+
+\begin{exemplobox}{Exemplo resolvido: deslocar sem misturar}
+Considere $A=(4,6,8)$ e $B=(1,3,5)$, com médias 6 e 3. A média combinada é $m_0=4{,}5$. O grupo $A$ é deslocado em $-1{,}5$ e o grupo $B$ em $+1{,}5$, produzindo $(2{,}5;4{,}5;6{,}5)$ em ambos. A coincidência completa ocorre apenas porque estes dados didáticos têm a mesma forma. Em geral, os grupos centralizados terão a mesma média e continuarão com formas e variâncias diferentes.
+\end{exemplobox}
+
+Essa transformação cria uma aproximação do cenário nulo; não revela quais seriam os dados verdadeiros sob $H_0$. Agrupar os dados e reamostrar indiscriminadamente do conjunto combinado imporia uma hipótese mais forte de distribuição comum. Testes de permutação, que redistribuem rótulos em condições apropriadas de permutabilidade, também não devem ser confundidos com o bootstrap separado aqui utilizado.
+
+\subsection{Do Cenário Nulo ao Valor-p}
+Em cada repetição, sorteamos uma reamostra de tamanho $n_A$ do grupo $A$ centralizado e uma de tamanho $n_B$ do grupo $B$ centralizado. Calculamos a estatística de Welch e acumulamos $B$ valores $T^{*(b)}$. Para a alternativa bilateral, consideramos extremos os valores com módulo pelo menos igual a $|T_{\mathrm{obs}}|$.
+
+Se $K$ é o número desses resultados extremos, usaremos a convenção de simulação:
+\[
+\hat p=\frac{K+1}{B+1},\qquad
+K=\sum_{b=1}^B\mathbf{1}\{|T^{*(b)}|\geq|T_{\mathrm{obs}}|\}.
+\]
+O símbolo $\mathbf{1}$ vale 1 quando a condição é satisfeita e 0 caso contrário; a soma conta quantas simulações atenderam ao critério. A adição de 1 evita relatar probabilidade exatamente zero por não termos observado eventos extremos em um conjunto finito de simulações. Em testes de Monte Carlo com realizações permutáveis, a fórmula pode ser justificada tratando a estatística observada como mais uma realização; no bootstrap, usamos $(K+1)/(B+1)$ como uma convenção ligeiramente mais conservadora do que $K/B$ para a simulação finita. Ela não é imposta pelo bootstrap nem torna o teste exato, tampouco elimina erro de aproximação ou variabilidade de Monte Carlo.
+
+A direção do teste deve ser definida pela pergunta antes de observar o resultado. Para $H_a:\mu_A>\mu_B$, contamos $T^{*(b)}\geq T_{\mathrm{obs}}$; para $H_a:\mu_A<\mu_B$, contamos $T^{*(b)}\leq T_{\mathrm{obs}}$. A escolha unilateral não depende de o sinal observado ter sido positivo ou negativo. No primeiro caso, a simulação na fronteira de igualdade de médias fornece a referência para o teste contra aumento.
+
+\begin{exemplobox}{Exemplo resolvido: cálculo do valor-p}
+Em um teste bilateral com $B=10\,000$, se 620 estatísticas simuladas tiverem módulo pelo menos tão grande quanto o observado, obteremos $\hat p=621/10\,001\approx0{,}0621$. Ao nível $\alpha=0{,}05$, não rejeitamos $H_0$. Isso não prova igualdade das médias; indica que o procedimento não forneceu evidência suficiente de diferença nesse nível.
+\end{exemplobox}
+
+O valor-p é uma aproximação da probabilidade de resultados pelo menos tão extremos sob o cenário nulo. Não é a probabilidade de $H_0$ ser verdadeira. Se $\hat p\leq\alpha$, rejeitamos $H_0$; caso contrário, não a rejeitamos. Se o resultado estiver próximo do limiar, vale avaliar a estabilidade em relação à simulação. Nenhum aumento de $B$ corrige dependência ignorada ou uma hipótese nula mal representada.
+
+\begin{perguntabox}
+Para testar igualdade de médias em duas amostras independentes: \textbf{(a)} por que não basta reamostrar diretamente os grupos originais? \textbf{(b)} por que centralizamos, mas não necessariamente misturamos os grupos? \textbf{(c)} podemos escolher a alternativa unilateral apenas depois de observar qual média foi maior?
+\end{perguntabox}
+
+\section{Exemplos Computacionais e Interpretação}
+\label{sec:exemplos}
+Os exemplos seguintes retomam o percurso completo, da escolha da estatística à interpretação. Adotamos nível nominal de confiança de 95\%, $\alpha=0{,}05$ para os testes e $B=10\,000$, salvo indicação diferente. Os exemplos simulados permitem execução imediata; as aplicações com CSV mantêm o vínculo com conjuntos de dados usados no curso, mas exigem discussão adicional sobre sua coleta.
+
+\subsection{Média de uma Distribuição Assimétrica}
+A Listagem~\ref{lst:ic-bootstrap} já constrói um intervalo para uma amostra exponencial. A Listagem~\ref{lst:visualizacao-medias} retoma suas variáveis e coloca lado a lado os dados e as médias bootstrap. Antes de executar, procure prever qual histograma descreve tempos individuais e qual descreve a variabilidade de uma média calculada com 50 observações.
+
+\begin{lstlisting}[caption={Visualizacao dos dados e das medias bootstrap.},label={lst:visualizacao-medias}]
+# Executar depois da Listagem de IC manual (x e boot_medias).
+import matplotlib.pyplot as plt
+fig, eixos = plt.subplots(1, 2, figsize=(10, 4))
+eixos[0].hist(x, bins=15, edgecolor="black")
+eixos[0].set(title="Dados originais", xlabel="Valor individual")
+eixos[1].hist(boot_medias, bins=35, edgecolor="black")
+eixos[1].axvline(limites[0], color="red", linestyle="--")
+eixos[1].axvline(limites[1], color="red", linestyle="--")
+eixos[1].set(title="Medias bootstrap", xlabel="Media reamostrada")
+fig.tight_layout()
+plt.show()
+\end{lstlisting}
+O histograma das médias tende a ser menos disperso que o dos valores individuais: uma média de 50 observações não varia como uma observação isolada. As linhas verticais delimitam o intervalo percentil, não uma região que deva conter 95\% dos dados originais. Para investigar cobertura, seria necessário repetir a geração da amostra e a construção do intervalo, não apenas gerar mais reamostras da mesma amostra.
+
+\subsection{Mediana: um Exemplo Autocontido}
+Considere 30 tempos independentes de conclusão de uma tarefa, simulados por uma distribuição lognormal. A população simulada tem mediana $e^2$, mas deixaremos essa informação fora do cálculo do intervalo. O interesse é verificar como trocar a estatística, mantendo o mecanismo de reamostragem. A Listagem~\ref{lst:mediana-simulada} estima a mediana, seu erro padrão bootstrap e um intervalo percentil para esses tempos simulados.
+
+\begin{lstlisting}[caption={Intervalo e erro padrao para uma mediana.},label={lst:mediana-simulada}]
+import numpy as np
+from scipy.stats import bootstrap
+rng = np.random.default_rng(2026)
+tempos = rng.lognormal(mean=2.0, sigma=0.7, size=30)
+res = bootstrap(
+    (tempos,), np.median, method="percentile",
+    confidence_level=0.95, n_resamples=10000,
+    rng=np.random.default_rng(87)
+)
+print("Mediana observada:", np.median(tempos))
+print("EP bootstrap:", res.standard_error)
+print("IC percentil:", res.confidence_interval)
+\end{lstlisting}
+Relate a estimativa, o erro padrão, os limites e a unidade de medida. A presença ou ausência de $e^2$ em um único intervalo não valida ou invalida o método: uma propriedade de cobertura se refere a repetições de todo o procedimento. A simulação oferece um ambiente em que essa propriedade pode ser investigada, porque o parâmetro gerador é conhecido.
+
+\subsection{Aplicação Complementar: Mediana do Atributo dis em Boston}
+No conjunto Boston, o atributo \texttt{dis} registra uma medida de distância ponderada a cinco centros de emprego. Para usar as linhas como amostra de uma população mais ampla, precisamos explicitar qual população ou processo esses registros representam e avaliar a plausibilidade de independência entre unidades geográficas. A presença de 506 registros em um arquivo não assegura essas condições.
+
+A Listagem~\ref{lst:boston-dis} realiza uma análise exploratória sob um modelo de linhas independentes. Se houver dependência espacial ou se a população de interesse for exatamente o conjunto finito de registros sem plano de amostragem definido, a interpretação inferencial precisa ser revista. O código não resolve essa escolha de modelo.
+
+\begin{lstlisting}[caption={Aplicacao ao CSV Boston, quando disponivel.},label={lst:boston-dis}]
+import numpy as np
+import pandas as pd
+from scipy.stats import bootstrap
+from pathlib import Path
+caminho = Path("../data/Boston.csv")
+if not caminho.exists():
+    print("Disponibilize Boston.csv no caminho indicado.")
+else:
+    df = pd.read_csv(caminho)
+    dis = pd.to_numeric(df["dis"], errors="coerce").dropna().to_numpy()
+    print("Numero de valores validos:", len(dis))
+    resultado = bootstrap(
+        (dis,), np.median, method="percentile",
+        confidence_level=0.95, n_resamples=10000,
+        rng=np.random.default_rng(42)
+    )
+    print("Mediana:", np.median(dis))
+    print("EP:", resultado.standard_error)
+    print("IC:", resultado.confidence_interval)
+\end{lstlisting}
+
+\subsection{Uma Função para Testar Diferenças de Médias}
+A Listagem~\ref{lst:teste} implementa o procedimento da Seção~\ref{sec:teste}. Ela pode ser usada com duas amostras independentes e variâncias finitas, desde que o erro padrão estimado não seja zero. O programa verifica condições numéricas básicas, mas a independência e o desenho de coleta devem ser avaliados por quem conduz a análise.
+
+\begin{lstlisting}[caption={Bootstrap studentizado sob igualdade de medias.},label={lst:teste}]
+import numpy as np
+from scipy.stats import ttest_ind
+
+def welch_t(a, b):
+    ep = np.sqrt(a.var(ddof=1)/len(a) + b.var(ddof=1)/len(b))
+    if not np.isfinite(ep) or ep <= 0:
+        raise ValueError("Erro padrao zero ou invalido.")
+    return (a.mean() - b.mean()) / ep
+
+def teste_bootstrap(a, b, B=10000, alternativa="two-sided", seed=42):
+    a = np.asarray(a, dtype=float)
+    b = np.asarray(b, dtype=float)
+    if (a.ndim != 1 or b.ndim != 1 or min(len(a), len(b)) < 2
+            or not np.all(np.isfinite(a))
+            or not np.all(np.isfinite(b))):
+        raise ValueError("Forneca vetores finitos com ao menos 2 valores.")
+    if alternativa not in ("two-sided", "greater", "less"):
+        raise ValueError("Alternativa invalida.")
+    if not isinstance(B, (int, np.integer)) or B < 1:
+        raise ValueError("B deve ser inteiro positivo.")
+    t_obs = welch_t(a, b)
+    m0 = np.concatenate((a, b)).mean()
+    a0 = a - a.mean() + m0
+    b0 = b - b.mean() + m0
+    rng = np.random.default_rng(seed)
+    t_boot = np.empty(B)
+    for i in range(B):
+        aa = rng.choice(a0, size=len(a), replace=True)
+        bb = rng.choice(b0, size=len(b), replace=True)
+        t_boot[i] = welch_t(aa, bb)
+    if alternativa == "two-sided":
+        extremos = np.abs(t_boot) >= abs(t_obs)
+    elif alternativa == "greater":
+        extremos = t_boot >= t_obs
+    else:
+        extremos = t_boot <= t_obs
+    k = np.count_nonzero(extremos)
+    p = (k + 1)/(B + 1)
+    return {"diferenca": a.mean()-b.mean(), "t": t_obs,
+            "p": p, "extremos": k, "t_boot": t_boot}
+
+# Dados simulados para executar sem arquivos externos.
+rng = np.random.default_rng(2026)
+a = rng.normal(loc=72, scale=12, size=40)
+b = rng.normal(loc=68, scale=15, size=45)
+res = teste_bootstrap(a, b, alternativa="two-sided")
+print("Diferenca observada:", res["diferenca"])
+print("T observado:", res["t"])
+print("Extremos:", res["extremos"])
+print("Valor-p bootstrap:", res["p"])
+print("Welch classico:", ttest_ind(a, b, equal_var=False))
+\end{lstlisting}
+O vetor \texttt{t\_boot} contém estatísticas sob o cenário nulo, e não diferenças brutas de médias. A saída do teste de Welch clássico usa outra aproximação de referência; por isso, seu valor-p não precisa coincidir exatamente com o bootstrap. Compare a decisão, a magnitude da diferença e as condições dos procedimentos. Uma divergência exige examinar os dados e a qualidade das aproximações, não escolher automaticamente o menor valor-p.
+
+Se uma reamostra produzir erro padrão zero, a função interrompe com uma mensagem. Isso pode ocorrer em amostras pequenas ou muito discretas. Descartar silenciosamente essas reamostras mudaria a distribuição simulada; é preferível reconhecer a limitação e reconsiderar o procedimento.
+
+\subsection{Aplicação Complementar: Curtidas em Publicações Pagas}
+O conjunto Facebook Metrics permite investigar se publicações identificadas como pagas apresentam média de curtidas maior que as não pagas. Denotando essas médias por $\mu_1$ e $\mu_0$, definimos previamente a alternativa $H_a:\mu_1>\mu_0$ e usamos a fronteira nula $\mu_1=\mu_0$ para construir a simulação.
+
+As unidades são publicações, não usuários. A análise requer discutir dependência temporal, campanhas comuns, públicos compartilhados e possíveis confundidores. Mesmo com evidência de diferença nas médias, dados observacionais não demonstram que pagar a publicação cause aumento nas curtidas. A Listagem~\ref{lst:facebook-metrics} lê o arquivo, trata valores ausentes e aplica o teste bootstrap unilateral definido anteriormente.
+
+\begin{lstlisting}[caption={Aplicacao ao Facebook Metrics, quando o CSV estiver disponivel.},label={lst:facebook-metrics}]
+# Executar depois da definicao de teste_bootstrap.
+import pandas as pd
+from pathlib import Path
+caminho = Path("../data/dataset_Facebook.csv")
+if not caminho.exists():
+    print("Disponibilize dataset_Facebook.csv no caminho indicado.")
+else:
+    df = pd.read_csv(caminho, delimiter=";")
+    dados = df[["Paid", "like"]].apply(pd.to_numeric, errors="coerce")
+    dados = dados.dropna()
+    dados = dados[dados["Paid"].isin([0, 1])]
+    pagas = dados.loc[dados["Paid"] == 1, "like"].to_numpy()
+    nao_pagas = dados.loc[dados["Paid"] == 0, "like"].to_numpy()
+    print("Tamanhos validos:", len(pagas), len(nao_pagas))
+    resultado = teste_bootstrap(
+        pagas, nao_pagas, alternativa="greater", B=10000, seed=42
+    )
+    for nome in ("diferenca", "t", "extremos", "p"):
+        print(nome, resultado[nome])
+\end{lstlisting}
+Não fixamos antecipadamente tamanhos ou resultados para essa aplicação: eles devem ser obtidos do arquivo efetivamente utilizado, após o tratamento explícito de ausências. No relatório, informe as médias, os tamanhos válidos, a diferença, a estatística, o valor-p e a decisão. Discuta também se a suposição de publicações independentes é defensável; caso não seja, reamostrar publicações isoladas não é suficiente.
+
+\section{Resumo e Preparação para a Aula}
+\label{sec:resumo}
+O bootstrap não-paramétrico usa a distribuição empírica como população substituta e sorteia reamostras para estudar a variação de uma estatística. Ele não transforma $B$ reamostras em $B$ novas coletas e não recupera informação ausente da amostra. A validade depende da relação entre a amostra, o desenho de coleta e a estatística escolhida.
+
+As aplicações usam características diferentes das estatísticas reamostradas. Seu desvio padrão estima o erro padrão; a diferença entre sua média e a estimativa original pode estimar viés; e seus quantis fornecem os limites do intervalo percentil. Para testar hipóteses, precisamos modificar o cenário de simulação de modo a representar $H_0$.
+
+Antes da aula, verifique se consegue explicar por que há reposição, por que a distribuição das médias difere da distribuição dos dados, por que aumentar $B$ estabiliza o cálculo sem ampliar a amostra e por que centralizamos os grupos em um teste de igualdade de médias. Escolha uma questão em que sua resposta mudou durante a leitura para discutir com os colegas.
+
+\section{Exercícios de Fixação}
+\label{sec:exercicios}
+Os exercícios combinam cálculo, programação e interpretação. Use sementes explícitas nos programas e registre os parâmetros das simulações. Quando o enunciado solicitar inferência, explique quais unidades são consideradas independentes e qual população ou processo está sendo representado. Respostas numéricas aproximadas e orientações estão no Apêndice~\ref{ap:exercicios}.
+
+\subsection*{Exercício 1: Escolha e Condições de Uso}
+Para cada situação, discuta as vantagens e limitações do bootstrap, em vez de escolher apenas entre ``paramétrico'' e ``não-paramétrico'':
+\begin{enumerate}[label=(\alph*)]
+\item Uma amostra aleatória de 200 salários é usada para construir um intervalo para a mediana. A distribuição é fortemente assimétrica.
+\item Uma amostra independente de 500 alturas aproximadamente normais é usada para construir um intervalo para a média. Compare a conveniência de uma fórmula clássica e da reamostragem.
+\item Quinze tempos de resposta apresentam valores extremos e o interesse é a mediana. Por que tamanho pequeno e valores extremos exigem cautela, em vez de garantir a adequação do método?
+\item Mil avaliações de 1 a 5 são usadas para estimar a média da codificação numérica. Discuta a interpretação dessa média e o que mudaria se várias avaliações pertencessem ao mesmo usuário.
+\end{enumerate}
+
+\subsection*{Exercício 2: Reamostras e Erro Padrão}
+Considere $x=(1,3,5,7,9)$, com $n=5$.
+\begin{enumerate}[label=(\alph*)]
+\item Gere cinco reamostras com reposição e calcule a média de cada uma.
+\item Estime o erro padrão pelo desvio padrão dessas cinco médias. Por que o resultado é instável?
+\item Repita com $B=10\,000$. Compare com $s/\sqrt n$ e com $\sqrt{(n-1)/n}\,s/\sqrt n$. Qual deles é o limite bootstrap?
+\item Explique por que repetir o cálculo com muitas reamostras não transforma esses cinco dados em uma amostra populacional grande.
+\item Como aprofundamento, calcule o número de sequências ordenadas e de multiconjuntos de índices possíveis. Por que os multiconjuntos não devem receber pesos iguais?
+\end{enumerate}
+
+\subsection*{Exercício 3: Intervalo para a Mediana}
+Considere os 30 tempos abaixo, em milissegundos, tratados como observações independentes de um processo estável. Eles são dados didáticos, fornecidos integralmente para permitir reprodução sem arquivos externos. A Listagem~\ref{lst:ex-mediana} define o vetor que deve ser usado nos cálculos deste exercício.
+\begin{lstlisting}[caption={Dados do Exercicio 3.},label={lst:ex-mediana}]
+tempos = np.array([
+    4.2, 5.1, 6.0, 7.4, 5.8, 8.3, 4.9, 6.7, 7.1, 9.5,
+    5.3, 6.4, 8.8, 7.9, 6.2, 10.1, 5.6, 7.0, 6.8, 8.1,
+    4.7, 9.2, 7.6, 6.5, 5.9, 8.5, 7.3, 11.4, 6.1, 7.8
+])
+\end{lstlisting}
+Calcule a mediana, o erro padrão bootstrap e um intervalo percentil de 95\% com $B=10\,000$. Compare a implementação manual com SciPy, mantendo a mesma estatística e o mesmo método. Interprete o intervalo sem confundi-lo com uma faixa para tempos individuais. Avalie também como o arredondamento dos tempos pode afetar os empates entre medianas reamostradas.
+
+\subsection*{Exercício 4: Diferença de Medianas e Desenho da Coleta}
+Em uma primeira pesquisa, pessoas diferentes executam as tarefas A e B, formando duas amostras independentes. A Listagem~\ref{lst:ex-diferenca-medianas} define os vetores a serem usados para estimar um intervalo percentil para $\operatorname{mediana}(A)-\operatorname{mediana}(B)$, reamostrando cada grupo separadamente.
+\begin{lstlisting}[caption={Dados do Exercicio 4.},label={lst:ex-diferenca-medianas}]
+a = np.array([12, 15, 11, 18, 13, 16, 14, 22, 17, 12, 19, 15])
+b = np.array([10, 11, 14, 9, 12, 13, 10, 15, 11, 12, 16, 10])
+\end{lstlisting}
+Em uma segunda pesquisa hipotética, cada pessoa executa ambas as tarefas, e cada posição dos vetores corresponde ao mesmo participante. Explique por que seria necessário reamostrar os índices dos pares conjuntamente. Distinga a diferença entre medianas da mediana das diferenças individuais: são parâmetros distintos. Se um intervalo bilateral adequado para a diferença excluir zero, discuta a evidência contra igualdade das medianas, lembrando que o procedimento tem cobertura aproximada.
+
+\subsection*{Exercício 5: Viés da Variância}
+Use os 20 valores da Listagem~\ref{lst:ex-vies-variancia} como amostra e estime o viés de $v_n=\sum(x_i-\bar x)^2/n$ com $B=5\,000$.
+\begin{lstlisting}[caption={Dados do Exercicio 5.},label={lst:ex-vies-variancia}]
+x = np.array([3, 5, 6, 8, 10, 4, 7, 9, 6, 5,
+              11, 8, 7, 6, 12, 4, 9, 10, 5, 7])
+\end{lstlisting}
+Explique o sinal esperado do viés, calcule a correção bootstrap e compare com a variância com denominador $n-1$. Compare também a estimativa por simulação com o viés bootstrap limite $-v_n/n$. As duas correções precisam coincidir? Um viés menor garante menor erro quadrático médio?
+
+\subsection*{Exercício 6: Teste de Igualdade de Médias}
+Para duas amostras independentes, use os dados da Listagem~\ref{lst:ex-teste-medias}, em pontos de uma prova. A pergunta foi definida antes da análise: as médias populacionais diferem em qualquer direção?
+\begin{lstlisting}[caption={Dados do Exercicio 6.},label={lst:ex-teste-medias}]
+impresso = np.array([64, 72, 68, 81, 75, 69, 77, 83, 70, 74, 66, 79])
+digital = np.array([60, 67, 71, 65, 73, 62, 76, 68, 64, 70, 66, 72])
+\end{lstlisting}
+Formule as hipóteses, calcule a diferença e a estatística de Welch, execute o teste bootstrap bilateral e compare com \texttt{ttest\_ind(..., equal\_var=False)}. Relate o valor-p e a decisão em $\alpha=0{,}05$. Explique por que a comparação observacional entre grupos não prova efeito causal do material de estudo. Examine o que mudaria no esquema de reamostragem caso os alunos pertencessem a turmas com dependência interna.
+
+\subsection*{Exercício 7: Interpretação Conjunta}
+Um analista obteve a estimativa original $\hat\theta=14{,}30$, média das estatísticas bootstrap $\bar\theta^*=14{,}47$, desvio padrão dessas estatísticas de $1{,}82$ e percentis 2,5 e 97,5 iguais a $10{,}88$ e $17{,}93$.
+\begin{enumerate}[label=(\alph*)]
+\item Informe o intervalo percentil, o erro padrão estimado, o viés estimado e a estimativa corrigida.
+\item O valor de referência 12 está incluído no intervalo? O que isso permite dizer, e o que não permite concluir, considerando a aproximação do procedimento?
+\item Em outro cenário, um intervalo bilateral de 95\% adequado para o mesmo parâmetro exclui 12. Como interpretar esse resultado em relação à hipótese de que o parâmetro vale 12?
+\item Por que a interpretação via intervalo não garante valor-p numericamente idêntico ao teste bootstrap centralizado da Seção~\ref{sec:teste}?
+\end{enumerate}
+
+\appendix
+\section{Contagem de Reamostras e Probabilidades}
+\label{ap:contagem}
+Se cada uma das $n$ posições originais pode ser escolhida em cada um dos $n$ sorteios, existem $n^n$ sequências ordenadas de índices. No bootstrap ordinário, todas essas sequências têm a mesma probabilidade $n^{-n}$. Para $n=5$, são $3125$ sequências.
+
+Quando a estatística não depende da ordem, podemos agrupar sequências com as mesmas multiplicidades. O número de vetores de multiplicidades $(k_1,\ldots,k_n)$ com $k_i\geq0$ e soma $n$ é:
+\[
+\binom{2n-1}{n-1}.
+\]
+Para $n=5$, há 126 multiconjuntos de índices. Se valores originais se repetem, alguns desses multiconjuntos ainda produzem os mesmos valores numéricos. Portanto, essa contagem não é necessariamente o número de conjuntos numéricos distintos.
+
+Os multiconjuntos não são equiprováveis. Um vetor de multiplicidades tem probabilidade:
+\[
+\Pr(k_1,\ldots,k_n)=\frac{n!}{k_1!\cdots k_n!}\left(\frac1n\right)^n.
+\]
+Com dois índices originais, as sequências $(1,1)$, $(1,2)$, $(2,1)$ e $(2,2)$ têm probabilidade $1/4$ cada. Ignorando a ordem, o multiconjunto com um elemento de cada índice tem probabilidade $1/2$, enquanto os outros dois têm $1/4$. Dar peso $1/3$ a cada multiconjunto não reproduziria o mecanismo de sorteio. Na prática, simulamos sequências diretamente, podendo repetir reamostras entre as $B$ realizações.
+
+\section{Outros Intervalos Bootstrap}
+\label{ap:ic}
+O método percentil usa diretamente os quantis da distribuição das estimativas bootstrap. O método \emph{basic}, também chamado reverso, parte de uma aproximação para a distribuição do erro do estimador e reflete os quantis em torno da estimativa original:
+\[
+IC_{1-\alpha}^{\mathrm{basic}}=
+[2\hat\theta-q_{1-\alpha/2}^*,\ 2\hat\theta-q_{\alpha/2}^*].
+\]
+A reflexão pode mudar a localização do intervalo e, em certos problemas, produzir limites fora do espaço possível do parâmetro. É preciso avaliar a adequação da construção ao problema, em vez de escolher o método apenas pela largura do intervalo.
+
+O método BCa ajusta as probabilidades dos quantis usando uma correção relacionada ao viés e um termo de aceleração, frequentemente estimado por jackknife. Seu objetivo é melhorar propriedades de cobertura sob condições de regularidade, mas não oferece garantia universal. Dados degenerados e estatísticas com muitos empates podem causar dificuldades. A derivação fica fora do escopo desta leitura; a documentação de SciPy descreve as opções implementadas.
+
+\section{Respostas Comentadas para Autoverificação}
+\label{ap:respostas}
+Estas respostas se referem às perguntas distribuídas no texto. Consulte-as depois de formular sua própria justificativa. O objetivo é verificar o raciocínio, e não apenas reconhecer um número correto.
+
+\paragraph{Pergunta 1.} O bootstrap permite aproximar a variação da mediana recalculando-a em reamostras, sem uma fórmula simples para seu erro padrão. Com apenas 20 observações, a distribuição empírica pode representar mal regiões relevantes da população; a simulação repete essa limitação em vez de eliminá-la.
+
+\paragraph{Pergunta 2.} A probabilidade de sortear 4 é $2/5$, pois duas posições têm esse valor. Cinco sorteios do valor 7 são possíveis, com probabilidade $(1/5)^5$. Sem reposição, usar todas as posições preserva a mesma coleção e a mesma média, de modo que não gera sua distribuição bootstrap.
+
+\paragraph{Pergunta 3.} Dez mil reamostras tendem a estabilizar a aproximação computacional mais que 20, mas continuam condicionadas à mesma amostra. Valores que não aparecem nela não surgem pela simples reamostragem. A informação populacional original não é multiplicada por $B$.
+
+\paragraph{Pergunta 4.} É preciso gerar reamostras, calcular uma mediana em cada uma e obter o desvio padrão desse vetor de medianas. O desvio padrão dos dados mede dispersão individual; o erro padrão mede dispersão de estimativas.
+
+\paragraph{Pergunta 5.} Viés próximo de zero indica pouco deslocamento médio estimado, mas não garante precisão. Um estimador pode oscilar muito em torno do parâmetro. Viés e variância contribuem conjuntamente para o erro quadrático médio.
+
+\paragraph{Pergunta 6.} O intervalo é $[3{,}82;5{,}14]$ ms. Para 99\%, usamos os percentis 0,5 e 99,5. Os números reamostrados são medianas, portanto o intervalo se refere ao parâmetro mediana e não a uma proporção dos tempos individuais.
+
+\paragraph{Pergunta 7.} Reamostrar os grupos originais mantém, em média, a diferença amostral observada, sem impor igualdade populacional. A centralização estabelece médias comuns e a reamostragem separada preserva formas e dispersões diferentes. A alternativa deve ser escolhida pela pergunta de pesquisa antes de observar o resultado, evitando selecionar a direção mais favorável após a análise.
+
+\section{Orientações para os Exercícios}
+\label{ap:exercicios}
+\paragraph{Exercício 1.} Para salários e mediana, a reamostragem pode ser útil se a coleta for adequada; assimetria não é obstáculo automático. Para alturas e média, um intervalo clássico é simples e o bootstrap pode servir de comparação. Com 15 tempos, a amostra pode não representar bem caudas e a mediana pode ter distribuição bootstrap discreta. Na escala 1 a 5, a média depende da codificação e de sua interpretação; avaliações repetidas do mesmo usuário exigem preservar a dependência, por exemplo reamostrando usuários sob um modelo apropriado.
+
+\paragraph{Exercício 2.} A média original é 5, $s^2=10$ e $s/\sqrt5\approx1{,}414$. O limite do erro padrão bootstrap é $\sqrt{8/5}\approx1{,}265$. Há $5^5=3125$ sequências e $\binom94=126$ multiconjuntos de índices, com pesos distintos. As estimativas por cinco reamostras podem variar muito entre execuções.
+
+\paragraph{Exercício 3.} A mediana observada é $6{,}9$ ms. Os limites e o erro padrão devem ser calculados; pequenas diferenças entre simulações são esperadas. Use \texttt{np.median} e \texttt{method="percentile"} na comparação. Um intervalo diz respeito à mediana populacional sob o modelo de coleta, e não à concentração de 95\% dos tempos.
+
+\paragraph{Exercício 4.} As medianas observadas são 15 e $11{,}5$, com diferença $3{,}5$. Para grupos independentes, sorteie cada vetor separadamente e subtraia as medianas em cada repetição. Para pares, sorteie uma sequência de índices e use-a nos dois vetores. Não substitua diferença de medianas por mediana das diferenças sem mudar explicitamente o parâmetro.
+
+\paragraph{Exercício 5.} O viés bootstrap limite é negativo e vale $-v_n/20$. A correção de primeira ordem tende a $v_n(1+1/20)$ e a correção analítica é $20v_n/19$. Os resultados não coincidem exatamente e reduzir o viés não garante reduzir a variância ou o erro quadrático médio.
+
+\paragraph{Exercício 6.} A hipótese alternativa é bilateral. As médias observadas são aproximadamente $73{,}17$ e $67{,}83$, com diferença $5{,}33$ pontos e estatística de Welch próxima de $2{,}40$. Ao executar a função da Listagem~\ref{lst:teste} com $B=10\,000$ e semente 42, obtemos $K=283$ estatísticas extremas e valor-p bootstrap $284/10\,001\approx0{,}0284$; o teste de Welch clássico fornece aproximadamente $0{,}0256$. Ambos rejeitam a igualdade em $\alpha=0{,}05$, sob as condições adotadas. A interpretação causal exige mais que diferença de médias, e dependência por turma exige outro modelo ou esquema de reamostragem.
+
+\paragraph{Exercício 7.} O intervalo é $[10{,}88;17{,}93]$, o erro padrão estimado é $1{,}82$, o viés estimado é $+0{,}17$ e a correção produz $14{,}13$. O valor 12 pertence ao intervalo apresentado; isso indica que, por esse procedimento aproximado, os dados não fornecem evidência suficiente contra 12 no nível nominal correspondente, mas não confirma que o parâmetro seja igual a 12. Em outro cenário, sua exclusão por um intervalo bilateral adequado sugere evidência contra esse valor no nível nominal correspondente, respeitada a aproximação. Uma equivalência exata entre decisão por intervalo e teste requer procedimentos compatíveis por inversão; não se deve presumir identidade numérica entre métodos bootstrap distintos.
+
+\begin{thebibliography}{9}
+\bibitem{hesterberg} Hesterberg, T. C. (2015). What Teachers Should Know About the Bootstrap: Resampling in the Undergraduate Statistics Curriculum. \emph{The American Statistician}, 69(4), 371--386. \url{https://doi.org/10.1080/00031305.2015.1089789}.
+\bibitem{scipy} SciPy. \emph{scipy.stats.bootstrap}: documentação de referência. \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html}. Consulte a versão correspondente ao ambiente utilizado.
+\end{thebibliography}
+\end{document}
